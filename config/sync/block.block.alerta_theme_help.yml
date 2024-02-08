@@ -1,0 +1,22 @@
+uuid: 01f04faf-4f95-4d65-9382-44baf7e87c1b
+langcode: es
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - alerta_theme
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: alerta_theme_help
+theme: alerta_theme
+region: sidebar_first
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Ayuda
+  label_display: '0'
+  provider: help
+visibility: {  }

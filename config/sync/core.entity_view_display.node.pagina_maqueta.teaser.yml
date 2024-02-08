@@ -1,0 +1,31 @@
+uuid: 9a0b839d-95a6-4b68-b3e3-450389af9be0
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.pagina_maqueta.body
+    - node.type.pagina_maqueta
+  module:
+    - text
+    - user
+id: node.pagina_maqueta.teaser
+targetEntityType: node
+bundle: pagina_maqueta
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

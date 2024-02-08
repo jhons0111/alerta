@@ -1,0 +1,11 @@
+uuid: acc9dab0-c769-4fe5-823d-cb73ce04930c
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.pagina_maqueta
+id: node.pagina_maqueta
+target_entity_type_id: node
+target_bundle: pagina_maqueta
+default_langcode: site_default
+language_alterable: false
