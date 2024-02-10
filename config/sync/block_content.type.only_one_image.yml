@@ -1,0 +1,8 @@
+uuid: fd68488c-9e4f-4462-b5fc-1a0927049677
+langcode: es
+status: true
+dependencies: {  }
+id: only_one_image
+label: 'Bloque solo una imagen'
+revision: 0
+description: 'Bloque que permite agregar solo una imagen en cualquier región del sitio.'
