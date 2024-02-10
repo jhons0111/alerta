@@ -1,0 +1,23 @@
+uuid: cd045008-e6b3-4d25-9df7-58d9f7088313
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.only_one_image
+    - field.field.block_content.only_one_image.field_image
+id: block_content.only_one_image.default
+targetEntityType: block_content
+bundle: only_one_image
+mode: default
+content:
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

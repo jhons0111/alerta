@@ -1,0 +1,25 @@
+uuid: e978f0d1-ef1d-4db1-a6bb-27bed10d9818
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.header
+  module:
+    - system
+  theme:
+    - alerta_theme
+id: header
+theme: alerta_theme
+region: header
+weight: 0
+provider: null
+plugin: 'system_menu_block:header'
+settings:
+  id: 'system_menu_block:header'
+  label: Menu
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

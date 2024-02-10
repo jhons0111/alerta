@@ -1,0 +1,25 @@
+uuid: 42443093-0641-4def-9ec9-fd6788fbc937
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:ffa0eea7-397a-46ea-b177-0fde3d478e4b'
+  module:
+    - block_content
+  theme:
+    - alerta_theme
+id: marcadelsitiopersonalizada
+theme: alerta_theme
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:ffa0eea7-397a-46ea-b177-0fde3d478e4b'
+settings:
+  id: 'block_content:ffa0eea7-397a-46ea-b177-0fde3d478e4b'
+  label: 'Marca del sitio personalizada'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

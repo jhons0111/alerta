@@ -1,0 +1,8 @@
+uuid: ea9c1b61-cf8c-452b-a97f-9b2834bdf0ef
+langcode: es
+status: true
+dependencies: {  }
+id: header
+label: Header
+description: 'Menu para configurar los links del header'
+locked: false

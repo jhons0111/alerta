@@ -1,0 +1,25 @@
+uuid: c381bea7-f56c-43a5-8b85-cdbc2ddc3112
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:only_one_image:bd340212-bf66-4694-bfbc-2e58f42a5784'
+  module:
+    - block_content
+  theme:
+    - alerta_theme
+id: imagendelheader
+theme: alerta_theme
+region: header
+weight: 1
+provider: null
+plugin: 'block_content:bd340212-bf66-4694-bfbc-2e58f42a5784'
+settings:
+  id: 'block_content:bd340212-bf66-4694-bfbc-2e58f42a5784'
+  label: 'Imagen del header'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -8,3 +8,10 @@ base theme: false
 
 libraries:
   - alerta_theme/global-styles
+
+regions:
+  header: 'Header'
+  messages: 'Messages'
+  content: 'Content'
+  footer: 'Footer'
+  sub_footer: 'Sub footer'
