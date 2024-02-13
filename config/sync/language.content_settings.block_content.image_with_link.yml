@@ -1,0 +1,11 @@
+uuid: ce560f21-06f5-409c-9903-d25fd4facbae
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.image_with_link
+id: block_content.image_with_link
+target_entity_type_id: block_content
+target_bundle: image_with_link
+default_langcode: site_default
+language_alterable: false

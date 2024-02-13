@@ -1,0 +1,40 @@
+{% block header %}
+    <div class="header">
+        {{ page.header }}
+    </div>
+{% endblock %}
+
+{% block messages %}
+    <div class="messages">
+        {{ page.messages }}
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="content">
+        {{ page.content }}
+    </div>
+{% endblock %}
+
+<div class="footer">
+    <div id="first-section">
+        <div class="footer-one">
+            {% block first_footer %}
+                    {{ page.first_footer }}
+            {% endblock %}
+        </div>
+        <div class="footer-two">
+            {% block second_footer %}
+                    {{ page.second_footer }}
+            {% endblock %}
+        </div>
+        <div id="map-id">
+        
+        </div>
+    </div>
+    <div class="second-section">
+        {% block sub_footer %}
+                {{ page.sub_footer }}
+        {% endblock %}
+    </div>
+</div>
