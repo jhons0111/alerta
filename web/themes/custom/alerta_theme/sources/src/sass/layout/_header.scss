@@ -1,7 +1,8 @@
 @use '../base/variables' as var;
 @use '../base/functions' as fun;
 
-header{
+header,
+.header{
     position: fixed;
     top: 0;
     left: 0;
