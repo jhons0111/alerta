@@ -59,6 +59,10 @@
         opacity: 0;
       }
     }
+    &.disabled{
+      display: none;
+      
+    }
 }
 
 @media(max-width: fun.breakpoints('ipad-small')){

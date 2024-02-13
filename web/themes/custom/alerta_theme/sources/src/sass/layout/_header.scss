@@ -1,0 +1,59 @@
+@use '../base/variables' as var;
+@use '../base/functions' as fun;
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 0;
+    & > div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        max-width: var.$limit-width;
+        margin: auto;
+    }
+    #block-alerta-theme-site-branding{
+        a{
+            width: 100%;
+            max-width: 40px;
+            display: block;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    nav{
+        ul{
+            display: flex;
+            gap: 10px;
+        }
+        li{
+            a{
+                border: 2px solid fun.color('primary');
+                font-family: 'rift';
+                font-weight: 400;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-width: 125px;
+                border-radius: 100px;
+                font-size: 1.6rem;
+                height: 30px;
+            }
+            &:first-child{
+                a{
+                    color: fun.color('primary');
+                }
+            }
+            &:last-child{
+                a{
+                    color: fun.color('black');
+                    background-color: fun.color('primary');
+                }
+            }
+        }
+    }
+}
