@@ -1,10 +1,14 @@
 global-styles:
   version: 1.0
   js:
-    js/global.js: {}
+    sources/dist/js/mainscript.js: {
+      attributes: {
+        type: module
+      }
+    }
   dependencies:
     - core/drupal
     - core/jquery
   css:
     theme:
-      css/main.css: {}
+      sources/dist/css/main.css: {}
