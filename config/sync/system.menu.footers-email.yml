@@ -1,0 +1,8 @@
+uuid: 4e778cc8-36b4-4948-9157-fe0ba11bfab7
+langcode: es
+status: true
+dependencies: {  }
+id: footers-email
+label: 'Email del footer'
+description: 'Menu para configurar el correo del footer'
+locked: false

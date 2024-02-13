@@ -1,0 +1,25 @@
+uuid: 65340709-f2e9-43a7-9b11-ba3c75f7b56f
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:image_with_link:921c4a71-abaf-4374-b2ed-f88c31d9b066'
+  module:
+    - block_content
+  theme:
+    - alerta_theme
+id: footers_social_media
+theme: alerta_theme
+region: first_footer
+weight: 0
+provider: null
+plugin: 'block_content:921c4a71-abaf-4374-b2ed-f88c31d9b066'
+settings:
+  id: 'block_content:921c4a71-abaf-4374-b2ed-f88c31d9b066'
+  label: 'Redes sociales del footer'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

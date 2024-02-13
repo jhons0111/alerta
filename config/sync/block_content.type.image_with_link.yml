@@ -1,0 +1,8 @@
+uuid: 013455e1-d7ad-4fe1-af8b-2e386f17a9ee
+langcode: es
+status: true
+dependencies: {  }
+id: image_with_link
+label: 'Bloque imagen con link'
+revision: 0
+description: 'Bloque que permite agregar imagenes con link en cualquier región del sitio.'

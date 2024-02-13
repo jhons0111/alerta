@@ -1,0 +1,10 @@
+uuid: c69ed9a8-06af-497b-be23-804a966119d4
+langcode: es
+status: true
+dependencies: {  }
+id: image_with_link
+label: 'Imagen con link'
+icon_uuid: null
+icon_default: null
+description: 'Paragraph que permite agregar una imagen y un link para la imagen.'
+behavior_plugins: {  }

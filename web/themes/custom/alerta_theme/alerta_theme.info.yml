@@ -13,5 +13,6 @@ regions:
   header: 'Header'
   messages: 'Messages'
   content: 'Content'
-  footer: 'Footer'
-  sub_footer: 'Sub footer'
+  first_footer: 'First footer'
+  second_footer: 'Second footer'
+  sub_footer: 'Subfooter'

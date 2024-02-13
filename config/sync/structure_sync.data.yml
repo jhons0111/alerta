@@ -1,0 +1,55 @@
+blocks:
+  -
+    info: 'Marca del sitio personalizada'
+    langcode: es
+    uuid: ffa0eea7-397a-46ea-b177-0fde3d478e4b
+    bundle: basic
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: '<p>©2024 ALERTA AGENCY</p>'
+          summary: ''
+          format: basic_html
+  -
+    info: 'Imagen del header'
+    langcode: es
+    uuid: bd340212-bf66-4694-bfbc-2e58f42a5784
+    bundle: only_one_image
+    revision_id: null
+    rev_id_current: null
+    fields:
+      field_image:
+        -
+          target_id: '1'
+menus:
+  -
+    menu_name: header
+    title: Reel
+    parent: null
+    uri: 'internal:/reel'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: true
+    weight: -50
+    langcode: es
+    uuid: 1bd01270-7e8d-4cb7-bac9-f81463a02323
+    options: {  }
+  -
+    menu_name: header
+    title: 'Get in touch'
+    parent: null
+    uri: 'internal:/get-in-touch'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: -49
+    langcode: es
+    uuid: 9fb11482-df19-4483-ae08-7508f0a22c31
+    options: {  }
+taxonomies:
+  tags: {  }
+log: 1

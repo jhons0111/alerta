@@ -1,0 +1,25 @@
+uuid: b1852d4c-5037-447b-a805-20cffd5f8f79
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.footers-email
+  module:
+    - system
+  theme:
+    - alerta_theme
+id: footers_email
+theme: alerta_theme
+region: second_footer
+weight: 0
+provider: null
+plugin: 'system_menu_block:footers-email'
+settings:
+  id: 'system_menu_block:footers-email'
+  label: 'Email del footer'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }
