@@ -1,10 +1,13 @@
 //Styles
 import '../sass/main.scss';
-//Modules
-import { loadExampleHandlers } from './modules/test';
+//Layout
+import { loadLoaderHandlers } from './layout/Loader';
+//Animations
+import { loadLineHandlers } from './animations/Line';
 
 
 //Load modules
 window.addEventListener('load', ()=>{
-    loadExampleHandlers();
+    loadLoaderHandlers();
+    loadLineHandlers();
 });
