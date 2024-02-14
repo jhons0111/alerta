@@ -1,0 +1,57 @@
+@use '../base/functions' as fun;
+
+.btn,
+.header nav ul a{
+    border: 2px solid fun.color('primary');
+    font-family: 'rift';
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 125px;
+    border-radius: 100px;
+    font-size: 1.6rem;
+    height: 30px;
+    position: relative;
+    color: fun.color('black');
+    background-color: fun.color('primary');
+    overflow: hidden;
+    transition: .5s ease all;
+    &::before,
+    &::after{
+        content: "";
+        position: absolute;
+        width: 120%;
+        height: 10px;
+        border-radius: 100%;
+        background-color: fun.color('secondary');
+        transition: .5s ease all;
+        z-index: -2;
+        bottom: -20px;
+    }
+    &::after{
+        transition-delay: .1s;
+        background-color: fun.color('tertiary');
+        z-index: -1;
+    }
+    &--secondary{
+        background-color: transparent;
+    }
+    &:hover{
+        background: transparent;
+        color: fun.color('white');
+        border-color: fun.color('tertiary');
+        &::before,
+        &::after{
+            height: 210%;
+        }
+    }
+}
+
+@media(max-width: fun.breakpoints('ipad-small')){
+    .btn,
+    .header nav ul a{
+        font-size: 1.5rem;
+        min-width: 100px;
+    }
+}

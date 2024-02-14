@@ -1,5 +1,5 @@
-const s = (() => {
-  const t = () => {
+const m = (() => {
+  const o = () => {
     const e = document.querySelector(".loader");
     setTimeout(() => {
       e.classList.add("line-animate");
@@ -10,32 +10,85 @@ const s = (() => {
   return {
     setHandleEvent: function() {
       try {
-        t();
+        o();
       } catch (e) {
       }
     }
   };
-})(), r = () => {
-  s.setHandleEvent();
-}, d = (() => {
-  const t = (o) => {
-    const n = path1.getTotalLength(), a = path2.getTotalLength();
-    path1.style.strokeDasharray = n, path1.style.strokeDashoffset = n, path2.style.strokeDasharray = a, path2.style.strokeDashoffset = a;
+})(), y = () => {
+  m.setHandleEvent();
+}, w = (() => {
+  const o = () => {
+    let e = 0;
+    window.addEventListener("scroll", function() {
+      const n = window.pageYOffset || document.documentElement.scrollTop, t = document.querySelector(".header");
+      n > e ? t.classList.add("scroll") : n < e && t.classList.remove("scroll"), e = n <= 0 ? 0 : n;
+    });
+  };
+  return {
+    setHandleEvent: function() {
+      try {
+        o();
+      } catch (e) {
+      }
+    }
+  };
+})(), p = () => {
+  w.setHandleEvent();
+}, g = (() => {
+  const o = () => {
+    const e = () => {
+      const n = document.body, t = document.querySelector(".dialog-off-canvas-main-canvas");
+      let s = 0, a = 0, r = s, l = a;
+      n.style.height = t.clientHeight + "px", t.style.position = "fixed", t.style.top = 0, t.style.left = 0, window.addEventListener("scroll", h), window.addEventListener("scroll", () => {
+        n.style.height = t.clientHeight + "px";
+      }), window.addEventListener("resize", () => {
+        n.style.height = t.clientHeight + "px";
+      });
+      function h() {
+        s = window.pageXOffset, a = window.pageYOffset;
+      }
+      window.requestAnimationFrame(d);
+      function d() {
+        r = c(r, s, 0.07), l = c(l, a, 0.07), r = Math.floor(r * 100) / 100, l = Math.floor(l * 100) / 100, t.style.transform = `translate3d(-${r}px, -${l}px, 0px)`, window.requestAnimationFrame(d);
+      }
+      function c(u, f, i) {
+        return (1 - i) * u + i * f;
+      }
+    };
+    setTimeout(() => {
+      window.screen.width >= 992 && e();
+    }, 2e3);
+  };
+  return {
+    setHandleEvent: function() {
+      try {
+        o();
+      } catch (e) {
+      }
+    }
+  };
+})(), H = () => {
+  g.setHandleEvent();
+}, L = (() => {
+  const o = (n) => {
+    const t = path1.getTotalLength(), s = path2.getTotalLength();
+    path1.style.strokeDasharray = t, path1.style.strokeDashoffset = t, path2.style.strokeDasharray = s, path2.style.strokeDashoffset = s;
   }, e = () => {
-    document.querySelector(".loader #path1"), document.querySelector(".loader #path2"), t(), t();
+    document.querySelector(".loader #path1"), document.querySelector(".loader #path2"), o(), o();
   };
   return {
     setHandleEvent: function() {
       try {
         e();
-      } catch (o) {
+      } catch (n) {
       }
     }
   };
-})(), l = () => {
-  d.setHandleEvent();
+})(), v = () => {
+  L.setHandleEvent();
 };
 window.addEventListener("load", () => {
-  r(), l();
+  y(), v(), p(), H();
 });
 //# sourceMappingURL=mainscript.js.map
