@@ -1,5 +1,16 @@
 blocks:
   -
+    info: 'Imagen del header'
+    langcode: es
+    uuid: bd340212-bf66-4694-bfbc-2e58f42a5784
+    bundle: only_one_image
+    revision_id: null
+    rev_id_current: null
+    fields:
+      field_image:
+        -
+          target_id: '1'
+  -
     info: 'Marca del sitio personalizada'
     langcode: es
     uuid: ffa0eea7-397a-46ea-b177-0fde3d478e4b
@@ -13,16 +24,20 @@ blocks:
           summary: ''
           format: basic_html
   -
-    info: 'Imagen del header'
+    info: 'Redes sociales del footer'
     langcode: es
-    uuid: bd340212-bf66-4694-bfbc-2e58f42a5784
-    bundle: only_one_image
+    uuid: 921c4a71-abaf-4374-b2ed-f88c31d9b066
+    bundle: image_with_link
     revision_id: null
     rev_id_current: null
     fields:
-      field_image:
+      field_image_with_link:
         -
           target_id: '1'
+          target_revision_id: '1'
+        -
+          target_id: '2'
+          target_revision_id: '2'
 menus:
   -
     menu_name: header
@@ -49,6 +64,19 @@ menus:
     weight: -49
     langcode: es
     uuid: 9fb11482-df19-4483-ae08-7508f0a22c31
+    options: {  }
+  -
+    menu_name: footers-email
+    title: email@email.com
+    parent: null
+    uri: 'internal:/mail:algo'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: es
+    uuid: f1e62b13-f93b-45d3-a475-6501f348cff6
     options: {  }
 taxonomies:
   tags: {  }
