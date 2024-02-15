@@ -1,0 +1,34 @@
+uuid: 9a3aaa11-7ca4-4db8-b4ef-3fdb8130cd14
+langcode: es
+status: true
+dependencies:
+  config:
+    - webform.webform.contact_form
+  module:
+    - user
+    - webform
+  theme:
+    - alerta_theme
+id: webform
+theme: alerta_theme
+region: contact_form
+weight: 0
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: Webform
+  label_display: visible
+  provider: webform
+  webform_id: contact_form
+  default_data: ''
+  redirect: false
+  lazy: false
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous

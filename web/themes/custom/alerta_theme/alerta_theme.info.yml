@@ -12,6 +12,7 @@ libraries:
 regions:
   header: 'Header'
   messages: 'Messages'
+  contact_form: 'Contact form'
   content: 'Content'
   first_footer: 'First footer'
   second_footer: 'Second footer'
