@@ -17,24 +17,65 @@
 {% endblock %}
 
 <footer class="footer">
-    <div id="first-section">
-        <div class="footer-one">
-            {% block first_footer %}
-                    {{ page.first_footer }}
-            {% endblock %}
+    <!--Content-->
+    <div class="footer__content">
+        <div class="block-content">
+            <div class="item__networks">
+                <p class="social__media">Social media</p>
+                <div class="social__networks">
+                    {% block first_footer %}
+                            {{ page.first_footer }}
+                    {% endblock %}
+                </div>
+            </div>
+            <div class="item__email">
+                <picture>
+                    <svg width="71" height="49" viewBox="0 0 71 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="5.5" y="9.5" width="60" height="38" stroke="white" stroke-width="3"/>
+                        <path d="M62.1771 10.25L35.5 33.0276L8.82294 10.25L62.1771 10.25Z" stroke="white" stroke-width="3"/>
+                    </svg>
+                </picture>
+                <div class="footer__contact">
+                    {% block second_footer %}
+                            {{ page.second_footer }}
+                    {% endblock %}
+                </div>
+            </div>
         </div>
-        <div class="footer-two">
-            {% block second_footer %}
-                    {{ page.second_footer }}
-            {% endblock %}
+        <!--Block map-->
+        <div class="block-map">
+            <div class="map">
+                <img src="https://lacuraestaentusmanos.150porciento.com/wp-content/uploads/2024/02/Basemap-image.jpg" alt="">
+            </div>
+            <div class="block">
+                <div class="certified">
+                    <p>CERTIFIED BY</p>
+                </div>
+                <picture class="image-certify">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="49" viewBox="0 0 48 49" fill="none">
+                        <path d="M25.7073 21.5157L25.8021 22.2653L26.5516 22.3617L40.1436 24.1104L26.5516 25.859L25.8021 25.9554L25.7073 26.705L23.9818 40.3458L22.2563 26.705L22.1614 25.9554L21.412 25.859L7.81999 24.1104L21.412 22.3617L22.1614 22.2653L22.2563 21.5157L23.9818 7.87492L25.7073 21.5157Z" stroke="white" stroke-width="1.95316"/>
+                        <circle cx="23.9814" cy="23.9082" r="16.3803" stroke="white" stroke-width="1.95316"/>
+                        <circle cx="37.6441" cy="13.4678" r="1.75591" stroke="white" stroke-width="1.95316"/>
+                    </svg>
+                </picture>
+                <div class="find">
+                    <p>Find us</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="49" viewBox="0 0 48 49" fill="none">
+                        <path d="M25.7073 21.5157L25.8021 22.2653L26.5516 22.3617L40.1436 24.1104L26.5516 25.859L25.8021 25.9554L25.7073 26.705L23.9818 40.3458L22.2563 26.705L22.1614 25.9554L21.412 25.859L7.81999 24.1104L21.412 22.3617L22.1614 22.2653L22.2563 21.5157L23.9818 7.87492L25.7073 21.5157Z" stroke="white" stroke-width="1.95316"/>
+                        <circle cx="23.9814" cy="23.9082" r="16.3803" stroke="white" stroke-width="1.95316"/>
+                        <circle cx="37.6441" cy="13.4678" r="1.75591" stroke="white" stroke-width="1.95316"/>
+                    </svg>
+                </div>
+            </div>
         </div>
-        <div id="map-id">
-        
-        </div>
+        <!--End block map-->
     </div>
-    <div class="second-section">
+    <!--End content-->
+    <!--Copyright-->
+    <div class="footer__copyrigth">
         {% block sub_footer %}
                 {{ page.sub_footer }}
         {% endblock %}
     </div>
+    <!--End copyright-->
 </footer>
