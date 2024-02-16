@@ -1,0 +1,24 @@
+{# Verifica si el campo tiene al menos un valor #}
+{% if content.field_image['#items'].value %}
+  {# Obtiene el primer valor del campo que contiene la referencia a la entidad #}
+  {% set imagen = content.field_image['#items'].entity %}
+
+    {# Imprime la imagen con la etiqueta img #}
+    <img src="{{ file_url(imagen.field_media_image.entity.fileuri) }}" alt="{{ imagen.field_descripcion.value }}">
+{% endif %}
+
+{# Obtener el valor del campo #}
+{% set link = content.field_link['#items'].0.uri %}
+
+{# Verificar si la URL es interna o externa #}
+{% if link starts with 'internal:' %}
+  {# URL interna #}
+  {% set internalPath = link | replace({'internal:': ''}) %}
+  {% set url = file_url(internalPath) %}
+{% else %}
+  {# URL externa #}
+  {% set url = link %}
+{% endif %}
+
+{# Imprimir la URL #}
+<a href="{{ url }}" target="_blank">{{ url }}</a>
