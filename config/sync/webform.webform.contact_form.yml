@@ -29,6 +29,11 @@ elements: |-
     '#title': Email
     '#title_display': invisible
     '#placeholder': Correo
+  how_can_we_collaborate:
+    '#type': textarea
+    '#title': 'Como podemos colaborarte'
+    '#title_display': invisible
+    '#placeholder': 'Como podemos colaborarte ?'
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'
