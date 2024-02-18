@@ -17,7 +17,7 @@ const m = (() => {
   };
 })(), y = () => {
   m.setHandleEvent();
-}, w = (() => {
+}, g = (() => {
   const o = () => {
     let e = 0;
     window.addEventListener("scroll", function() {
@@ -34,8 +34,8 @@ const m = (() => {
     }
   };
 })(), p = () => {
-  w.setHandleEvent();
-}, g = (() => {
+  g.setHandleEvent();
+}, w = (() => {
   const o = () => {
     const e = () => {
       const n = document.body, t = document.querySelector(".dialog-off-canvas-main-canvas");
@@ -48,11 +48,11 @@ const m = (() => {
       function h() {
         s = window.pageXOffset, a = window.pageYOffset;
       }
-      window.requestAnimationFrame(d);
-      function d() {
-        r = c(r, s, 0.07), l = c(l, a, 0.07), r = Math.floor(r * 100) / 100, l = Math.floor(l * 100) / 100, t.style.transform = `translate3d(-${r}px, -${l}px, 0px)`, window.requestAnimationFrame(d);
+      window.requestAnimationFrame(c);
+      function c() {
+        r = d(r, s, 0.07), l = d(l, a, 0.07), r = Math.floor(r * 100) / 100, l = Math.floor(l * 100) / 100, t.style.transform = `translate3d(-${r}px, -${l}px, 0px)`, window.requestAnimationFrame(c);
       }
-      function c(u, f, i) {
+      function d(u, f, i) {
         return (1 - i) * u + i * f;
       }
     };
@@ -69,8 +69,24 @@ const m = (() => {
     }
   };
 })(), H = () => {
-  g.setHandleEvent();
-}, L = (() => {
+  w.setHandleEvent();
+}, v = (() => {
+  const o = () => {
+    document.querySelector("#open-form").addEventListener("click", (n) => {
+      n.target.closest(".join-us").classList.toggle("active");
+    });
+  };
+  return {
+    setHandleEvent: function() {
+      try {
+        o();
+      } catch (e) {
+      }
+    }
+  };
+})(), L = () => {
+  v.setHandleEvent();
+}, E = (() => {
   const o = (n) => {
     const t = path1.getTotalLength(), s = path2.getTotalLength();
     path1.style.strokeDasharray = t, path1.style.strokeDashoffset = t, path2.style.strokeDasharray = s, path2.style.strokeDashoffset = s;
@@ -85,10 +101,10 @@ const m = (() => {
       }
     }
   };
-})(), v = () => {
-  L.setHandleEvent();
+})(), S = () => {
+  E.setHandleEvent();
 };
 window.addEventListener("load", () => {
-  y(), v(), p(), H();
+  y(), S(), p(), H(), L();
 });
 //# sourceMappingURL=mainscript.js.map
