@@ -38,6 +38,9 @@ elements: |-
     '#type': webform_actions
     '#title': 'Submit button(s)'
     '#submit__label': Colaborar
+    '#submit__attributes':
+      class:
+        - btn
 css: ''
 javascript: ''
 settings:

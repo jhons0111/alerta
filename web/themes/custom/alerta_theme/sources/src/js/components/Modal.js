@@ -2,6 +2,12 @@ const Modal = (()=>{
 
     const _ModalConfig = ()=>{
         const btnModal = document.querySelector('#open-form');
+        const bgModal = document.querySelector('#join-form-ctn .join-us__bg');
+        console.log(bgModal);
+        bgModal.addEventListener('click', (e)=>{
+            console.log('click');
+            e.target.closest('.join-us').classList.remove('active');
+        });
 
         btnModal.addEventListener('click', (e)=>{
             e.target.closest('.join-us').classList.toggle('active');
