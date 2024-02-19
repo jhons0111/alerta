@@ -13,7 +13,7 @@ entity_type: paragraph
 bundle: image_with_link
 label: Link
 description: 'Link de la imagen'
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

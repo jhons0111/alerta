@@ -38,17 +38,14 @@ elements: |-
     '#type': webform_actions
     '#title': 'Submit button(s)'
     '#submit__label': Colaborar
-    '#submit__attributes':
-      class:
-        - btn
 css: ''
 javascript: ''
 settings:
-  ajax: false
-  ajax_scroll_top: form
+  ajax: true
+  ajax_scroll_top: ''
   ajax_progress_type: ''
-  ajax_effect: ''
-  ajax_speed: null
+  ajax_effect: slide
+  ajax_speed: 500
   page: true
   page_submit_path: ''
   page_confirm_path: ''
