@@ -1,112 +1,26 @@
+{# Header region #}
 {% block header %}
     <div class="header">
         {{ page.header }}
     </div>
 {% endblock %}
 
+{# Messages region #}
 {% block messages %}
     <div class="messages">
         {{ page.messages }}
     </div>
 {% endblock %}
 
-<section class="join-us ctm-inputs" id="join-form-ctn">
-    <div class="join-us__bg"></div>
-    <div class="join-us__content">
-        <article id="open-form">
-            <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" viewBox="0 0 37 37" fill="none">
-                <path d="M18.5 0L20.9855 16.0145L37 18.5L20.9855 20.9855L18.5 37L16.0145 20.9855L0 18.5L16.0145 16.0145L18.5 0Z" fill="white"/>
-            </svg>
-        </article>
-        <!--Content form-->
-        <article id="join-form">
-            <svg xmlns="http://www.w3.org/2000/svg" width="656" height="666" viewBox="0 0 656 666" fill="none">
-                <path d="M-227.451 -49.6104C-200.267 -91.958 -99.9067 -132.721 -105.516 -65.8569C-126.318 182.127 34.7976 39.3193 149.621 65.4141C321.075 104.379 -21.7403 524.35 370.771 482.287C569.36 461.005 532.62 680.232 777.544 515.901C933.429 411.312 895.935 615.486 969.816 662.943" stroke="url(#paint0_linear_1841_1705)" stroke-width="6"/>
-                <defs>
-                <linearGradient id="paint0_linear_1841_1705" x1="41.2414" y1="84.607" x2="642.092" y2="647.936" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#8700F1"/>
-                <stop offset="0.34375" stop-color="#FF006B"/>
-                <stop offset="0.729167" stop-color="#C8FF6E"/>
-                <stop offset="1" stop-color="#00FFF0" stop-opacity="0.19"/>
-                </linearGradient>
-                </defs>
-            </svg>
-            {% block contact_form %}
-                <div class="contact-form">
-                    {{ page.contact_form }}
-                </div>
-            {% endblock %}
-        </article>
-    </div>
-    <!--End content form-->
-</section>
+{# Contact form region #}
+{% include directory ~ '/templates/includes/contact-form.html.twig' %}
 
+{# Content region #}
 {% block content %}
     <div class="content">
         {{ page.content }}
     </div>
 {% endblock %}
 
-<footer class="footer">
-    <!--Content-->
-    <div class="footer__content">
-        <div class="block-content">
-            <div class="item__networks">
-                <p class="social__media">Social media</p>
-                <div class="social__networks">
-                    {% block first_footer %}
-                            {{ page.first_footer }}
-                    {% endblock %}
-                </div>
-            </div>
-            <div class="item__email">
-                <picture>
-                    <svg width="71" height="49" viewBox="0 0 71 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="5.5" y="9.5" width="60" height="38" stroke="white" stroke-width="3"/>
-                        <path d="M62.1771 10.25L35.5 33.0276L8.82294 10.25L62.1771 10.25Z" stroke="white" stroke-width="3"/>
-                    </svg>
-                </picture>
-                <div class="footer__contact">
-                    {% block second_footer %}
-                            {{ page.second_footer }}
-                    {% endblock %}
-                </div>
-            </div>
-        </div>
-        <!--Block map-->
-        <div class="block-map">
-            <div class="map">
-                <img src="https://lacuraestaentusmanos.150porciento.com/wp-content/uploads/2024/02/Basemap-image.jpg" alt="">
-            </div>
-            <div class="block">
-                <div class="certified">
-                    <p>CERTIFIED BY</p>
-                </div>
-                <picture class="image-certify">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="49" viewBox="0 0 48 49" fill="none">
-                        <path d="M25.7073 21.5157L25.8021 22.2653L26.5516 22.3617L40.1436 24.1104L26.5516 25.859L25.8021 25.9554L25.7073 26.705L23.9818 40.3458L22.2563 26.705L22.1614 25.9554L21.412 25.859L7.81999 24.1104L21.412 22.3617L22.1614 22.2653L22.2563 21.5157L23.9818 7.87492L25.7073 21.5157Z" stroke="white" stroke-width="1.95316"/>
-                        <circle cx="23.9814" cy="23.9082" r="16.3803" stroke="white" stroke-width="1.95316"/>
-                        <circle cx="37.6441" cy="13.4678" r="1.75591" stroke="white" stroke-width="1.95316"/>
-                    </svg>
-                </picture>
-                <div class="find">
-                    <p>Find us</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="49" viewBox="0 0 48 49" fill="none">
-                        <path d="M25.7073 21.5157L25.8021 22.2653L26.5516 22.3617L40.1436 24.1104L26.5516 25.859L25.8021 25.9554L25.7073 26.705L23.9818 40.3458L22.2563 26.705L22.1614 25.9554L21.412 25.859L7.81999 24.1104L21.412 22.3617L22.1614 22.2653L22.2563 21.5157L23.9818 7.87492L25.7073 21.5157Z" stroke="white" stroke-width="1.95316"/>
-                        <circle cx="23.9814" cy="23.9082" r="16.3803" stroke="white" stroke-width="1.95316"/>
-                        <circle cx="37.6441" cy="13.4678" r="1.75591" stroke="white" stroke-width="1.95316"/>
-                    </svg>
-                </div>
-            </div>
-        </div>
-        <!--End block map-->
-    </div>
-    <!--End content-->
-    <!--Copyright-->
-    <div class="footer__copyrigth">
-        {% block sub_footer %}
-                {{ page.sub_footer }}
-        {% endblock %}
-    </div>
-    <!--End copyright-->
-</footer>
+{# Footer region #}
+{% include directory ~ '/templates/includes/footer.html.twig' %}
