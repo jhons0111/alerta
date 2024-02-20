@@ -38,6 +38,9 @@ elements: |-
     '#type': webform_actions
     '#title': 'Submit button(s)'
     '#submit__label': Colaborar
+    '#submit__attributes':
+      class:
+        - btn
 css: ''
 javascript: ''
 settings:
@@ -49,7 +52,7 @@ settings:
   page: true
   page_submit_path: ''
   page_confirm_path: ''
-  page_theme_name: ''
+  page_theme_name: alerta_theme
   form_title: both
   form_submit_once: false
   form_open_message: ''
