@@ -1,31 +1,56 @@
+//Strenuous
 @font-face {
     font-family: 'Strenuous';
-    src: url("https://fonts.cdnfonts.com/s/4994/strenuous 3d.woff");
+    src: url("./../../dist/fonts/strenuous-regular.otf");
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Strenuous';
+    src: url("./../../dist/fonts/strenuous-medium.otf");
+    font-weight: 500;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Strenuous';
+    src: url("./../../dist/fonts/strenuous-bold.ttf");
     font-weight: 700;
     font-display: swap;
 }
-
+@font-face {
+    font-family: 'Strenuous';
+    src: url("./../../dist/fonts/strenuous-3d.ttf");
+    font-weight: 800;
+    font-display: swap;
+}
+//Rift
 @font-face {
     font-family: 'rift';
     src: url("./../../dist/fonts/rift.otf");
     font-weight: 400;
     font-display: swap;
 }
-
+//Etna font
 @font-face {
-    font-family: 'nombre fuente';
-    src: url("url de la fuente");
+    font-family: 'etna';
+    src: url("./../../dist/fonts/etna-bold-italic.otf");
     font-weight: 700;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'nombre fuente';
-    src: url("url de la fuente");
-    font-weight: 800;
+    font-family: 'etna';
+    src: url("./../../dist/fonts/etna-light-italic.otf");
+    font-weight: 300;
     font-display: swap;
 }
-
+//TT GLOBS
+@font-face {
+    font-family: 'globs';
+    src: url("./../../dist/fonts/tt-globs-regular.ttf");
+    font-weight: 400;
+    font-display: swap;
+}
 
 html {
     font-size: 62.5%;

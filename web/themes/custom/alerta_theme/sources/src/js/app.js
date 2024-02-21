@@ -9,6 +9,8 @@ import { loadModalHandlers } from './components/Modal';
 import { loadFormHandlers } from './components/Form';
 //Animations
 import { loadLineHandlers } from './animations/Line';
+//Libs
+import { loadAosHandlers } from './libs/Aos';
 
 
 //Load modules
@@ -19,4 +21,5 @@ window.addEventListener('load', ()=>{
     loadScrollHandlers();
     loadModalHandlers();
     loadFormHandlers();
+    loadAosHandlers();
 });

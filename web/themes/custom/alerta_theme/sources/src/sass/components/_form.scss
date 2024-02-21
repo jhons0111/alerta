@@ -110,17 +110,21 @@
                 }
             }
             #edit-second-title,
-            #edit-first-title{
+            #edit-first-title,
+            [id^="edit-second-title"],
+            [id^="edit-first-title"]{
                 color: fun.color('primary');
                 font-size: 2.5rem;
                 font-weight: 600;
                 text-align: center;
                 grid-column: 1/3;
             }
-            #edit-first-title{
+            #edit-first-title,
+            [id^="edit-first-title"]{
                 margin-top: 30px;
             }
-            #edit-second-title{
+            #edit-second-title,
+            [id^="edit-second-title"]{
                 color: fun.color('white');
                 margin-bottom: 30px;
             }

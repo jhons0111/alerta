@@ -1,0 +1,28 @@
+.ctm-fonts{
+    h1,h2,h3,h4,h5,h6,p,a{
+        &.Strenuous{
+            font-family: 'Strenuous';
+            span{
+                font-family: 'Strenuous';
+            }
+        }
+        &.rift{
+            font-family: 'rift';
+            span{
+                font-family: 'rift';
+            }
+        }
+        &.etna{
+            font-family: 'etna';
+            span{
+                font-family: 'etna';
+            }
+        }
+        &.globs{
+            font-family: 'globs';
+            span{
+                font-family: 'globs';
+            }
+        }
+    }
+}

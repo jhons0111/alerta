@@ -1,0 +1,30 @@
+@use '../base/functions' as fun;
+
+.home{
+    &.aos-animate{
+        article:last-child{
+            h3:last-child{
+                span{
+                    color: fun.color('black');
+                }
+                &::before{
+                    width: 110%;
+                }
+            }
+        }
+    }
+}
+
+.home-line{
+    opacity: 0;
+    &.aos-animate{
+        opacity: 1;
+        #pathHome1,
+        #pathHome2 {
+            stroke-dasharray: 3000;
+            stroke-dashoffset: 3000;
+            animation: draw 1s linear forwards;
+            animation-delay: .5s;
+        }
+    }
+}

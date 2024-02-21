@@ -7,4 +7,7 @@ body::-webkit-scrollbar{
 }
 body{
     overflow-x: hidden;
+    .dialog-off-canvas-main-canvas{
+        width: 100%;
+    }
 }

@@ -1,130 +1,518 @@
-const f = (() => {
-  const n = () => {
-    const t = document.querySelector(".loader");
+const te = (() => {
+  const j = () => {
+    const h = document.querySelector(".loader");
     setTimeout(() => {
-      t.classList.add("line-animate");
+      h.classList.add("line-animate");
     }, 1500), setTimeout(() => {
-      t.classList.add("hidden");
+      h.classList.add("hidden");
     }, 2250);
   };
   return {
     setHandleEvent: function() {
       try {
-        n();
-      } catch (t) {
+        j();
+      } catch (h) {
       }
     }
   };
-})(), y = () => {
-  f.setHandleEvent();
-}, g = (() => {
-  const n = () => {
-    let t = 0;
+})(), ne = () => {
+  te.setHandleEvent();
+}, oe = (() => {
+  const j = () => {
+    let h = 0;
     window.addEventListener("scroll", function() {
-      const o = window.pageYOffset || document.documentElement.scrollTop, e = document.querySelector(".header");
-      o > t ? e.classList.add("scroll") : o < t && e.classList.remove("scroll"), t = o <= 0 ? 0 : o;
+      const d = window.pageYOffset || document.documentElement.scrollTop, t = document.querySelector(".header");
+      d > h ? t.classList.add("scroll") : d < h && t.classList.remove("scroll"), h = d <= 0 ? 0 : d;
     });
   };
   return {
     setHandleEvent: function() {
       try {
-        n();
-      } catch (t) {
+        j();
+      } catch (h) {
       }
     }
   };
-})(), p = () => {
-  g.setHandleEvent();
-}, v = (() => {
-  const n = () => {
-    const t = () => {
-      const o = document.body, e = document.querySelector(".dialog-off-canvas-main-canvas");
-      let s = 0, c = 0, r = s, l = c;
-      o.style.height = e.clientHeight + "px", e.style.position = "fixed", e.style.top = 0, e.style.left = 0, window.addEventListener("scroll", u), window.addEventListener("scroll", () => {
-        o.style.height = e.clientHeight + "px";
+})(), re = () => {
+  oe.setHandleEvent();
+}, ie = (() => {
+  const j = () => {
+    const h = () => {
+      const d = document.body, t = document.querySelector(".dialog-off-canvas-main-canvas");
+      let r = 0, n = 0, s = r, m = n;
+      d.style.height = t.clientHeight + "px", t.style.position = "fixed", t.style.top = 0, t.style.left = 0, window.addEventListener("scroll", w), window.addEventListener("scroll", () => {
+        d.style.height = t.clientHeight + "px";
       }), window.addEventListener("resize", () => {
-        o.style.height = e.clientHeight + "px";
+        d.style.height = t.clientHeight + "px";
       });
-      function u() {
-        s = window.pageXOffset, c = window.pageYOffset;
+      function w() {
+        r = window.pageXOffset, n = window.pageYOffset;
       }
-      window.requestAnimationFrame(a);
-      function a() {
-        r = d(r, s, 0.07), l = d(l, c, 0.07), r = Math.floor(r * 100) / 100, l = Math.floor(l * 100) / 100, e.style.transform = `translate3d(-${r}px, -${l}px, 0px)`, window.requestAnimationFrame(a);
+      window.requestAnimationFrame(i);
+      function i() {
+        s = p(s, r, 0.07), m = p(m, n, 0.07), s = Math.floor(s * 100) / 100, m = Math.floor(m * 100) / 100, t.style.transform = `translate3d(-${s}px, -${m}px, 0px)`, window.requestAnimationFrame(i);
       }
-      function d(h, m, i) {
-        return (1 - i) * h + i * m;
+      function p(c, l, u) {
+        return (1 - u) * c + u * l;
       }
     };
     setTimeout(() => {
-      window.screen.width >= 992 && t();
+      window.screen.width >= 992 && h();
     }, 2e3);
   };
   return {
     setHandleEvent: function() {
       try {
-        n();
-      } catch (t) {
+        j();
+      } catch (h) {
       }
     }
   };
-})(), H = () => {
-  v.setHandleEvent();
-}, w = (() => {
-  const n = () => {
-    const t = document.querySelector("#open-form"), o = document.querySelector("#join-form-ctn .join-us__bg");
-    console.log(o), o.addEventListener("click", (e) => {
-      console.log("click"), e.target.closest(".join-us").classList.remove("active");
-    }), t.addEventListener("click", (e) => {
-      e.target.closest(".join-us").classList.toggle("active");
+})(), ae = () => {
+  ie.setHandleEvent();
+}, ce = (() => {
+  const j = () => {
+    const h = document.querySelector("#open-form"), d = document.querySelector("#join-form-ctn .join-us__bg");
+    console.log(d), d.addEventListener("click", (t) => {
+      console.log("click"), t.target.closest(".join-us").classList.remove("active");
+    }), h.addEventListener("click", (t) => {
+      t.target.closest(".join-us").classList.toggle("active");
     });
   };
   return {
     setHandleEvent: function() {
       try {
-        n();
-      } catch (t) {
+        j();
+      } catch (h) {
       }
     }
   };
-})(), L = () => {
-  w.setHandleEvent();
-}, E = (() => {
-  const n = () => {
-    const t = document.querySelector("#join-form-ctn"), o = document.querySelector(".header"), e = document.body;
+})(), se = () => {
+  ce.setHandleEvent();
+}, ue = (() => {
+  const j = () => {
+    const h = document.querySelector("#join-form-ctn"), d = document.querySelector(".header"), t = document.body;
     setTimeout(() => {
-      e.appendChild(o), e.appendChild(t);
+      t.appendChild(d), t.appendChild(h);
     }, 2500);
   };
   return {
     setHandleEvent: function() {
       try {
-        n();
-      } catch (t) {
+        j();
+      } catch (h) {
       }
     }
   };
-})(), S = () => {
-  E.setHandleEvent();
-}, q = (() => {
-  const n = (o) => {
-    const e = path1.getTotalLength(), s = path2.getTotalLength();
-    path1.style.strokeDasharray = e, path1.style.strokeDashoffset = e, path2.style.strokeDasharray = s, path2.style.strokeDashoffset = s;
-  }, t = () => {
-    document.querySelector(".loader #path1"), document.querySelector(".loader #path2"), n(), n();
+})(), de = () => {
+  ue.setHandleEvent();
+}, le = (() => {
+  const j = (d) => {
+    const t = path1.getTotalLength(), r = path2.getTotalLength();
+    path1.style.strokeDasharray = t, path1.style.strokeDashoffset = t, path2.style.strokeDasharray = r, path2.style.strokeDashoffset = r;
+  }, h = () => {
+    document.querySelector(".loader #path1"), document.querySelector(".loader #path2"), j(), j();
   };
   return {
     setHandleEvent: function() {
       try {
-        t();
-      } catch (o) {
+        h();
+      } catch (d) {
       }
     }
   };
-})(), x = () => {
-  q.setHandleEvent();
+})(), fe = () => {
+  le.setHandleEvent();
+};
+var me = typeof globalThis != "undefined" ? globalThis : typeof window != "undefined" ? window : typeof global != "undefined" ? global : typeof self != "undefined" ? self : {}, ee = { exports: {} };
+(function(j, h) {
+  (function(d, t) {
+    j.exports = t();
+  })(me, function() {
+    return function(d) {
+      function t(n) {
+        if (r[n])
+          return r[n].exports;
+        var s = r[n] = { exports: {}, id: n, loaded: !1 };
+        return d[n].call(s.exports, s, s.exports, t), s.loaded = !0, s.exports;
+      }
+      var r = {};
+      return t.m = d, t.c = r, t.p = "dist/", t(0);
+    }([function(d, t, r) {
+      function n(a) {
+        return a && a.__esModule ? a : { default: a };
+      }
+      var s = Object.assign || function(a) {
+        for (var O = 1; O < arguments.length; O++) {
+          var q = arguments[O];
+          for (var C in q)
+            Object.prototype.hasOwnProperty.call(q, C) && (a[C] = q[C]);
+        }
+        return a;
+      }, m = r(1), w = (n(m), r(6)), i = n(w), p = r(7), c = n(p), l = r(8), u = n(l), v = r(9), E = n(v), H = r(10), I = n(H), K = r(11), X = n(K), J = r(14), R = n(J), L = [], G = !1, y = { offset: 120, delay: 0, easing: "ease", duration: 400, disable: !1, once: !1, startEvent: "DOMContentLoaded", throttleDelay: 99, debounceDelay: 50, disableMutationObserver: !1 }, T = function() {
+        var a = arguments.length > 0 && arguments[0] !== void 0 && arguments[0];
+        if (a && (G = !0), G)
+          return L = (0, X.default)(L, y), (0, I.default)(L, y.once), L;
+      }, P = function() {
+        L = (0, R.default)(), T();
+      }, o = function() {
+        L.forEach(function(a, O) {
+          a.node.removeAttribute("data-aos"), a.node.removeAttribute("data-aos-easing"), a.node.removeAttribute("data-aos-duration"), a.node.removeAttribute("data-aos-delay");
+        });
+      }, e = function(a) {
+        return a === !0 || a === "mobile" && E.default.mobile() || a === "phone" && E.default.phone() || a === "tablet" && E.default.tablet() || typeof a == "function" && a() === !0;
+      }, f = function(a) {
+        y = s(y, a), L = (0, R.default)();
+        var O = document.all && !window.atob;
+        return e(y.disable) || O ? o() : (y.disableMutationObserver || u.default.isSupported() || (console.info(`
+      aos: MutationObserver is not supported on this browser,
+      code mutations observing has been disabled.
+      You may have to call "refreshHard()" by yourself.
+    `), y.disableMutationObserver = !0), document.querySelector("body").setAttribute("data-aos-easing", y.easing), document.querySelector("body").setAttribute("data-aos-duration", y.duration), document.querySelector("body").setAttribute("data-aos-delay", y.delay), y.startEvent === "DOMContentLoaded" && ["complete", "interactive"].indexOf(document.readyState) > -1 ? T(!0) : y.startEvent === "load" ? window.addEventListener(y.startEvent, function() {
+          T(!0);
+        }) : document.addEventListener(y.startEvent, function() {
+          T(!0);
+        }), window.addEventListener("resize", (0, c.default)(T, y.debounceDelay, !0)), window.addEventListener("orientationchange", (0, c.default)(T, y.debounceDelay, !0)), window.addEventListener("scroll", (0, i.default)(function() {
+          (0, I.default)(L, y.once);
+        }, y.throttleDelay)), y.disableMutationObserver || u.default.ready("[data-aos]", P), L);
+      };
+      d.exports = { init: f, refresh: T, refreshHard: P };
+    }, function(d, t) {
+    }, , , , , function(d, t) {
+      (function(r) {
+        function n(e, f, a) {
+          function O(b) {
+            var S = _, W = A;
+            return _ = A = void 0, $ = b, x = e.apply(W, S);
+          }
+          function q(b) {
+            return $ = b, k = setTimeout(B, f), F ? O(b) : x;
+          }
+          function C(b) {
+            var S = b - M, W = b - $, Z = f - S;
+            return D ? P(Z, N - W) : Z;
+          }
+          function Y(b) {
+            var S = b - M, W = b - $;
+            return M === void 0 || S >= f || S < 0 || D && W >= N;
+          }
+          function B() {
+            var b = o();
+            return Y(b) ? U(b) : void (k = setTimeout(B, C(b)));
+          }
+          function U(b) {
+            return k = void 0, g && _ ? O(b) : (_ = A = void 0, x);
+          }
+          function V() {
+            k !== void 0 && clearTimeout(k), $ = 0, _ = M = A = k = void 0;
+          }
+          function Q() {
+            return k === void 0 ? x : U(o());
+          }
+          function z() {
+            var b = o(), S = Y(b);
+            if (_ = arguments, A = this, M = b, S) {
+              if (k === void 0)
+                return q(M);
+              if (D)
+                return k = setTimeout(B, f), O(M);
+            }
+            return k === void 0 && (k = setTimeout(B, f)), x;
+          }
+          var _, A, N, x, k, M, $ = 0, F = !1, D = !1, g = !0;
+          if (typeof e != "function")
+            throw new TypeError(l);
+          return f = p(f) || 0, m(a) && (F = !!a.leading, D = "maxWait" in a, N = D ? T(p(a.maxWait) || 0, f) : N, g = "trailing" in a ? !!a.trailing : g), z.cancel = V, z.flush = Q, z;
+        }
+        function s(e, f, a) {
+          var O = !0, q = !0;
+          if (typeof e != "function")
+            throw new TypeError(l);
+          return m(a) && (O = "leading" in a ? !!a.leading : O, q = "trailing" in a ? !!a.trailing : q), n(e, f, { leading: O, maxWait: f, trailing: q });
+        }
+        function m(e) {
+          var f = typeof e == "undefined" ? "undefined" : c(e);
+          return !!e && (f == "object" || f == "function");
+        }
+        function w(e) {
+          return !!e && (typeof e == "undefined" ? "undefined" : c(e)) == "object";
+        }
+        function i(e) {
+          return (typeof e == "undefined" ? "undefined" : c(e)) == "symbol" || w(e) && y.call(e) == v;
+        }
+        function p(e) {
+          if (typeof e == "number")
+            return e;
+          if (i(e))
+            return u;
+          if (m(e)) {
+            var f = typeof e.valueOf == "function" ? e.valueOf() : e;
+            e = m(f) ? f + "" : f;
+          }
+          if (typeof e != "string")
+            return e === 0 ? e : +e;
+          e = e.replace(E, "");
+          var a = I.test(e);
+          return a || K.test(e) ? X(e.slice(2), a ? 2 : 8) : H.test(e) ? u : +e;
+        }
+        var c = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function(e) {
+          return typeof e;
+        } : function(e) {
+          return e && typeof Symbol == "function" && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e;
+        }, l = "Expected a function", u = NaN, v = "[object Symbol]", E = /^\s+|\s+$/g, H = /^[-+]0x[0-9a-f]+$/i, I = /^0b[01]+$/i, K = /^0o[0-7]+$/i, X = parseInt, J = (typeof r == "undefined" ? "undefined" : c(r)) == "object" && r && r.Object === Object && r, R = (typeof self == "undefined" ? "undefined" : c(self)) == "object" && self && self.Object === Object && self, L = J || R || Function("return this")(), G = Object.prototype, y = G.toString, T = Math.max, P = Math.min, o = function() {
+          return L.Date.now();
+        };
+        d.exports = s;
+      }).call(t, function() {
+        return this;
+      }());
+    }, function(d, t) {
+      (function(r) {
+        function n(o, e, f) {
+          function a(g) {
+            var b = z, S = _;
+            return z = _ = void 0, M = g, N = o.apply(S, b);
+          }
+          function O(g) {
+            return M = g, x = setTimeout(Y, e), $ ? a(g) : N;
+          }
+          function q(g) {
+            var b = g - k, S = g - M, W = e - b;
+            return F ? T(W, A - S) : W;
+          }
+          function C(g) {
+            var b = g - k, S = g - M;
+            return k === void 0 || b >= e || b < 0 || F && S >= A;
+          }
+          function Y() {
+            var g = P();
+            return C(g) ? B(g) : void (x = setTimeout(Y, q(g)));
+          }
+          function B(g) {
+            return x = void 0, D && z ? a(g) : (z = _ = void 0, N);
+          }
+          function U() {
+            x !== void 0 && clearTimeout(x), M = 0, z = k = _ = x = void 0;
+          }
+          function V() {
+            return x === void 0 ? N : B(P());
+          }
+          function Q() {
+            var g = P(), b = C(g);
+            if (z = arguments, _ = this, k = g, b) {
+              if (x === void 0)
+                return O(k);
+              if (F)
+                return x = setTimeout(Y, e), a(k);
+            }
+            return x === void 0 && (x = setTimeout(Y, e)), N;
+          }
+          var z, _, A, N, x, k, M = 0, $ = !1, F = !1, D = !0;
+          if (typeof o != "function")
+            throw new TypeError(c);
+          return e = i(e) || 0, s(f) && ($ = !!f.leading, F = "maxWait" in f, A = F ? y(i(f.maxWait) || 0, e) : A, D = "trailing" in f ? !!f.trailing : D), Q.cancel = U, Q.flush = V, Q;
+        }
+        function s(o) {
+          var e = typeof o == "undefined" ? "undefined" : p(o);
+          return !!o && (e == "object" || e == "function");
+        }
+        function m(o) {
+          return !!o && (typeof o == "undefined" ? "undefined" : p(o)) == "object";
+        }
+        function w(o) {
+          return (typeof o == "undefined" ? "undefined" : p(o)) == "symbol" || m(o) && G.call(o) == u;
+        }
+        function i(o) {
+          if (typeof o == "number")
+            return o;
+          if (w(o))
+            return l;
+          if (s(o)) {
+            var e = typeof o.valueOf == "function" ? o.valueOf() : o;
+            o = s(e) ? e + "" : e;
+          }
+          if (typeof o != "string")
+            return o === 0 ? o : +o;
+          o = o.replace(v, "");
+          var f = H.test(o);
+          return f || I.test(o) ? K(o.slice(2), f ? 2 : 8) : E.test(o) ? l : +o;
+        }
+        var p = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function(o) {
+          return typeof o;
+        } : function(o) {
+          return o && typeof Symbol == "function" && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o;
+        }, c = "Expected a function", l = NaN, u = "[object Symbol]", v = /^\s+|\s+$/g, E = /^[-+]0x[0-9a-f]+$/i, H = /^0b[01]+$/i, I = /^0o[0-7]+$/i, K = parseInt, X = (typeof r == "undefined" ? "undefined" : p(r)) == "object" && r && r.Object === Object && r, J = (typeof self == "undefined" ? "undefined" : p(self)) == "object" && self && self.Object === Object && self, R = X || J || Function("return this")(), L = Object.prototype, G = L.toString, y = Math.max, T = Math.min, P = function() {
+          return R.Date.now();
+        };
+        d.exports = n;
+      }).call(t, function() {
+        return this;
+      }());
+    }, function(d, t) {
+      function r(p) {
+        var c = void 0, l = void 0;
+        for (c = 0; c < p.length; c += 1)
+          if (l = p[c], l.dataset && l.dataset.aos || l.children && r(l.children))
+            return !0;
+        return !1;
+      }
+      function n() {
+        return window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
+      }
+      function s() {
+        return !!n();
+      }
+      function m(p, c) {
+        var l = window.document, u = n(), v = new u(w);
+        i = c, v.observe(l.documentElement, { childList: !0, subtree: !0, removedNodes: !0 });
+      }
+      function w(p) {
+        p && p.forEach(function(c) {
+          var l = Array.prototype.slice.call(c.addedNodes), u = Array.prototype.slice.call(c.removedNodes), v = l.concat(u);
+          if (r(v))
+            return i();
+        });
+      }
+      Object.defineProperty(t, "__esModule", { value: !0 });
+      var i = function() {
+      };
+      t.default = { isSupported: s, ready: m };
+    }, function(d, t) {
+      function r(l, u) {
+        if (!(l instanceof u))
+          throw new TypeError("Cannot call a class as a function");
+      }
+      function n() {
+        return navigator.userAgent || navigator.vendor || window.opera || "";
+      }
+      Object.defineProperty(t, "__esModule", { value: !0 });
+      var s = function() {
+        function l(u, v) {
+          for (var E = 0; E < v.length; E++) {
+            var H = v[E];
+            H.enumerable = H.enumerable || !1, H.configurable = !0, "value" in H && (H.writable = !0), Object.defineProperty(u, H.key, H);
+          }
+        }
+        return function(u, v, E) {
+          return v && l(u.prototype, v), E && l(u, E), u;
+        };
+      }(), m = /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i, w = /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i, i = /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i, p = /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i, c = function() {
+        function l() {
+          r(this, l);
+        }
+        return s(l, [{ key: "phone", value: function() {
+          var u = n();
+          return !(!m.test(u) && !w.test(u.substr(0, 4)));
+        } }, { key: "mobile", value: function() {
+          var u = n();
+          return !(!i.test(u) && !p.test(u.substr(0, 4)));
+        } }, { key: "tablet", value: function() {
+          return this.mobile() && !this.phone();
+        } }]), l;
+      }();
+      t.default = new c();
+    }, function(d, t) {
+      Object.defineProperty(t, "__esModule", { value: !0 });
+      var r = function(s, m, w) {
+        var i = s.node.getAttribute("data-aos-once");
+        m > s.position ? s.node.classList.add("aos-animate") : typeof i != "undefined" && (i === "false" || !w && i !== "true") && s.node.classList.remove("aos-animate");
+      }, n = function(s, m) {
+        var w = window.pageYOffset, i = window.innerHeight;
+        s.forEach(function(p, c) {
+          r(p, i + w, m);
+        });
+      };
+      t.default = n;
+    }, function(d, t, r) {
+      function n(i) {
+        return i && i.__esModule ? i : { default: i };
+      }
+      Object.defineProperty(t, "__esModule", { value: !0 });
+      var s = r(12), m = n(s), w = function(i, p) {
+        return i.forEach(function(c, l) {
+          c.node.classList.add("aos-init"), c.position = (0, m.default)(c.node, p.offset);
+        }), i;
+      };
+      t.default = w;
+    }, function(d, t, r) {
+      function n(i) {
+        return i && i.__esModule ? i : { default: i };
+      }
+      Object.defineProperty(t, "__esModule", { value: !0 });
+      var s = r(13), m = n(s), w = function(i, p) {
+        var c = 0, l = 0, u = window.innerHeight, v = { offset: i.getAttribute("data-aos-offset"), anchor: i.getAttribute("data-aos-anchor"), anchorPlacement: i.getAttribute("data-aos-anchor-placement") };
+        switch (v.offset && !isNaN(v.offset) && (l = parseInt(v.offset)), v.anchor && document.querySelectorAll(v.anchor) && (i = document.querySelectorAll(v.anchor)[0]), c = (0, m.default)(i).top, v.anchorPlacement) {
+          case "top-bottom":
+            break;
+          case "center-bottom":
+            c += i.offsetHeight / 2;
+            break;
+          case "bottom-bottom":
+            c += i.offsetHeight;
+            break;
+          case "top-center":
+            c += u / 2;
+            break;
+          case "bottom-center":
+            c += u / 2 + i.offsetHeight;
+            break;
+          case "center-center":
+            c += u / 2 + i.offsetHeight / 2;
+            break;
+          case "top-top":
+            c += u;
+            break;
+          case "bottom-top":
+            c += i.offsetHeight + u;
+            break;
+          case "center-top":
+            c += i.offsetHeight / 2 + u;
+        }
+        return v.anchorPlacement || v.offset || isNaN(p) || (l = p), c + l;
+      };
+      t.default = w;
+    }, function(d, t) {
+      Object.defineProperty(t, "__esModule", { value: !0 });
+      var r = function(n) {
+        for (var s = 0, m = 0; n && !isNaN(n.offsetLeft) && !isNaN(n.offsetTop); )
+          s += n.offsetLeft - (n.tagName != "BODY" ? n.scrollLeft : 0), m += n.offsetTop - (n.tagName != "BODY" ? n.scrollTop : 0), n = n.offsetParent;
+        return { top: m, left: s };
+      };
+      t.default = r;
+    }, function(d, t) {
+      Object.defineProperty(t, "__esModule", { value: !0 });
+      var r = function(n) {
+        return n = n || document.querySelectorAll("[data-aos]"), Array.prototype.map.call(n, function(s) {
+          return { node: s };
+        });
+      };
+      t.default = r;
+    }]);
+  });
+})(ee);
+var pe = ee.exports;
+const be = (() => {
+  const j = () => {
+    setTimeout(() => {
+      pe.init({
+        duration: 1e3,
+        easing: "ease",
+        once: !0
+      });
+    }, 2250);
+  };
+  return {
+    setHandleEvent: function() {
+      try {
+        j();
+      } catch (h) {
+      }
+    }
+  };
+})(), ve = () => {
+  be.setHandleEvent();
 };
 window.addEventListener("load", () => {
-  y(), x(), p(), H(), L(), S();
+  ne(), fe(), re(), ae(), se(), de(), ve();
 });
 //# sourceMappingURL=mainscript.js.map
