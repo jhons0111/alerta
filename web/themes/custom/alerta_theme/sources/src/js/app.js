@@ -12,16 +12,22 @@ import { loadBlobHandlers } from './components/Blob';
 import { loadLineHandlers } from './animations/Line';
 //Libs
 import { loadAosHandlers } from './libs/Aos';
+//Modules
+import { disableScroll } from './modules/DisabledScroll';
 
+//Disable scroll
+disableScroll();
 
 //Load modules
 window.addEventListener('load', ()=>{
+    loadScrollHandlers();
     loadLoaderHandlers();
     loadLineHandlers();
     loadHeaderHandlers();
-    loadScrollHandlers();
     loadModalHandlers();
     loadFormHandlers();
     loadAosHandlers();
     loadBlobHandlers();
+    //Enable scroll
+    window.onscroll = null;
 });

@@ -1,12 +1,28 @@
+@use '../base/functions' as fun;
+
 .gradient{
     position: relative;
     article{
         background-image: linear-gradient(#680CFF 10%, #9747FF);
-        filter: blur(150px);
         position: absolute;
-        // transform: rotate(124.872deg);
-        right: 0;
         width: 250px;
         height: 250px;
+        transform: rotate(124.872deg);
+        backdrop-filter: blur(9.645670890808105px);
+        filter: blur(66.533779px);
+        top: 40vh;
+        right: -100px;
+    }
+}
+
+@media(max-width: fun.breakpoints('ipad-small')){
+    .gradient {
+        filter: blur(100px);
+        article{
+            width: 150px;
+            height: 150px;
+            right: -25px;
+            filter: blur(50px);
+        }
     }
 }

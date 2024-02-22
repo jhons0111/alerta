@@ -1,12 +1,28 @@
+@use '../base/functions' as fun;
+
 .scroll-down{
     position: absolute;
     top: 80vh;
     z-index: 999;
     right: 2.5%;
     animation: scroll-down 1s infinite ease alternate;
+    opacity: 0;
+    transition: .5s ease opacity;
+    transition-delay: .7s;
     svg,img{
         width: 30px;
         height: auto;
+    }
+    &.aos-animate{
+        opacity: 1;
+    }
+}
+
+@media(max-width: fun.breakpoints('ipad-big')){
+    .scroll-down{
+        svg, img{
+            width: 20px;
+        }
     }
 }
 

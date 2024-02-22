@@ -1,3 +1,5 @@
+@use '../base/functions' as fun;
+
 .blob {
     display: flex;
     justify-content: center;
@@ -15,4 +17,10 @@
     transform: translate(calc(-50% + 15px), -50%);
     z-index: -1;
     pointer-events: none;
+}
+
+@media(max-width: fun.breakpoints('ipad-small')){
+    .blob {
+        display: none;
+    }
 }

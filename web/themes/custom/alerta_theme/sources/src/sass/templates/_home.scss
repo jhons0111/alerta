@@ -84,11 +84,30 @@
 
 .home-planet{
     padding: 20vh 0;
+    display: flex;
+    align-items: center;
+    gap: 60px;
     h5{
         display: flex;
-        font-size: 2vw;
+        flex-wrap: wrap;
+        font-size: 2.5vw;
         span{
             color: fun.color('white');
+        }
+    }
+    article{
+        &:first-child{
+            width: 35%;
+            height: 30vw;
+            max-height: 500px;
+            border-radius: 100%;
+            border: 1px solid fun.color('white');
+        }
+        &:last-child{
+            width: 65%;
+            h5{
+                max-width: 40vw;
+            }
         }
     }
 }
@@ -152,5 +171,31 @@
     }
     .home-line{
         top: 10vh;
+    }
+    .home-planet{
+        gap: 30px;
+        padding: 60px 0;
+        h5{
+            font-size: 1.7rem;
+        }
+        article{
+            &:first-child{
+                width: 40%;
+            }
+            &:last-child{
+                width: 60%;
+                h5{
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: fun.breakpoints('mobile')){
+    .home-planet{
+        h5{
+            font-size: 1.5rem;
+        }
     }
 }
