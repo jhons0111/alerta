@@ -1,0 +1,20 @@
+.scroll-down{
+    position: absolute;
+    top: 80vh;
+    z-index: 999;
+    right: 2.5%;
+    animation: scroll-down 1s infinite ease alternate;
+    svg,img{
+        width: 30px;
+        height: auto;
+    }
+}
+
+@keyframes scroll-down{
+    from{
+        margin-top: 10px;
+    }
+    to{
+        margin-top: -10px;
+    }
+}

@@ -7,6 +7,7 @@ import { loadHeaderHandlers } from './layout/Header';
 import { loadScrollHandlers } from './components/Scroll';
 import { loadModalHandlers } from './components/Modal';
 import { loadFormHandlers } from './components/Form';
+import { loadBlobHandlers } from './components/Blob';
 //Animations
 import { loadLineHandlers } from './animations/Line';
 //Libs
@@ -22,4 +23,5 @@ window.addEventListener('load', ()=>{
     loadModalHandlers();
     loadFormHandlers();
     loadAosHandlers();
+    loadBlobHandlers();
 });

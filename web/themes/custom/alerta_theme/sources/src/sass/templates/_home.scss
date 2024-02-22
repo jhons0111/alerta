@@ -82,6 +82,17 @@
     }
 }
 
+.home-planet{
+    padding: 20vh 0;
+    h5{
+        display: flex;
+        font-size: 2vw;
+        span{
+            color: fun.color('white');
+        }
+    }
+}
+
 @media(max-width: fun.breakpoints('ipad-big')){
     .home{
         article{

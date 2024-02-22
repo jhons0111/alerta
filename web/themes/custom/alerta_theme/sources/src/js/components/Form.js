@@ -3,10 +3,14 @@ const Form = (()=>{
     const _FormConfig = ()=>{
         const getForm = document.querySelector('#join-form-ctn');
         const getHeader = document.querySelector('.header');
+        const getBlob = document.querySelector('.blob');
+        const getStars = document.querySelector('.stars__container');
         const getBody = document.body;
         setTimeout(()=>{
             getBody.appendChild(getHeader);
             getBody.appendChild(getForm);
+            getBody.appendChild(getBlob);
+            getBody.appendChild(getStars);
         }, 2500);
     }
 

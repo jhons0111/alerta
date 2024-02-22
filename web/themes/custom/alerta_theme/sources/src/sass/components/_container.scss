@@ -1,8 +1,17 @@
-.dialog-off-canvas-main-canvas{
-    background-color: #000;
+@use '../base/functions' as fun;
+@use '../base/variables' as var;
+
+body{
+    background-color: fun.color('black');
 }
 
 .main-content{
     position: relative;
     overflow: hidden;
+}
+
+.ctn{
+    width: 90%;
+    margin: auto;
+    max-width: var.$limit-width;
 }
