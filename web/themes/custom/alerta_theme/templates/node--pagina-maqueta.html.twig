@@ -2,10 +2,15 @@
     <!-- Stars -->
     <section class="stars__container">
         <div id='stars'></div>
-        <div id='stars2'></div>
-        <div id='stars3'></div>
+        {% for i in 1..3 %}
+            <div id='stars{{ i }}'></div>
+        {% endfor %}
     </section>
     <!--End stars-->
+
+    <section class="home-certified" data-aos="personality">
+        <img src="/themes/custom/alerta_theme/sources/dist/assets/img/svg/nmsdc.svg">
+    </section>
 
     <!--Title-->
     <section class="home ctm-fonts personality-animation" data-aos="personality">
@@ -136,5 +141,55 @@
     </section>
     <!--End planet three js-->
 
+
+    <section class="home-alert ctm-fonts">
+        <article class="personality-animation" data-aos="personality">
+            <div id="canvas"></div>
+        </article>
+        <article class="personality-animation" data-aos="personality">
+            <div class="animation-tx-reveal">
+                <h4 class="globs">
+                    <span style="--index:0.1s">A</span>
+                    <span style="--index:0.15s">L</span>
+                    <span style="--index:0.2s">E</span>
+                    <span style="--index:0.25s">R</span>
+                    <span style="--index:0.3s">T</span>
+                    <span style="--index:0.35s">A</span>
+                    <em class="lines"></em>
+                    <em class="line-point">
+                        <b></b>
+                    </em>
+                </h4>
+            </div>
+        </article>
+    </section>
+
+    <!-- Imagine brand limitless -->
+    <section class="home-limitless">
+        <div class="personality-animation" data-aos="personality">
+            <article class="animation-tx-reveal">
+                <h6 class="block-animation">
+                    <span style="--index:0.3s">Imagine</span>
+                </h6>
+                <h6 class="block-animation">
+                    <span style="--index:0.35s">Your</span>
+                    <span style="--index:0.4s">Brand</span>
+                    <span style="--index:0.45s">Limitless</span>
+                </h6>
+            </article>
+        </div>
+    </section>
+    <!-- End imagine brand limitless -->
+
+    <!--THREE JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/83/three.min.js"></script>
+    <script id="vertexShader" type="x-shader/x-vertex">
+        varying vec3 vNormal; void main() { vNormal = normalize( normalMatrix * normal ); gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 ); }
+    </script>
+    <script id="fragmentShader" type="x-shader/x-vertex">
+        varying vec3 vNormal; void main() { float intensity = pow( 0.7 - dot( vNormal, vec3( 0.0, 0.0, 0.5 ) ), 4.0 ); gl_FragColor = vec4( 0.89, 0.82, 0.69, 1.0 ) * intensity; }
+    </script>
+    <script src="/themes/custom/alerta_theme/sources/dist/three/Planet.js"></script>
+    <!--END THREE JS-->
     {% include directory ~ '/templates/includes/loader.html.twig' %}
 </main>

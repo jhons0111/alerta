@@ -15,6 +15,15 @@
     }
 }
 
+.home-certified{
+    opacity: 0;
+    transition: .5s ease opacity;
+    transition-delay: 1s;
+    &.aos-animate{
+        opacity: 1;
+    }
+}
+
 .home-line{
     opacity: 0;
     &.aos-animate{
@@ -25,6 +34,120 @@
             stroke-dashoffset: 3000;
             animation: draw 1s linear forwards;
             animation-delay: .5s;
+        }
+    }
+}
+
+.home-alert .personality-animation{
+    &:first-child{
+        transform: scale(0);
+        transition: 1s ease transform;
+        &::before{
+            opacity: 0;
+            transition: 1s ease opacity;
+            transition-delay: 1s;
+        }
+    }
+    h4{
+        background-color: transparent;
+        transition: .5s ease background-color;
+        &::before,
+        &::after{
+            width: 0;
+            transition: .5s ease width;
+            transition: 1s ease all;
+
+        }
+        .lines::before,
+        .lines::after{
+            height: 0;
+            transition: .5s ease height;
+            transition: 1s ease all;
+        }
+        .line-point{
+            &::before, 
+            &::after,
+            b::before,
+            b::after{
+                width: 0;
+                transition: 1s ease all;
+                transition-delay: .5s;
+            }
+            &::after{
+                width: 0;
+            }
+            b{
+                &::before{
+                    height: 0;
+                }
+                &::after{
+                    width: 0;
+                    height: 0;
+                }
+            }
+        }
+    }
+    &.aos-animate{
+        &:first-child{
+            transform: scale(1);
+            &::before{
+                opacity: 1;
+            }
+        }
+        h4{
+            background-color: fun.color('black');
+            &::before,
+            &::after{
+                width: 100%;
+            }
+            .lines::before,
+            .lines::after{
+                height: 100%;
+            }
+            .line-point{
+                &::before, 
+                &::after,
+                b::before,
+                b::after{
+                    width: 10vw;
+                }
+                &::after{
+                    width: 5vw;
+                }
+                b{
+                    &::before{
+                        height: 5vw;
+                        width: 2px;
+                    }
+                    &::after{
+                        width: .5vw;
+                        height: .5vw;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.home-limitless{
+    .personality-animation{
+        h6{
+            &:last-child{
+                &::before{
+                    transition: .5s ease width;
+                    transition-delay: .6s;
+                    width: 0;
+                }
+            }
+        }
+        &.aos-animate{
+            h6{
+                &:last-child{
+                    &::before{
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
 }

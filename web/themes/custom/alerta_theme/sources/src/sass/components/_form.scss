@@ -165,6 +165,10 @@
             right: -280px;
         }
         article{
+            &#open-form{
+                height: 35px;
+                padding: 5px;
+            }
             &:last-child{
                 max-width: 280px;
                 form{
