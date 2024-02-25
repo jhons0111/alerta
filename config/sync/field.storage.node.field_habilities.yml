@@ -1,16 +1,16 @@
-uuid: 9064a0e5-dfa9-4061-b874-1970d9e769ec
+uuid: 2bedc9c8-d490-4701-9687-46df8bef243c
 langcode: es
 status: true
 dependencies:
   module:
-    - block_content
-    - media
-id: block_content.field_image
-field_name: field_image
-entity_type: block_content
+    - node
+    - taxonomy
+id: node.field_habilities
+field_name: field_habilities
+entity_type: node
 type: entity_reference
 settings:
-  target_type: media
+  target_type: taxonomy_term
 module: core
 locked: false
 cardinality: -1

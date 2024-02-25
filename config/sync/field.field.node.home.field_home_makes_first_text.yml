@@ -1,0 +1,21 @@
+uuid: 23f4130a-9031-4b95-bc10-45b6b2795d08
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_home_makes_first_text
+    - node.type.home
+  module:
+    - text
+id: node.home.field_home_makes_first_text
+field_name: field_home_makes_first_text
+entity_type: node
+bundle: home
+label: 'Primero texto sección makes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

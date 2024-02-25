@@ -1,0 +1,29 @@
+uuid: 7553f152-12d4-46d3-b629-b4c1eb1b0e82
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.badges_section
+    - field.storage.node.field_home_badges_section
+    - node.type.home
+id: node.home.field_home_badges_section
+field_name: field_home_badges_section
+entity_type: node
+bundle: home
+label: 'Sección Insignias'
+description: 'Bloque para agregar el contenido de la sección Insignias.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      badges_section: badges_section
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

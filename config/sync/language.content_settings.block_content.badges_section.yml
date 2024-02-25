@@ -1,0 +1,11 @@
+uuid: f197426b-1923-4ab8-a97a-0eb27bca4445
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.badges_section
+id: block_content.badges_section
+target_entity_type_id: block_content
+target_bundle: badges_section
+default_langcode: site_default
+language_alterable: false

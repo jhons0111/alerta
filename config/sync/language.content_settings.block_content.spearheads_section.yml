@@ -1,0 +1,11 @@
+uuid: 91657bf4-a8de-4ed8-a0f2-97b93356a333
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.spearheads_section
+id: block_content.spearheads_section
+target_entity_type_id: block_content
+target_bundle: spearheads_section
+default_langcode: site_default
+language_alterable: false

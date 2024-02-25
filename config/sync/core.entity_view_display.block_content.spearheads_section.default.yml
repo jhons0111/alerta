@@ -1,0 +1,40 @@
+uuid: 94d0aa8a-a6a2-4e4f-b85a-810a0e073a2d
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.spearheads_section
+    - field.field.block_content.spearheads_section.field_image
+    - field.field.block_content.spearheads_section.field_spearhead_sec_title
+    - field.field.block_content.spearheads_section.field_spearheads_title
+  module:
+    - text
+id: block_content.spearheads_section.default
+targetEntityType: block_content
+bundle: spearheads_section
+mode: default
+content:
+  field_image:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_spearhead_sec_title:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_spearheads_title:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

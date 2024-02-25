@@ -1,0 +1,43 @@
+uuid: c8098e05-f431-48d5-bac4-4e582b232615
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.badges_section
+    - field.field.block_content.badges_section.field_complete_badget
+    - field.field.block_content.badges_section.field_image
+    - field.field.block_content.badges_section.field_title
+  module:
+    - entity_reference_revisions
+id: block_content.badges_section.default
+targetEntityType: block_content
+bundle: badges_section
+mode: default
+content:
+  field_complete_badget:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_image:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

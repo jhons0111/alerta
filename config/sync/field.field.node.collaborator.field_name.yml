@@ -1,0 +1,19 @@
+uuid: c87b0b2b-8dfa-4646-8459-83db8b66142c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_name
+    - node.type.collaborator
+id: node.collaborator.field_name
+field_name: field_name
+entity_type: node
+bundle: collaborator
+label: Nombre
+description: 'Nombre del colaborador'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

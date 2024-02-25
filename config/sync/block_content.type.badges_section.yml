@@ -1,0 +1,8 @@
+uuid: 986e1fed-a60d-4e24-8278-a1bf6973afd2
+langcode: es
+status: true
+dependencies: {  }
+id: badges_section
+label: 'Bloque sección Badges'
+revision: 0
+description: 'Bloque para el contenido de la sección ''Badges'' del home.'

@@ -1,0 +1,21 @@
+uuid: 5cca6099-b6db-42f7-9abf-610eb3d36c2d
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.spearheads_section
+    - field.storage.block_content.field_spearheads_title
+  module:
+    - text
+id: block_content.spearheads_section.field_spearheads_title
+field_name: field_spearheads_title
+entity_type: block_content
+bundle: spearheads_section
+label: 'Primer titulo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

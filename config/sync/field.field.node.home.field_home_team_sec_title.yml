@@ -1,0 +1,21 @@
+uuid: 4ff85b4a-b792-44d1-b8e1-997b95e24c1a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_home_team_sec_title
+    - node.type.home
+  module:
+    - text
+id: node.home.field_home_team_sec_title
+field_name: field_home_team_sec_title
+entity_type: node
+bundle: home
+label: 'Segundo team title'
+description: 'Segundo titulo de la sección ''equipo''.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

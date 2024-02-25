@@ -1,0 +1,21 @@
+uuid: 5471760b-f737-48f1-86f8-11a93e275e41
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.badges
+  module:
+    - text
+id: paragraph.badges.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: badges
+label: Descripción
+description: 'Descripción de la insignia.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

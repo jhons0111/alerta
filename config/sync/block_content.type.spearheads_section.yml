@@ -1,0 +1,8 @@
+uuid: d1375e4b-6cab-4e9e-9358-88a2baf866a1
+langcode: es
+status: true
+dependencies: {  }
+id: spearheads_section
+label: 'Bloque sección Spearheads'
+revision: 0
+description: 'Bloque para el contenido de la sección ''Spearheads'' del home.'

@@ -1,0 +1,19 @@
+uuid: 181e7c15-6b67-4e7c-b6f9-021b017eece0
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_position
+    - node.type.collaborator
+id: node.collaborator.field_position
+field_name: field_position
+entity_type: node
+bundle: collaborator
+label: Cargo
+description: 'Cargo del colaborador'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
