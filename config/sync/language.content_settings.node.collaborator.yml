@@ -1,0 +1,11 @@
+uuid: 0046559d-853a-4d9b-ac96-44c2d6b50bd1
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.collaborator
+id: node.collaborator
+target_entity_type_id: node
+target_bundle: collaborator
+default_langcode: site_default
+language_alterable: false

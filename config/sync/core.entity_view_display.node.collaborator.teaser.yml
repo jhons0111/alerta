@@ -1,0 +1,31 @@
+uuid: 898c9a73-7642-4fa3-a89b-2738b47e326d
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.collaborator.field_description
+    - field.field.node.collaborator.field_habilities
+    - field.field.node.collaborator.field_name
+    - field.field.node.collaborator.field_picture
+    - field.field.node.collaborator.field_position
+    - node.type.collaborator
+  module:
+    - user
+id: node.collaborator.teaser
+targetEntityType: node
+bundle: collaborator
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_description: true
+  field_habilities: true
+  field_name: true
+  field_picture: true
+  field_position: true
+  langcode: true

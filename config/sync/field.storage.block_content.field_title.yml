@@ -1,19 +1,20 @@
-uuid: 9064a0e5-dfa9-4061-b874-1970d9e769ec
+uuid: 67e9630b-e40a-4f5a-9dc6-6808144b980f
 langcode: es
 status: true
 dependencies:
   module:
     - block_content
-    - media
-id: block_content.field_image
-field_name: field_image
+id: block_content.field_title
+field_name: field_title
 entity_type: block_content
-type: entity_reference
+type: string
 settings:
-  target_type: media
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
 module: core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

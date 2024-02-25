@@ -1,0 +1,11 @@
+uuid: 84e59b35-7ab0-4adf-85ac-6cab20e99a49
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.habilities
+id: taxonomy_term.habilities
+target_entity_type_id: taxonomy_term
+target_bundle: habilities
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,60 @@
+uuid: 3b36196e-c963-4b20-8287-0d0e8e62c380
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.habilities.field_icon
+    - taxonomy.vocabulary.habilities
+  module:
+    - media_library
+    - path
+    - text
+id: taxonomy_term.habilities.default
+targetEntityType: taxonomy_term
+bundle: habilities
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_icon:
+    type: media_library_widget
+    weight: 2
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 3
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden: {  }

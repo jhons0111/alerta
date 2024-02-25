@@ -1,0 +1,65 @@
+uuid: 2e653734-3fcd-4fa6-babb-2ca04019e779
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.collaborator.field_description
+    - field.field.node.collaborator.field_habilities
+    - field.field.node.collaborator.field_name
+    - field.field.node.collaborator.field_picture
+    - field.field.node.collaborator.field_position
+    - node.type.collaborator
+  module:
+    - text
+    - user
+id: node.collaborator.default
+targetEntityType: node
+bundle: collaborator
+mode: default
+content:
+  field_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_habilities:
+    type: entity_reference_entity_id
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_picture:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_position:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

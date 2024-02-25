@@ -1,0 +1,21 @@
+uuid: 233e219c-0860-4ea9-baa8-e811968d7056
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.collaborator
+  module:
+    - text
+id: node.collaborator.field_description
+field_name: field_description
+entity_type: node
+bundle: collaborator
+label: Descripción
+description: 'Descripción del colaborador'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

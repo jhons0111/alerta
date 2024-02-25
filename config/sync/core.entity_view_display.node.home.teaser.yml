@@ -1,0 +1,39 @@
+uuid: 2d8ad7af-b551-4938-aa78-36288771777a
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.home.field_home_badges_section
+    - field.field.node.home.field_home_image
+    - field.field.node.home.field_home_initial_text
+    - field.field.node.home.field_home_makes_first_text
+    - field.field.node.home.field_home_makes_second_text
+    - field.field.node.home.field_home_makes_third_text
+    - field.field.node.home.field_home_spearheads_section
+    - field.field.node.home.field_home_team_sec_title
+    - field.field.node.home.field_home_team_title
+    - node.type.home
+  module:
+    - user
+id: node.home.teaser
+targetEntityType: node
+bundle: home
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_home_badges_section: true
+  field_home_image: true
+  field_home_initial_text: true
+  field_home_makes_first_text: true
+  field_home_makes_second_text: true
+  field_home_makes_third_text: true
+  field_home_spearheads_section: true
+  field_home_team_sec_title: true
+  field_home_team_title: true
+  langcode: true

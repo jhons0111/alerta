@@ -1,0 +1,19 @@
+uuid: 82fe0588-ddcc-4983-89ae-8724b76a2943
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_home_makes_first_text
+field_name: field_home_makes_first_text
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: 773e5b2b-6f0d-4d06-bf42-e6c6a37f24ce
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_home_makes_third_text
+    - node.type.home
+  module:
+    - text
+id: node.home.field_home_makes_third_text
+field_name: field_home_makes_third_text
+entity_type: node
+bundle: home
+label: 'Tercer texto de la sección makes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

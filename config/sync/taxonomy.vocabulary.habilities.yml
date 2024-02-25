@@ -1,0 +1,8 @@
+uuid: 42902b7d-bfa8-416d-b709-9ac9757d9c04
+langcode: es
+status: true
+dependencies: {  }
+name: Habilidades
+vid: habilities
+description: 'Habilidades del colaborador de la compañia'
+weight: 0

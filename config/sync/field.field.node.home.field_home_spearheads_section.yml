@@ -1,0 +1,29 @@
+uuid: a5e378b6-5cb1-4862-82eb-03a41e0cae2d
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.spearheads_section
+    - field.storage.node.field_home_spearheads_section
+    - node.type.home
+id: node.home.field_home_spearheads_section
+field_name: field_home_spearheads_section
+entity_type: node
+bundle: home
+label: 'Sección Spearheads'
+description: 'Bloque para agregar el contenido de la sección Spearheads.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      spearheads_section: spearheads_section
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

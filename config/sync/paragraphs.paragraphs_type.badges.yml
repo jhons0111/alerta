@@ -1,0 +1,10 @@
+uuid: e239704b-e844-46ca-a5d3-d2f7e903e10f
+langcode: es
+status: true
+dependencies: {  }
+id: badges
+label: Insignias
+icon_uuid: null
+icon_default: null
+description: 'Paragraph para agregar las insignias con su información en el home del sitio.'
+behavior_plugins: {  }

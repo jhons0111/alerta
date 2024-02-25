@@ -1,0 +1,8 @@
+colaborators.data:
+  path: '/api/colaborators'
+  defaults:
+    _controller: '\Drupal\colaborators\Controller\ColaboratorsResource::get'
+    _title: 'Colaborators Resource'
+  methods: [GET]
+  requirements:
+    _permission: 'access content'

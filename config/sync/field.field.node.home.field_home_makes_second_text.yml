@@ -1,0 +1,21 @@
+uuid: 1e20f90d-790e-4250-8d35-dd9443607a72
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_home_makes_second_text
+    - node.type.home
+  module:
+    - text
+id: node.home.field_home_makes_second_text
+field_name: field_home_makes_second_text
+entity_type: node
+bundle: home
+label: 'Segundo texto de la sección makes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

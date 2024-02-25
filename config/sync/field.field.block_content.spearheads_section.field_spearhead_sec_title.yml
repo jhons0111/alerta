@@ -1,0 +1,21 @@
+uuid: ef78fc70-7d4f-49bd-9d7f-cf35f91598d9
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.spearheads_section
+    - field.storage.block_content.field_spearhead_sec_title
+  module:
+    - text
+id: block_content.spearheads_section.field_spearhead_sec_title
+field_name: field_spearhead_sec_title
+entity_type: block_content
+bundle: spearheads_section
+label: 'Segundo titulo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

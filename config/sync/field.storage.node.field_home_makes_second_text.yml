@@ -1,0 +1,19 @@
+uuid: 4a677f0e-bff2-4411-8eda-1108debb3d78
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_home_makes_second_text
+field_name: field_home_makes_second_text
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
