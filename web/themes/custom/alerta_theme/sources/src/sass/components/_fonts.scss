@@ -26,6 +26,12 @@
                 font-family: 'globs';
             }
         }
+        &.signo{
+            font-family: 'signo';
+            span{
+                font-family: 'signo';
+            }
+        }
         &.secondary{
             color: fun.color('primary');
 
