@@ -151,3 +151,30 @@
         }
     }
 }
+
+.home-grid{
+    article{
+        &:last-child{
+            .item{
+                opacity: 0;
+                transform: translateY(100px);
+            }
+            &.aos-animate{
+                .item{
+                    animation: fade-up 1s ease 1 forwards var(--index);
+                }
+            }
+        }
+    }
+}
+
+@keyframes fade-up{
+    from{
+        opacity: 0;
+        transform: translatey(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translatey(0);
+    }
+}

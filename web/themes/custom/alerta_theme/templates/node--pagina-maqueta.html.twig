@@ -122,26 +122,66 @@
         </article>
         <article class="animation-tx-reveal-secondary">
             <h5 class="rift">
-                <span style="--index:0.3s">IN</span>
-                <span style="--index:0.35s">A</span>
-                <span style="--index:0.4s">WORLD</span>
-                <span style="--index:0.45s">THAT</span>
-                <span style="--index:0.5s">IS</span>
-                <span style="--index:0.55s">BECOMING</span>
-                <span style="--index:0.6s">MORE</span>
-                <span style="--index:0.65s">CONECTED</span>
-                <span class="secondary" style="--index:0.7s">NAVIGATING</span>
-                <span class="secondary" style="--index:0.75s">BOUNDARIES</span>
-                <span style="--index:0.8s">IS</span>
-                <span style="--index:0.85s">A</span>
-                <span style="--index:0.9s">CRITICAL</span>
-                <span style="--index:0.95s">SKILL.</span>
+                <span style="--index:0.1s">IN</span>
+                <span style="--index:0.15s">A</span>
+                <span style="--index:0.2s">WORLD</span>
+                <span style="--index:0.25s">THAT</span>
+                <span style="--index:0.3s">IS</span>
+                <span style="--index:0.35s">BECOMING</span>
+                <span style="--index:0.4s">MORE</span>
+                <span style="--index:0.45s">CONECTED</span>
+                <span class="secondary" style="--index:0.5s">NAVIGATING</span>
+                <span class="secondary" style="--index:0.55s">BOUNDARIES</span>
+                <span style="--index:0.6s">IS</span>
+                <span style="--index:0.65s">A</span>
+                <span style="--index:0.7s">CRITICAL</span>
+                <span style="--index:0.75s">SKILL.</span>
             </h5>
         </article>
     </section>
     <!--End planet three js-->
 
+    <section class="home-effective ctn">
+        <article>
+            <picture data-aos="fade-up">
+                <img src="/themes/custom/alerta_theme/sources/dist/assets/img/svg/icon-test.svg" alt="icon">
+            </picture>
+            <picture data-aos="fade-up">
+                <img src="/themes/custom/alerta_theme/sources/dist/assets/img/svg/icon-test.svg" alt="icon">
+            </picture>
+            <em>
+                <b></b>
+            </em>
+        </article>
+    </section>
 
+
+    <section class="home-grid ctn ctm-fonts">
+        <article class="personality-animation" data-aos="personality">
+            <h2 class="Strenuous difuminate animation-tx-reveal">
+                <span style="--index:0.15s">Alerta</span>
+                <span style="--index:0.2s">Spearheads</span>
+            </h2>
+            <h3 class="animation-tx-reveal">
+                <span style="--index:0.25s"><b>MARKET</b></span>
+                <span style="--index:0.3s"><b>-</b></span>
+                <span style="--index:0.35s"><b>BENDING</b></span>
+                <span style="--index:0.45s">PROJECTS</span>
+                <span style="--index:0.5s">LIKE:</span>
+            </h3>
+        </article>
+        <article class="personality-animation" data-aos="personality">
+            {% for i in 1..8 %}
+                <div class="item"  style='--index:0.{{i}}s'>
+                    <picture>
+                        <img src="/themes/custom/alerta_theme/sources/dist/assets/img/jpg/test-card.jpg" alt="">
+                    </picture>
+                </div>  
+            {% endfor %}
+        </article>
+    </section>
+
+    <!-- Planet with message alert-->
     <section class="home-alert ctm-fonts">
         <article class="personality-animation" data-aos="personality">
             <div id="canvas"></div>
@@ -163,6 +203,7 @@
             </div>
         </article>
     </section>
+    <!-- End planet with message alert-->
 
     <!-- Imagine brand limitless -->
     <section class="home-limitless">
