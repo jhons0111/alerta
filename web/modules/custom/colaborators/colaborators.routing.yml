@@ -6,3 +6,14 @@ colaborators.data:
   methods: [GET]
   requirements:
     _permission: 'access content'
+
+colaborator.data:
+  path: '/api/colaborator/{node}'
+  defaults:
+    _controller: '\Drupal\colaborators\Controller\ColaboratorsResource::individualData'
+  options:
+    parameters:
+      node:
+        type: entity:node
+  requirements:
+    _permission: 'access content'
