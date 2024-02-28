@@ -1,7 +1,6 @@
 var renderer, scene, camera, circle, particle, luminor, halo, galaxy;
 var lights = [];
 
-console.log('se ejecuta');
 init();
 animate();
 

@@ -14,6 +14,8 @@ import { loadLineHandlers } from './animations/Line';
 import { loadAosHandlers } from './libs/Aos';
 //Modules
 import { disableScroll } from './modules/DisabledScroll';
+//Api
+import { loadTeamHandlers } from './api/Team';
 
 //Disable scroll
 disableScroll();
@@ -28,6 +30,7 @@ window.addEventListener('load', ()=>{
     loadFormHandlers();
     loadAosHandlers();
     loadBlobHandlers();
+    loadTeamHandlers();
     //Enable scroll
     window.onscroll = null;
 });

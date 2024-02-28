@@ -256,13 +256,8 @@
                 </h4>
             </div>
         </article>
-        <article class="personality-animation" data-aos="personality">
+        <article class="personality-animation" data-aos="personality" id="render-team">
             <p>Click on the circles to meet the crew</p>
-            {% for i in 0..10 %}
-                <picture style="--left: {{i*70}}px; --index: 0.{{i}}s">
-                    <img src="/themes/custom/alerta_theme/sources/dist/assets/img/png/team-person.png" alt="">
-                </picture>
-            {% endfor %}
         </article>
     </section>
     <!-- Team -->
@@ -313,36 +308,7 @@
         <div class="modal">
             <div class="modal__bg close-modal"></div>
             <div class="modal__content">
-                <div class="item">
-                    <picture>
-                        <img src="/themes/custom/alerta_theme/sources/dist/assets/img/png/team-person.png" alt="">
-                    </picture>
-                    <picture>
-                        <img src="/themes/custom/alerta_theme/sources/dist/assets/img/jpg/bg-modal.jpg" alt="">
-                    </picture>
-                    <div class="modal__name">
-                        <p>Danilo alvarez</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="modal__close close-modal">
-                        <picture>
-                            <img src="/themes/custom/alerta_theme/sources/dist/assets/img/svg/star-modal.svg" alt="">
-                        </picture>
-                    </div>
-                    <div class="modal__dsc">
-                        <h4>Creative director</h4>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id iure similique amet repellat beatae eum qui corrupti. Nam ipsum quae soluta iure. Aspernatur voluptatum, maxime nemo dolor temporibus veniam debitis dolorem necessitatibus ut tempore quod ratione dicta voluptates soluta rem!</p>
-                    </div>
-                    <div class="block">
-                        <picture>
-                            <img src="/themes/custom/alerta_theme/sources/dist/assets/img/svg/icon-category.svg" alt="">
-                        </picture>
-                        <picture>
-                            <img src="/themes/custom/alerta_theme/sources/dist/assets/img/svg/icon-category.svg" alt="">
-                        </picture>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </section>
