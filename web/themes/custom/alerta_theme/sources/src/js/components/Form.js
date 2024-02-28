@@ -5,12 +5,14 @@ const Form = (()=>{
         const getHeader = document.querySelector('.header');
         const getBlob = document.querySelector('.blob');
         const getStars = document.querySelector('.stars__container');
+        const getModal = document.querySelector('#modal-content');
         const getBody = document.body;
         setTimeout(()=>{
             getBody.appendChild(getHeader);
             getBody.appendChild(getForm);
             getBody.appendChild(getBlob);
             getBody.appendChild(getStars);
+            getBody.appendChild(getModal);
         }, 2500);
     }
 

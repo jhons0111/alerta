@@ -204,6 +204,59 @@
     }
 }
 
+.home-team{
+    article{
+        &:first-child{
+            picture{
+                img{
+                    transform: translateX(100px);
+                    opacity: 0;
+                    transition: .5s ease all;
+                    transition-delay: .25s;
+                }
+                &::before{
+                    width: 0;
+                    transition: .5s ease width;
+                    transition-delay: .5s;
+                }
+            }
+            em{
+                opacity: 0;
+                transition: .5s ease opacity;
+            }
+            &.aos-animate{
+                picture{
+                    img{
+                        opacity: 1;
+                        transform: translate(0);
+                    }
+                    &::before{
+                        width: 90%;
+                    }
+                }
+                em{
+                    opacity: 1;
+                }
+            }
+        }
+        &:last-child{
+            picture{
+                opacity: 0;
+                transition: .5s ease opacity;
+                transition-delay: var(--index);
+                &:last-child{
+                    transition-delay: 1s !important;
+                }
+            }
+            &.aos-animate{
+                picture{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
 @keyframes fade-up{
     from{
         opacity: 0;

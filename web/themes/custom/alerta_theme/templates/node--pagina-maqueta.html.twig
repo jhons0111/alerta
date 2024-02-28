@@ -225,38 +225,44 @@
     <!--End projects grid-->
 
     <!-- Team -->
-    <section class="home-team">
-        <article>
+    <section class="home-team ctn">
+        <article  class="personality-animation" data-aos="personality">
             <picture>
-                <img src="image-team.jpg" alt="">
+                <img src="/themes/custom/alerta_theme/sources/dist/assets/img/jpg/image-team.jpg" alt="">
             </picture>
-            <em></em>
-            <h2 class="animation-tx-reveal">
-                <span style="--index:0.25s">IT</span>
-                <span style="--index:0.3s">THE</span>
-                <span style="--index:0.35s">HANDS,</span>
-                <span style="--index:0.45s">HEARTS</span>
-                <span style="--index:0.5s">AND</span>
-                <span style="--index:0.55s">BRAINS</span>
-            </h2>
-            <h4 class="animation-tx-reveal">
-                <span style="--index:0.25s">of</span>
-                <span style="--index:0.3s"><b>the</b></span>
-                <span style="--index:0.35s"><b>most</b></span>
-                <span style="--index:0.45s"><b>commited</b></span>
-                <span style="--index:0.5s"><strong>talent</strong></span>
-                <span style="--index:0.5s"><strong>force</strong></span>
-                <span style="--index:0.5s"><b>in</b></span>
-                <span style="--index:0.5s"><b>advertising</b></span>
-            </h4>
+            <em>
+                <img src="" alt="">
+                <b></b>
+            </em>
+            <div>
+                <em></em>
+                <h2 class="animation-tx-reveal">
+                    <span style="--index:0.25s">IT</span>
+                    <span style="--index:0.3s">THE</span>
+                    <span style="--index:0.35s">HANDS,</span>
+                    <span style="--index:0.45s">HEARTS</span>
+                    <span style="--index:0.5s">AND</span>
+                    <span style="--index:0.55s">BRAINS</span>
+                </h2>
+                <h4 class="animation-tx-reveal">
+                    <span style="--index:0.25s">of</span>
+                    <span style="--index:0.3s"><b>the</b></span>
+                    <span style="--index:0.35s"><b>most</b></span>
+                    <span style="--index:0.45s"><b>commited</b></span>
+                    <span style="--index:0.5s"><strong>talent</strong></span>
+                    <span style="--index:0.5s"><strong>force</strong></span>
+                    <span style="--index:0.5s"><b>in</b></span>
+                    <span style="--index:0.5s"><b>advertising</b></span>
+                </h4>
+            </div>
         </article>
-        <article>
-            {% for i in 1..8 %}
-                <picture>
+        <article class="personality-animation" data-aos="personality">
+            <p>Click on the circles to meet the crew</p>
+            {% for i in 0..10 %}
+                <picture style="--left: {{i*70}}px; --index: 0.{{i}}s">
                     <img src="/themes/custom/alerta_theme/sources/dist/assets/img/png/team-person.png" alt="">
                 </picture>
             {% endfor %}
-            <p>Click on the circles to meet the crew</p>
         </article>
     </section>
     <!-- Team -->
