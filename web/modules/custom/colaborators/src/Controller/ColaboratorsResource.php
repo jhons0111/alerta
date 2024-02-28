@@ -84,7 +84,7 @@ class ColaboratorsResource extends ControllerBase {
     $media_entity = $node->field_picture->entity;
     if($media_entity) {
 
-      $file_entity = $media_entity->field_media_image->entity;
+      $file_entity_picture = $media_entity->field_media_image->entity;
     }
 
     // Check if the field_habilities is present in the node.
@@ -112,7 +112,7 @@ class ColaboratorsResource extends ControllerBase {
       'name' => $node->field_name->value,
       'position' => $node->field_position->value,
       'description' => $node->field_description->value,
-      'picture' => ($file_entity) ? file_create_url($file_entity->getFileUri()) : '',
+      'picture' => ($file_entity_picture) ? file_create_url($file_entity_picture->getFileUri()) : '',
       'habilities' => !empty($dataItem['habilities']) ? $dataItem['habilities'] : ''
     ];
 
