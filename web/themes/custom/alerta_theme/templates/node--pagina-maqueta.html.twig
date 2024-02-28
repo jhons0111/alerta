@@ -197,7 +197,7 @@
     <!--End alert makes-->
 
 
-
+    <!--Project grid-->
     <section class="home-grid ctn ctm-fonts">
         <article class="personality-animation" data-aos="personality">
             <h2 class="Strenuous difuminate animation-tx-reveal">
@@ -222,6 +222,44 @@
             {% endfor %}
         </article>
     </section>
+    <!--End projects grid-->
+
+    <!-- Team -->
+    <section class="home-team">
+        <article>
+            <picture>
+                <img src="image-team.jpg" alt="">
+            </picture>
+            <em></em>
+            <h2 class="animation-tx-reveal">
+                <span style="--index:0.25s">IT</span>
+                <span style="--index:0.3s">THE</span>
+                <span style="--index:0.35s">HANDS,</span>
+                <span style="--index:0.45s">HEARTS</span>
+                <span style="--index:0.5s">AND</span>
+                <span style="--index:0.55s">BRAINS</span>
+            </h2>
+            <h4 class="animation-tx-reveal">
+                <span style="--index:0.25s">of</span>
+                <span style="--index:0.3s"><b>the</b></span>
+                <span style="--index:0.35s"><b>most</b></span>
+                <span style="--index:0.45s"><b>commited</b></span>
+                <span style="--index:0.5s"><strong>talent</strong></span>
+                <span style="--index:0.5s"><strong>force</strong></span>
+                <span style="--index:0.5s"><b>in</b></span>
+                <span style="--index:0.5s"><b>advertising</b></span>
+            </h4>
+        </article>
+        <article>
+            {% for i in 1..8 %}
+                <picture>
+                    <img src="/themes/custom/alerta_theme/sources/dist/assets/img/png/team-person.png" alt="">
+                </picture>
+            {% endfor %}
+            <p>Click on the circles to meet the crew</p>
+        </article>
+    </section>
+    <!-- Team -->
 
     <!-- Planet with message alert-->
     <section class="home-alert ctm-fonts">
@@ -263,6 +301,45 @@
         </div>
     </section>
     <!-- End imagine brand limitless -->
+
+
+    <section id="modal-content">
+        <div class="modal">
+            <div class="modal__bg close-modal"></div>
+            <div class="modal__content">
+                <div class="item">
+                    <picture>
+                        <img src="/themes/custom/alerta_theme/sources/dist/assets/img/png/team-person.png" alt="">
+                    </picture>
+                    <picture>
+                        <img src="/themes/custom/alerta_theme/sources/dist/assets/img/jpg/bg-modal.jpg" alt="">
+                    </picture>
+                    <div class="modal__name">
+                        <p>Danilo alvarez</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="modal__close close-modal">
+                        <picture>
+                            <img src="/themes/custom/alerta_theme/sources/dist/assets/img/svg/star-modal.svg" alt="">
+                        </picture>
+                    </div>
+                    <div class="modal__dsc">
+                        <h4>Creative director</h4>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id iure similique amet repellat beatae eum qui corrupti. Nam ipsum quae soluta iure. Aspernatur voluptatum, maxime nemo dolor temporibus veniam debitis dolorem necessitatibus ut tempore quod ratione dicta voluptates soluta rem!</p>
+                    </div>
+                    <div class="block">
+                        <picture>
+                            <img src="/themes/custom/alerta_theme/sources/dist/assets/img/svg/icon-category.svg" alt="">
+                        </picture>
+                        <picture>
+                            <img src="/themes/custom/alerta_theme/sources/dist/assets/img/svg/icon-category.svg" alt="">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!--THREE JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/83/three.min.js"></script>
