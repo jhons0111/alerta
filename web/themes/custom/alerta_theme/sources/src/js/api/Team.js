@@ -32,7 +32,6 @@ const Team = (()=>{
                 requestGet(`/api/colaborator/${e.target.dataset.colaborator}`)
                     .then(res=>{
                         const { picture, name, position, description, habilities  } = res;
-                        console.log(res);
                         const templateModal = TemplateModal(picture, name, position, description, habilities);
                         modalContent.classList.add('active');
                         modalContent.querySelector('.modal__content').innerHTML = templateModal;

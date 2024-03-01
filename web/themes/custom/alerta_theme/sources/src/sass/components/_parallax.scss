@@ -1,0 +1,73 @@
+@use '../base/functions' as fun;
+
+.parallax{
+    position: absolute;
+    left: 0.5vw;
+    bottom: -500vh;
+    .item{
+        color: fun.color('white');
+        display: flex;
+        transform: rotate(90deg);
+        z-index: 9;
+        position: absolute;
+        left: -134%;
+        top: 26%;
+        align-items: center;
+        gap: 10px;
+        em{
+            height: 1.5vw;
+            width: 5vw;
+            background-color: fun.color('primary');
+            &:last-child{
+                width: 1vw;   
+            }
+        }
+        p{
+            font-size: 1.5vw;
+        }
+    }
+    &--rigth{
+        bottom: -450vh;
+        left: unset;
+        right: 0.5vw;
+        .item{
+            transform: rotate(-90deg);
+        }
+    }
+    article{
+        div{
+            width: 4vw;
+            height: 4vw;
+            border: 2px solid #4A4A4A;
+            border-radius: 100%;
+            position: relative;
+            &:nth-child(2){
+                top: -2vw;
+            }
+            &:nth-child(3){
+                top: -4vw;
+            }
+            &:nth-child(4){
+                top: -6vw;
+            }
+            &:nth-child(5){
+                top: -8vw;
+            }
+            &:nth-child(6){
+                top: -10vw;
+            }
+            &:nth-child(7){
+                top: -12vw;
+            }
+        }
+    }
+}
+
+@media(max-width: fun.breakpoints('desktop')){
+    .parallax{
+        bottom: -600vh;
+        &--rigth{
+            bottom: -550vh;
+        }
+    }
+}

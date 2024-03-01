@@ -2,6 +2,7 @@
 
 .gradient{
     position: relative;
+    pointer-events: none;
     article{
         background-image: linear-gradient(#680CFF 10%, #9747FF);
         position: absolute;
@@ -13,6 +14,15 @@
         top: 40vh;
         right: -100px;
     }
+    &--big{
+        display: flex;
+        justify-content: flex-end;
+        img{
+            width: 80%;
+            position: absolute;
+            top: -60vh;
+        }
+    }
 }
 
 @media(max-width: fun.breakpoints('ipad-small')){
@@ -23,6 +33,7 @@
             height: 150px;
             right: -25px;
             filter: blur(50px);
+
         }
     }
 }

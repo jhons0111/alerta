@@ -5,6 +5,7 @@ const ScrollSmoth = (()=>{
             const body = document.body;
             const main = document.querySelector('.dialog-off-canvas-main-canvas');
             const scrollDown = document.querySelector('.scroll-down');
+            const parallax = document.querySelectorAll('.parallax');
             let sx = 0, // For scroll positions
                 sy = 0;
             let dx = sx, // For container positions
@@ -40,6 +41,8 @@ const ScrollSmoth = (()=>{
                 dy = Math.floor(dy * 100) / 100;
 
                 main.style.transform = `translate3d(-${dx}px, -${dy}px, 0px)`;
+                parallax[0].style.transform = `translate3d(-${dx}px, -${dy}px, 0px)`;
+                parallax[1].style.transform = `translate3d(-${dx}px, -${dy}px, 0px)`;
                 scrollDown.style.transform = `translate3d(-${dx}px, -${dy}px, 0px)`;
                 window.requestAnimationFrame(render);
             }

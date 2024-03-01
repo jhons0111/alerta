@@ -221,8 +221,8 @@
                 <span style="--index:0.5s">LIKE:</span>
             </h3>
         </article>
-        <article class="personality-animation" data-aos="personality">
-            {% for i in 1..8 %}
+        <article class="personality-animation" data-aos="personality" id="grid-projects">
+            {% for i in 1..12 %}
                 <div class="item"  style='--index:0.{{i}}s'>
                     <picture>
                         <img src="/themes/custom/alerta_theme/sources/dist/assets/img/jpg/test-card.jpg" alt="icon project">
@@ -249,9 +249,20 @@
                     </div>
                 </div>  
             {% endfor %}
+            <div id="show-more">
+                <p>See more</p>
+                <img src="/themes/custom/alerta_theme/sources/dist/assets/img/svg/icon-down.svg" alt="">
+            </div>
         </article>
     </section>
     <!--End projects grid-->
+
+    <!--RGB-->
+    <section class="gradient gradient--big">
+        <img src="/themes/custom/alerta_theme/sources/dist/assets/img/png/gradient.png" alt="">
+    </section>
+    <!--End RGB-->
+    
 
     <!-- Categories-->
     <section class="home-categories">
@@ -301,6 +312,7 @@
             <!--End item-->
         </article>
     </section>
+    <!-- End categories-->
 
     <!-- Team -->
     <section class="home-team ctn">
@@ -339,6 +351,35 @@
         </article>
     </section>
     <!-- Team -->
+
+    <!--Parallax-->
+    <section class="parallax">
+        <div class="item">
+            <p>TALENT</p>
+            <em></em>
+            <p>FORCE</p>
+            <em></em>
+        </div>
+        <article>
+            {% for i in 1..7 %}
+                <div style="--top: {{i * 2.5}}"></div>
+            {% endfor %}
+        </article>
+    </section>
+    <section class="parallax parallax--rigth">
+        <div class="item">
+            <p>TALENT</p>
+            <em></em>
+            <p>FORCE</p>
+            <em></em>
+        </div>
+        <article>
+            {% for i in 1..7 %}
+                <div style="--top: {{i * 2.5}}"></div>
+            {% endfor %}
+        </article>
+    </section>
+    <!--End arallax-->
 
     <!-- Planet with message alert-->
     <section class="home-alert ctm-fonts">
