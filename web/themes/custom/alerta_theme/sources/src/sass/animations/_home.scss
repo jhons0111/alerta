@@ -29,11 +29,15 @@
     &.aos-animate{
         opacity: 1;
         #pathHome1,
-        #pathHome2 {
+        #pathHome2,
+        #pathHome3 {
             stroke-dasharray: 3000;
             stroke-dashoffset: 3000;
             animation: draw 1s linear forwards;
             animation-delay: .5s;
+        }
+        #pathHome3{
+            animation-delay: 0.000001s !important;
         }
     }
 }
@@ -201,6 +205,35 @@
                 }
             }
         }
+        &:nth-child(2){
+            .block{
+                &:last-child{
+                        opacity: 0;
+                        transform: translatex(100px);
+                    &.aos-animate{
+                        animation: fade-right .5s ease forwards;
+                        animation-delay: .5s;
+                    }
+                }
+            }
+        }
+        &:nth-child(3){
+            border-color: transparent;
+            transition: .5s ease all;
+            transition-delay: .6s;
+            .item{
+                opacity: 0;
+                transform: translatex(100px);
+            }
+            &.aos-animate{
+                border-color: fun.color('white');
+                .item{
+                    animation: fade-right .5s ease forwards;
+                    animation-delay: var(--index);
+                }
+            }
+        }
+ 
     }
 }
 
@@ -315,5 +348,25 @@
     to{
         opacity: 1;
         transform: translatey(0);
+    }
+}
+
+@keyframes fade-right{
+    from{
+        opacity: 0;
+        transform: translatex(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translatex(0);
+    }
+}
+
+@keyframes show-opacity{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
     }
 }
