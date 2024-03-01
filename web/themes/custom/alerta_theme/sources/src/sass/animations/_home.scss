@@ -257,6 +257,56 @@
     }
 }
 
+.home-categories{
+    article{
+        &:first-child{
+            &::before,
+            &::after{
+                width: 0;
+                transition: .5s ease width;
+            }
+            &.aos-animate{
+                &::before,
+                &::after{
+                    width: 100%;
+                }
+            }
+        }
+        &:nth-child(2){
+            picture{
+                opacity: 0;
+                transform: translatey(100px);
+            }
+            &.aos-animate{
+                picture{
+                    animation: fade-up .5s ease forwards;
+                    animation-delay: var(--index);
+                }
+            }
+        }
+        &:last-child{
+            &::before{
+                width: 0;
+                transition: .5s ease width;
+                transition-delay: .35s;
+            }
+            .item{
+                opacity: 0;
+                transform: translatey(100px);
+            }
+            &.aos-animate{
+                &::before{
+                    width: 100%;
+                }
+                .item{
+                    animation: fade-up .5s ease forwards;
+                    animation-delay: var(--index);
+                }
+            }
+        }
+    }
+}
+
 @keyframes fade-up{
     from{
         opacity: 0;

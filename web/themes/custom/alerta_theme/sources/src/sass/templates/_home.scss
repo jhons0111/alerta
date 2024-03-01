@@ -626,6 +626,105 @@
 }
 
 
+.home-categories{
+    padding: 20vh 0;
+    article{
+        &:first-child{
+            position: relative;
+            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 80px;
+            &::before,
+            &::after{
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background:  linear-gradient(90deg, #9EFF00 19.27%, #00F0FF 47.92%, #9747FF 73.96%, #FF00B8 100%);
+            }
+            &::before{
+                top: 0;
+            }
+            &::after{
+                bottom: 0;
+            }
+            h3{
+                font-size: 2vw;
+                text-align: center;
+                color: fun.color('white');
+                display: flex;
+                gap: 7.5px;
+            }
+        }
+        &:nth-child(2){
+            &.ctn{
+                max-width: 1200px;
+            }
+            picture{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        &:last-child{
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 80px;
+            gap: 100px 50px;
+            position: relative;
+            align-items: center;
+            &::before{
+                content: "";
+                width: 100%;
+                height: 2px;
+                position: absolute;
+                background-color: fun.color('white');
+                left: 0;
+                margin-top: 20px;
+            }
+            .item{
+                flex: 1 22%;
+                display: flex;
+                gap: 20px;
+            }
+            picture{
+                width: 100%;
+                max-width: 90px;
+                display: block;
+                img{
+                    width: 100%;
+                }
+            }
+            h4{
+                font-size: 2rem;
+            }
+            p{
+                margin: 5px 0;
+            }
+            h4, p, a{
+                font-family: 'Signo';
+            }
+            p, a{
+                font-size: 1.5rem;
+            }
+            p,h4{
+                color: fun.color('white');
+            }
+            a{
+                color: fun.color('secondary');
+            }
+        }
+    }
+}
+
+
 @media(max-width: fun.breakpoints('desktop')){
     .home-effective{
         article{
@@ -670,6 +769,7 @@
         top: 60px;
     }
     .home-alert{
+        padding: 300px 0;
         article{
             &:first-child{
                 left: unset;
@@ -683,7 +783,7 @@
         }
     }
     .home-limitless{
-        padding: 10vh 0 20vh 0;
+        padding: 60px 0 120px 0;
         article{
             gap: 10px;
             h6{
@@ -692,6 +792,7 @@
         }
     }
     .home-grid{
+        padding: 60px 0;
         article{
             &:first-child{
                 h2{
@@ -704,6 +805,7 @@
         }
     }
     .home-effective{
+        padding: 120px 0;
         article{
             &:nth-child(3){
                 .item{
@@ -715,6 +817,7 @@
         }
     }
     .home-team{
+        padding: 60px 0;
         article{
             &:first-child{
                 left: 0;
@@ -753,6 +856,29 @@
                 max-width: 800px;
                 p{
                     display: none;
+                }
+            }
+        }
+    }
+    .home-categories{
+        padding: 120px 0;
+        article{
+            &:first-child{
+                padding: 15px 0;
+                margin-bottom: 50px;
+                h3{
+                    font-size: 2.5rem;
+                    gap: 5px;
+                }
+            }
+            &:last-child{
+                gap: 30px;
+                padding-top: 60px;
+                &::before{
+                    content: none;
+                }
+                .item{
+                    flex: 1 100%;
                 }
             }
         }
@@ -913,6 +1039,15 @@
                     img{
                         opacity: 1;
                     }
+                }
+            }
+        }
+    }
+    .home-categories{
+        article{
+            &:first-child{
+                h3{
+                    font-size: 2rem;
                 }
             }
         }

@@ -224,6 +224,55 @@
     </section>
     <!--End projects grid-->
 
+    <!-- Categories-->
+    <section class="home-categories">
+        <article class="personality-animation" data-aos="personality">
+            <h3 class="animation-tx-reveal">
+                <span style="--index:0.25s"><b>USING</b></span>
+                <span style="--index:0.3s"><b>STATE</b></span>
+                <span style="--index:0.35s"><b>-</b></span>
+                <span style="--index:0.45s">OF</span>
+                <span style="--index:0.5s">-</span>
+                <span style="--index:0.5s">THE</span>
+                <span style="--index:0.5s">-</span>
+                <span style="--index:0.5s">ART</span>
+                <span style="--index:0.5s">RESOURCES</span>
+                <span style="--index:0.5s">INCLUDING</span>
+            </h3>
+        </article>
+        <article class="swiper swiper-home ctn" data-aos="personality">
+            <div class="swiper-wrapper">
+                {% for i in 1..7 %}
+                    <!--Slide item-->
+                    <div class="swiper-slide">
+                        <picture  style="--index:0.{{i}}s">
+                            <img src="/themes/custom/alerta_theme/sources/dist/assets/img/svg/icon-category.svg" alt="">
+                        </picture>
+                    </div>
+                    <!--End slide item-->
+                {% endfor %}
+            </div>
+        </article>
+        <article class="ctn" data-aos="personality">
+            {% for i in 1..7 %}
+            <!--Item-->
+            <div class="item"  style="--index:0.{{i}}s">
+                <picture>
+                    <img src="/themes/custom/alerta_theme/sources/dist/assets/img/svg/icon-category.svg" alt="">
+                </picture>
+                <div class="block">
+                    <h4>CREATIVITY</h4>
+                    <p>
+                        We are passionate about developing impactful and culturally relevant creative. 
+                    </p>
+                    <a href="#">Click for more.</a>
+                </div>
+            </div>
+            {% endfor %}
+            <!--End item-->
+        </article>
+    </section>
+
     <!-- Team -->
     <section class="home-team ctn">
         <article  class="personality-animation" data-aos="personality">

@@ -12,6 +12,7 @@ import { loadBlobHandlers } from './components/Blob';
 import { loadLineHandlers } from './animations/Line';
 //Libs
 import { loadAosHandlers } from './libs/Aos';
+import { loadSwiperHandlers } from './libs/Swiper';
 //Modules
 import { disableScroll } from './modules/DisabledScroll';
 //Api
@@ -31,6 +32,7 @@ window.addEventListener('load', ()=>{
     loadAosHandlers();
     loadBlobHandlers();
     loadTeamHandlers();
+    loadSwiperHandlers();
     //Enable scroll
     window.onscroll = null;
 });

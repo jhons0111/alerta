@@ -13,6 +13,7 @@
     transition: .5s ease opacity;
     transition-delay: .2s;
     z-index: 11;
+    display: none;
     &__ctn{
         display: flex;
     }
