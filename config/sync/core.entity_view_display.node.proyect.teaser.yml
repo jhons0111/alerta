@@ -1,0 +1,29 @@
+uuid: 8f24df78-ccf7-4b21-b758-f824961907aa
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.proyect.field_card_badges
+    - field.field.node.proyect.field_card_description
+    - field.field.node.proyect.field_card_image
+    - field.field.node.proyect.field_card_title
+    - node.type.proyect
+  module:
+    - user
+id: node.proyect.teaser
+targetEntityType: node
+bundle: proyect
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_card_badges: true
+  field_card_description: true
+  field_card_image: true
+  field_card_title: true
+  langcode: true

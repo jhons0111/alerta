@@ -4,24 +4,23 @@ status: true
 dependencies:
   config:
     - block_content.type.badges_section
-    - field.field.block_content.badges_section.field_complete_badget
+    - field.field.block_content.badges_section.field_complete_badges
     - field.field.block_content.badges_section.field_image
-    - field.field.block_content.badges_section.field_title
+    - field.field.block_content.badges_section.field_title_badges
   module:
-    - entity_reference_revisions
+    - text
 id: block_content.badges_section.default
 targetEntityType: block_content
 bundle: badges_section
 mode: default
 content:
-  field_complete_badget:
-    type: entity_reference_revisions_entity_view
+  field_complete_badges:
+    type: entity_reference_label
     label: above
     settings:
-      view_mode: default
-      link: ''
+      link: true
     third_party_settings: {  }
-    weight: 2
+    weight: 4
     region: content
   field_image:
     type: entity_reference_label
@@ -31,13 +30,12 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-  field_title:
-    type: string
+  field_title_badges:
+    type: text_default
     label: above
-    settings:
-      link_to_entity: false
+    settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 3
     region: content
 hidden:
   langcode: true

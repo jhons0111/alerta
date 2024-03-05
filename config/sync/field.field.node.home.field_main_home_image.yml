@@ -1,19 +1,19 @@
-uuid: 4784c683-1929-4f6d-a4a6-3e43cb3555f8
+uuid: 7d53d693-67b7-4494-9b9a-40fc50216f97
 langcode: es
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_image
+    - field.storage.node.field_main_home_image
     - media.type.image
-    - paragraphs.paragraphs_type.badges
-id: paragraph.badges.field_image
-field_name: field_image
-entity_type: paragraph
-bundle: badges
-label: Imagen
-description: 'Imagen de la insignia.'
+    - node.type.home
+id: node.home.field_main_home_image
+field_name: field_main_home_image
+entity_type: node
+bundle: home
+label: 'Imagen principal sección makes'
+description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

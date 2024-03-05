@@ -3,33 +3,23 @@ langcode: es
 status: true
 dependencies:
   config:
-    - field.field.paragraph.badges.field_description
-    - field.field.paragraph.badges.field_image
+    - field.field.paragraph.badges.field_field_badges
     - field.field.paragraph.badges.field_link
-    - field.field.paragraph.badges.field_title
     - paragraphs.paragraphs_type.badges
   module:
     - link
-    - text
 id: paragraph.badges.default
 targetEntityType: paragraph
 bundle: badges
 mode: default
 content:
-  field_description:
-    type: text_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 2
-    region: content
-  field_image:
+  field_field_badges:
     type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 0
+    weight: 4
     region: content
   field_link:
     type: link
@@ -42,13 +32,5 @@ content:
       target: ''
     third_party_settings: {  }
     weight: 3
-    region: content
-  field_title:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 1
     region: content
 hidden: {  }

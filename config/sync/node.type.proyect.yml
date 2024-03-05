@@ -1,0 +1,17 @@
+uuid: 0a631b81-79f4-4f3c-9136-3977926693bf
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Proyecto
+type: proyect
+description: 'Tipo de contenido para crear los proyectos de la compañia.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

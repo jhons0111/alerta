@@ -3,34 +3,21 @@ langcode: es
 status: true
 dependencies:
   config:
-    - field.field.paragraph.badges.field_description
-    - field.field.paragraph.badges.field_image
+    - field.field.paragraph.badges.field_field_badges
     - field.field.paragraph.badges.field_link
-    - field.field.paragraph.badges.field_title
     - paragraphs.paragraphs_type.badges
   module:
     - link
-    - media_library
-    - text
 id: paragraph.badges.default
 targetEntityType: paragraph
 bundle: badges
 mode: default
 content:
-  field_description:
-    type: text_textarea
-    weight: 2
+  field_field_badges:
+    type: options_select
+    weight: 4
     region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-  field_image:
-    type: media_library_widget
-    weight: 0
-    region: content
-    settings:
-      media_types: {  }
+    settings: {  }
     third_party_settings: {  }
   field_link:
     type: link_default
@@ -39,14 +26,6 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
-    third_party_settings: {  }
-  field_title:
-    type: string_textfield
-    weight: 1
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
 hidden:
   created: true

@@ -4,23 +4,21 @@ status: true
 dependencies:
   config:
     - block_content.type.spearheads_section
-    - field.field.block_content.spearheads_section.field_image
+    - field.field.block_content.spearheads_section.field_proyects
     - field.field.block_content.spearheads_section.field_spearhead_sec_title
     - field.field.block_content.spearheads_section.field_spearheads_title
   module:
-    - media_library
     - text
 id: block_content.spearheads_section.default
 targetEntityType: block_content
 bundle: spearheads_section
 mode: default
 content:
-  field_image:
-    type: media_library_widget
+  field_proyects:
+    type: options_select
     weight: 28
     region: content
-    settings:
-      media_types: {  }
+    settings: {  }
     third_party_settings: {  }
   field_spearhead_sec_title:
     type: text_textarea

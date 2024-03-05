@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.home.field_home_spearheads_section
     - field.field.node.home.field_home_team_sec_title
     - field.field.node.home.field_home_team_title
+    - field.field.node.home.field_main_home_image
     - node.type.home
   module:
     - user
@@ -36,4 +37,5 @@ hidden:
   field_home_spearheads_section: true
   field_home_team_sec_title: true
   field_home_team_title: true
+  field_main_home_image: true
   langcode: true

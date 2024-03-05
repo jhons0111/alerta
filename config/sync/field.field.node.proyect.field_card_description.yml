@@ -1,0 +1,21 @@
+uuid: 1d9e2b5f-dc08-4843-bd60-ec0b7fb67d30
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_card_description
+    - node.type.proyect
+  module:
+    - text
+id: node.proyect.field_card_description
+field_name: field_card_description
+entity_type: node
+bundle: proyect
+label: 'Descripción de la tarjeta'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

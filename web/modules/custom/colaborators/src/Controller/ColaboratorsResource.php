@@ -95,7 +95,7 @@ class ColaboratorsResource extends ControllerBase {
       foreach ($taxonomy_term_entities as $taxonomy_term) {
         $icon_field = $taxonomy_term->get('field_icon')->first();
 
-        if ($icon_field && $icon_field->entity) {
+        if ($icon_field) {
           // Assuming field_icon is a reference field to an image entity.
           $file_entity = $icon_field->entity->get('field_media_image')->entity;
 

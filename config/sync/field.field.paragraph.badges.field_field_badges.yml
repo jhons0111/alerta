@@ -1,0 +1,29 @@
+uuid: 2fa99040-b0a5-4be2-ad58-eba96a158bc3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_field_badges
+    - paragraphs.paragraphs_type.badges
+    - taxonomy.vocabulary.habilities
+id: paragraph.badges.field_field_badges
+field_name: field_field_badges
+entity_type: paragraph
+bundle: badges
+label: 'Insignias completas'
+description: 'Información completa de cada insignia.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      habilities: habilities
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

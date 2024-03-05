@@ -1,0 +1,21 @@
+uuid: 948b0038-2dc0-45d0-aa86-2c7fa4c38851
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.badges_section
+    - field.storage.block_content.field_title_badges
+  module:
+    - text
+id: block_content.badges_section.field_title_badges
+field_name: field_title_badges
+entity_type: block_content
+bundle: badges_section
+label: 'Titulo de la sección'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

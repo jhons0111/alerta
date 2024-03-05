@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - block_content.type.spearheads_section
-    - field.field.block_content.spearheads_section.field_image
+    - field.field.block_content.spearheads_section.field_proyects
     - field.field.block_content.spearheads_section.field_spearhead_sec_title
     - field.field.block_content.spearheads_section.field_spearheads_title
   module:
@@ -14,7 +14,7 @@ targetEntityType: block_content
 bundle: spearheads_section
 mode: default
 content:
-  field_image:
+  field_proyects:
     type: entity_reference_label
     label: above
     settings:

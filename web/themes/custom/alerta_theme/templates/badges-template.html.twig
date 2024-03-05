@@ -1,0 +1,47 @@
+<article class="personality-animation" data-aos="personality">
+    <h3 class="animation-tx-reveal">
+        {{ title|raw }}
+    </h3>
+</article>
+<article class="swiper swiper-home ctn" data-aos="personality">
+    <div class="swiper-wrapper">
+        {% for key, item in badges %}
+            <!--Slide item-->
+            <div class="swiper-slide">
+                <picture  style="--index:0.{{ loop.index }}s">
+                    <img src="{{ item|raw }}" alt="">
+                </picture>
+            </div>
+            <!--End slide item-->
+        {% endfor %}
+    </div>
+</article>
+<article class="ctn" data-aos="personality">
+    {% for key, item in complete_badges %}
+        <!--Item-->
+        <div class="item"  style="--index:0.{{ loop.index }}s">
+            <picture>
+                <img src="{{ item.image_url }}" alt="">
+            </picture>
+            <div class="block">
+                <h4>{{ item.title|raw }}</h4>
+                <p>
+                    {{ item.description|raw }}
+                </p>
+                {% set link = item.call_to_action %}
+
+                {# Verify if the url is internal o external #}
+                {% if link starts with 'internal:' %}
+                {# Internal URL #}
+                {% set internalPath = link | replace({'internal:': ''}) %}
+                {% set url = file_url(internalPath) %}
+                {% else %}
+                {# External URL #}
+                {% set url = link %}
+                {% endif %}
+                <a href="{{ url }}">{{ item.cta_label }}</a>
+            </div>
+        </div>
+    {% endfor %}
+    <!--End item-->
+</article>

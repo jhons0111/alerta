@@ -1,26 +1,26 @@
-uuid: c40b9b5c-0989-44d7-a494-8c5d8ac35323
+uuid: b29d653a-c40e-45fb-a2c5-fbd41011a5a1
 langcode: es
 status: true
 dependencies:
   config:
     - block_content.type.spearheads_section
-    - field.storage.block_content.field_image
-    - media.type.image
-id: block_content.spearheads_section.field_image
-field_name: field_image
+    - field.storage.block_content.field_proyects
+    - node.type.proyect
+id: block_content.spearheads_section.field_proyects
+field_name: field_proyects
 entity_type: block_content
 bundle: spearheads_section
-label: Imagen
-description: ''
+label: Proyectos
+description: 'Tipos de contenido de tipo proyectos.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:media'
+  handler: 'default:node'
   handler_settings:
     target_bundles:
-      image: image
+      proyect: proyect
     sort:
       field: _none
       direction: ASC

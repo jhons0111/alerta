@@ -1,19 +1,19 @@
-uuid: 7464275f-970c-43cd-a2a9-109ee06659dc
+uuid: abd860fa-cfcd-4b5a-a4ec-4c38a8fc0df5
 langcode: es
 status: true
 dependencies:
   module:
-    - media
     - node
-id: node.field_home_image
-field_name: field_home_image
+    - taxonomy
+id: node.field_card_badges
+field_name: field_card_badges
 entity_type: node
 type: entity_reference
 settings:
-  target_type: media
+  target_type: taxonomy_term
 module: core
 locked: false
-cardinality: 4
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

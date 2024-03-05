@@ -1,0 +1,19 @@
+uuid: 644af9a3-ea1e-42c0-ab12-1fe2931d885f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_card_title
+    - node.type.proyect
+id: node.proyect.field_card_title
+field_name: field_card_title
+entity_type: node
+bundle: proyect
+label: 'Titulo de la tarjeta'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

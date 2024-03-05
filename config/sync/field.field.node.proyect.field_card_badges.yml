@@ -1,0 +1,29 @@
+uuid: 3af26d26-e52b-4d73-8b5e-2b25ece2dcc0
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_card_badges
+    - node.type.proyect
+    - taxonomy.vocabulary.habilities
+id: node.proyect.field_card_badges
+field_name: field_card_badges
+entity_type: node
+bundle: proyect
+label: 'Insiginias de la tarjeta'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      habilities: habilities
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

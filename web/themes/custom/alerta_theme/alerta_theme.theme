@@ -1,5 +1,7 @@
 <?php
 
+use Drupal\Core\Render\RendererInterface;
+
 function alerta_theme_preprocess_page(&$variables) {
 
 }
@@ -10,4 +12,159 @@ function alerta_theme_theme_suggestions_block_alter(array &$suggestions, array $
   if (isset($variables['elements']['content']['#block_content'])) { 
     array_splice($suggestions, 1, 0, 'block__type__' . $variables['elements']['content']['#block_content']->bundle()); 
   } 
+}
+
+/**
+ * Implements hook_theme().
+ */
+function alerta_theme_theme($existing, $type, $theme, $path) {
+
+  $themes = [
+    'spearheads_template' => [
+      'variables' => [
+        'first_title' => null,
+        'second_title' => null,
+        'projects' => null
+      ]
+    ],
+    'badges_template' => [
+      'variables' => [
+        'title' => null,
+        'badges' => null,
+        'complete_badges' => null
+      ]
+    ]
+  ];
+
+  return $themes;
+}
+
+function alerta_theme_preprocess_node(&$variables) {
+
+  if ($variables['node']->getType() == 'home') {
+
+    //Load the spearhead block
+    $block_spearheads_id = $variables['node']->field_home_spearheads_section->target_id;
+    if($block_spearheads_id){
+      $block = \Drupal\block_content\Entity\BlockContent::load($block_spearheads_id);
+      $render = \Drupal::entityTypeManager()->
+        getViewBuilder('block_content')->view($block);
+      
+      //Set the fields
+      $title = $render['#block_content']->field_spearheads_title->value;
+      $second_title = $render['#block_content']->field_spearhead_sec_title->value;
+      $projects_nids = $render['#block_content']->field_proyects->getValue();
+
+      $projects = [];
+      foreach ($projects_nids as $proyect_id) {
+
+        $nid = $proyect_id['target_id'];
+        $proyect_node = \Drupal\node\Entity\Node::load($nid);
+        if ($proyect_node) {
+
+          $projects[$nid]['title'] = $proyect_node->get('field_card_title')->value;
+          $projects[$nid]['description'] = $proyect_node->get('field_card_description')->value;
+
+          $media_entity = $proyect_node->get('field_card_image')->entity;
+          if ($media_entity) {
+
+            $file_entity = $media_entity->field_media_image->entity;
+          }
+          $projects[$nid]['image'] = ($file_entity) ? file_create_url($file_entity->getFileUri()) : '';
+          
+          //Get the pryect url
+          $url_object = $proyect_node->toUrl();
+          $projects[$nid]['url'] = $url_object->toString();
+
+          if ($proyect_node->get('field_card_badges')) {
+
+            $taxonomy_term_entities = $proyect_node->get('field_card_badges')->referencedEntities();
+
+            // Loop through referenced taxonomy term entities.
+            foreach ($taxonomy_term_entities as $taxonomy_term) {
+              $icon_field = $taxonomy_term->get('field_icon')->first();
+
+              if ($icon_field) {
+                //Assuming field_icon is a reference field to an image entity.
+                $file_entity = $icon_field->entity->get('field_media_image')->entity;
+
+                //Set the img url and the alt
+                $projects[$nid]['badges'][] = [
+                  'image_url' => ($file_entity) ? file_create_url($file_entity->getFileUri()) : '',
+                  'alt'      => $icon_field->entity->get('field_media_image')->alt,
+                ];
+              }
+            }
+          }
+        }
+      }
+
+      //Return template for the spearheads section
+      $variables['spearheads_template'] = [
+        '#theme'        => 'spearheads_template',
+        '#first_title'  => $title,
+        '#second_title' => $second_title,
+        '#projects'     => $projects,
+        '#cache' => [
+          'max-age' => 0
+        ]
+      ];
+    }
+
+    //Load the badges block
+    $block_badges_id = $variables['node']->field_home_badges_section->target_id;
+    if($block_badges_id){
+      $block = \Drupal\block_content\Entity\BlockContent::load($block_badges_id);
+      $render = \Drupal::entityTypeManager()->
+        getViewBuilder('block_content')->view($block);
+      
+      //Set the block's initial fields
+      $badges_title = $render['#block_content']->field_title_badges->value;
+      $images = $render['#block_content']->field_image->referencedEntities();
+      
+      $complete_badges = [];
+      if ($render['#block_content']->field_complete_badges) {
+
+        // Loop through referenced taxonomy term entities.
+        $taxonomy_term_entities = $render['#block_content']->field_complete_badges->referencedEntities();
+        foreach ($taxonomy_term_entities as $taxonomy_term) {
+
+          $icon_field = $taxonomy_term->get('field_icon')->first();
+          if ($icon_field) {
+            //Assuming field_icon is a reference field to an image entity.
+            $file_entity = $icon_field->entity->get('field_media_image')->entity;
+          }
+
+          //Set the taxonomy 'badges' fields and attributes
+          $complete_badges[] = [
+            'title'          => ($taxonomy_term->get('name')->value) ?? '',
+            'description'    => ($taxonomy_term->get('description')->value) ?? '',
+            'image_url'      => ($file_entity) ? file_create_url($file_entity->getFileUri()) : '',
+            'alt'            => ($icon_field->entity->get('field_media_image')->alt) ?? '',
+            'call_to_action' => ($taxonomy_term->get('field_call_to_action')->uri) ?? '',
+            'cta_label'      => ($taxonomy_term->get('field_call_to_action')->getValue()[0]['title']) ?? '',
+          ];
+        }
+      }
+
+      //Get the image of every badge image.
+      $image_urls = [];
+      foreach ($images as $image) {
+
+        $file_entity = $image->field_media_image->entity;
+        $image_urls[] = ($file_entity) ? file_create_url($file_entity->getFileUri()) : '';
+      }
+
+      //Return template for the spearheads section
+      $variables['badges_template'] = [
+        '#theme'           => 'badges_template',
+        '#title'           => $badges_title,
+        '#badges'          => $image_urls,
+        '#complete_badges' => $complete_badges,
+        '#cache' => [
+          'max-age' => 0
+        ]
+      ];
+    }
+  }
 }

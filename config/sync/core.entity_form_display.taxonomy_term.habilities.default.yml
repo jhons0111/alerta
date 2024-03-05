@@ -3,9 +3,11 @@ langcode: es
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.habilities.field_call_to_action
     - field.field.taxonomy_term.habilities.field_icon
     - taxonomy.vocabulary.habilities
   module:
+    - link
     - media_library
     - path
     - text
@@ -21,6 +23,14 @@ content:
     settings:
       rows: 5
       placeholder: ''
+    third_party_settings: {  }
+  field_call_to_action:
+    type: link_default
+    weight: 6
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
     third_party_settings: {  }
   field_icon:
     type: media_library_widget

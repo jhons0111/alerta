@@ -1,0 +1,29 @@
+uuid: d1db37be-a3eb-4a87-a151-cf49bada8c2b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_card_image
+    - media.type.image
+    - node.type.proyect
+id: node.proyect.field_card_image
+field_name: field_card_image
+entity_type: node
+bundle: proyect
+label: 'Imagen de la tarjeta'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

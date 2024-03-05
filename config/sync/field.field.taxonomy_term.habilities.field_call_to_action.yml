@@ -1,0 +1,23 @@
+uuid: 1815dacb-e61f-4a41-9d8d-bf37acdbb743
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_call_to_action
+    - taxonomy.vocabulary.habilities
+  module:
+    - link
+id: taxonomy_term.habilities.field_call_to_action
+field_name: field_call_to_action
+entity_type: taxonomy_term
+bundle: habilities
+label: 'Call to action'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

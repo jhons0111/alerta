@@ -1,0 +1,20 @@
+uuid: 2ee480f8-e758-4dc7-9eae-35631f762ba5
+langcode: es
+status: true
+dependencies:
+  module:
+    - block_content
+    - taxonomy
+id: block_content.field_complete_badges
+field_name: field_complete_badges
+entity_type: block_content
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

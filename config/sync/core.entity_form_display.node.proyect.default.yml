@@ -1,21 +1,20 @@
-uuid: 185d0cf1-9d71-4198-9236-9bb88749c899
+uuid: 91102a9e-f0b3-485d-9863-2a4735821ad2
 langcode: es
 status: true
 dependencies:
   config:
-    - field.field.node.collaborator.field_description
-    - field.field.node.collaborator.field_habilities
-    - field.field.node.collaborator.field_name
-    - field.field.node.collaborator.field_picture
-    - field.field.node.collaborator.field_position
-    - node.type.collaborator
+    - field.field.node.proyect.field_card_badges
+    - field.field.node.proyect.field_card_description
+    - field.field.node.proyect.field_card_image
+    - field.field.node.proyect.field_card_title
+    - node.type.proyect
   module:
     - media_library
     - path
     - text
-id: node.collaborator.default
+id: node.proyect.default
 targetEntityType: node
-bundle: collaborator
+bundle: proyect
 mode: default
 content:
   created:
@@ -24,38 +23,30 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_description:
-    type: text_textarea
+  field_card_badges:
+    type: options_select
     weight: 124
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_card_description:
+    type: text_textarea
+    weight: 123
     region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-  field_habilities:
-    type: options_buttons
-    weight: 125
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_name:
-    type: string_textfield
-    weight: 121
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_picture:
+  field_card_image:
     type: media_library_widget
-    weight: 122
+    weight: 121
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-  field_position:
+  field_card_title:
     type: string_textfield
-    weight: 123
+    weight: 122
     region: content
     settings:
       size: 60
