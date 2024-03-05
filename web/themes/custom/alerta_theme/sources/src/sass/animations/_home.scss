@@ -156,6 +156,22 @@
     }
 }
 
+.home-planet {
+    article{
+        &:first-child{
+            #canvas-hero{
+                transform: scale(0);
+                transition: 1s ease transform;
+            }
+            &.aos-animate{
+                #canvas-hero{
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}
+
 .home-grid{
     article{
         &:last-child{
@@ -272,7 +288,7 @@
                 }
             }
         }
-        &:last-child{
+        &:nth-child(2){
             picture{
                 opacity: 0;
                 transition: .5s ease opacity;

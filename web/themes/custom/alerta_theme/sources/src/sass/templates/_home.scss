@@ -463,9 +463,10 @@
             flex-wrap: wrap;
             gap: 30px;
             margin-top: 40px;
+            justify-content: center;
             .item{
                 flex: 1 calc(25% - 90px); 
-                max-width: 300px;
+                max-width: 350px;
                 min-width: 250px;
                 position: relative;
                 overflow: hidden;
@@ -585,7 +586,7 @@
 }
 
 .home-team{
-    padding: 20vh 0;
+    padding: 20vh 0 25vw 0;
     article{
         &:first-child{
             position: relative;
@@ -655,7 +656,7 @@
                     }   
                 }
             }
-            div{
+            .team-line-bg{
                 padding: 20px 60px 40px 20px;
                 display: flex;
                 justify-content: center;
@@ -668,10 +669,69 @@
                     border-radius: 0 60px 0 0;
                 }
             }
+            .team-lines{
+                position: absolute;
+                left: calc(100% + 21px);
+                top: 35%;
+                .line-team{
+                    position: relative;
+                    &::before,
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        background-color: fun.color('white');                        
+                    }
+                    &::before{
+                        width: 5vw;
+                        height: 2px;
+                    }
+                    &::after{
+                        left: 5vw;
+                        width: 2px;
+                        height: 12.5vw;
+                    }
+                }
+                img{
+                    position: absolute;
+                    width: 5vw;
+                    top: 12.5vw;
+                    left: 2.5vw;
+                }
+                .line-team-bottom{
+                    position: relative;
+                    &::before,
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        background-color: fun.color('white');                        
+                    }
+                    &::before{
+                        width: 2px;
+                        height: 5vw;
+                        top: 17.5vw;
+                        left: 5vw;
+                    }
+                    &::after{
+                        top: 22.5vw;
+                        width: 5vw;
+                        height: 2px;
+                    }
+                }
+                p{
+                    font-size: 2rem;
+                    color: fun.color('white');
+                    top: 20.5vw;
+                    position: relative;
+                    width: 325px;
+                    left: -350px;
+                    font-family: 'Signo';
+                    text-align: right;
+                }
+            }
         }
     }
     article{
-        &:last-child{
+        &:nth-child(2){
             display: flex;
             position: relative;
             z-index: 9;
@@ -959,8 +1019,11 @@
                 h4{
                     font-size: 2.5rem;
                 }
+                .team-lines{
+                    display: none;
+                }
             }
-            &:last-child{
+            &:nth-child(2){
                 top: -10px;
                 overflow-x: auto;
                 width: 100%;
@@ -1166,7 +1229,7 @@
                     }
                 }
             }
-            &:last-child{
+            &:nth-child(2){
                 height: 100px;
                 picture{
                     width: 100px;

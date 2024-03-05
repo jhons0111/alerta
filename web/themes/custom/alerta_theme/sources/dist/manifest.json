@@ -1,6 +1,6 @@
 {
   "../src/js/app.js": {
-    "file": "js/mainscript.umd.cjs",
+    "file": "js/mainscript.js",
     "isEntry": true,
     "src": "../src/js/app.js"
   },
