@@ -60,7 +60,7 @@ const ScrollSmoth = (()=>{
 
     return {
         setHandleEvent: function(){
-            try{ ScrollSmoth(); }catch(err){  };
+            // try{ ScrollSmoth(); }catch(err){  };
         }
     }
 

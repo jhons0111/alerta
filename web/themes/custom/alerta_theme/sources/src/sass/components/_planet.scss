@@ -1,0 +1,36 @@
+@use '../base/functions' as fun;
+
+.dg.main {
+    display: none;
+}
+
+#canvas-hero{
+    border: none;
+    outline: inherit;
+    position: relative;
+}
+
+@media(min-width: 1400px){
+    #canvas-hero{
+        width: 35vw !important;
+        height: 35vw !important;
+        left: 0vw;
+        top: -2.5vw;
+    }
+}
+
+@media(max-width: fun.breakpoints('ipad-big')){
+    #canvas-hero{
+        width: 100vw !important;
+        left: -5%;
+        max-height: 500px;
+    }
+    .home-planet {
+        article{
+            &:first-child{
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}

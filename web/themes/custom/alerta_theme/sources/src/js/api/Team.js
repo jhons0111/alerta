@@ -29,7 +29,7 @@ const Team = (()=>{
         buttons.forEach((btn)=>{
             btn.addEventListener('click', (e)=>{
                 //Request
-                requestGet(`/api/colaborator/${e.target.dataset.colaborator}`)
+                requestGet(`/api/colaborator/${btn.dataset.colaborator}`)
                     .then(res=>{
                         const { picture, name, position, description, habilities  } = res;
                         const templateModal = TemplateModal(picture, name, position, description, habilities);

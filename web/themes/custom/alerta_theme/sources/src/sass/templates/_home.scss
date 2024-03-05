@@ -117,10 +117,6 @@
     article{
         &:first-child{
             width: 35%;
-            height: 30vw;
-            max-height: 500px;
-            border-radius: 100%;
-            border: 1px solid fun.color('white');
         }
         &:last-child{
             width: 65%;
@@ -469,6 +465,7 @@
             margin-top: 40px;
             .item{
                 flex: 1 calc(25% - 90px); 
+                max-width: 300px;
                 min-width: 250px;
                 position: relative;
                 overflow: hidden;
@@ -522,6 +519,7 @@
                 z-index: 9;
                 background-color: fun.color('black');
                 height: 100%;
+                width: 100%;
                 border: 2px solid fun.color('white');
                 overflow: hidden;
                 display: flex;
@@ -1081,6 +1079,7 @@
                 }
                 .item{
                     display: none;
+                    max-width: 100%;
                     &:first-child,
                     &:nth-child(2){
                         display: flex;
