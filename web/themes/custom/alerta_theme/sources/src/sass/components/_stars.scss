@@ -12,11 +12,15 @@
     width: 100%;
     overflow: hidden;
     pointer-events: none;
+    div{
+      opacity: .2;
+    }
   }
   #stars {
     width: 1px;
     height: 1px;
     background: transparent;
+    opacity: .7;
     box-shadow: 343px 1717px #fff, 763px 92px #fff, 152px 705px #fff,
     1792px 262px #fff, 1569px 1434px #fff, 142px 1058px #fff, 657px 266px #fff,
     769px 1371px #fff, 1682px 83px #fff, 78px 1163px #fff, 1149px 1642px #fff,

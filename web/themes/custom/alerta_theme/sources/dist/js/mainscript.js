@@ -2999,7 +2999,7 @@ var _n = Ge((He) => {
         </div>
         <div class="block">
             ${r.map(function(s) {
-    return `<picture><img src="${s}" alt="categories"></picture>`;
+    return `<picture><img src="${s.icon}" alt="categories"></picture>`;
   })}
         </div>
     </div>
@@ -3016,7 +3016,7 @@ var _n = Ge((He) => {
       const i = document.querySelectorAll("#render-team picture"), r = document.querySelector("#modal-content .modal");
       i.forEach((s) => {
         s.addEventListener("click", (a) => {
-          Pe(`/api/colaborator/${a.target.dataset.colaborator}`).then((o) => {
+          Pe(`/api/colaborator/${s.dataset.colaborator}`).then((o) => {
             const { picture: l, name: d, position: m, description: u, habilities: f } = o, c = zn(l, d, m, u, f);
             r.classList.add("active"), r.querySelector(".modal__content").innerHTML = c, n();
           });

@@ -30,7 +30,7 @@ const TemplateModal = (picture, name, position, description, habilities)=>{
             <p>${description}</p>
         </div>
         <div class="block">
-            ${habilities.map(function(image){ return `<picture><img src="${image}" alt="categories"></picture>` })}
+            ${habilities.map(function(image){ return `<picture><img src="${image.icon}" alt="categories"></picture>` })}
         </div>
     </div>
     `;
