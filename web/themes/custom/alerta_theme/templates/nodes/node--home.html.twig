@@ -117,8 +117,8 @@
 
     <!--Planet three js-->
     <section class="home-planet personality-animation ctm-fonts ctn" data-aos="personality">
-        <article>
-            
+        <article data-aos="personality">
+            <canvas id="canvas-hero"></canvas>
         </article>
         <article class="animation-tx-reveal-secondary">
             <h5 class="rift">
@@ -230,6 +230,14 @@
                     {{ node.field_home_team_sec_title.value|raw }}
                 </h4>
             </div>
+            <div class="team-lines">
+                <em class="line-team"></em>  
+                <img src="/themes/custom/alerta_theme/sources/dist/assets/img/svg/icon-team.svg" alt="">
+                <em class="line-team-bottom">
+                <b></b>
+                </em>
+                <p>Wielding our proprietary communication super weapon</p>
+            </div>
         </article>
         <article class="personality-animation" data-aos="personality" id="render-team">
             <p>Click on the circles to meet the crew</p>
@@ -326,6 +334,7 @@
         varying vec3 vNormal; void main() { float intensity = pow( 0.7 - dot( vNormal, vec3( 0.0, 0.0, 0.5 ) ), 4.0 ); gl_FragColor = vec4( 0.89, 0.82, 0.69, 1.0 ) * intensity; }
     </script>
     <script src="/themes/custom/alerta_theme/sources/dist/three/Planet.js"></script>
+    <script src="/themes/custom/alerta_theme/sources/dist/three/PlanetHero.js" type="module"></script>
     <!--END THREE JS-->
     {% include directory ~ '/templates/includes/loader.html.twig' %}
 </main>

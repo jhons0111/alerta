@@ -1,5 +1,75 @@
 blocks:
   -
+    info: 'Imagen del header'
+    langcode: es
+    uuid: bd340212-bf66-4694-bfbc-2e58f42a5784
+    bundle: only_one_image
+    revision_id: null
+    rev_id_current: null
+    fields:
+      field_image:
+        -
+          target_id: '1'
+  -
+    info: 'Marca del sitio personalizada'
+    langcode: es
+    uuid: ffa0eea7-397a-46ea-b177-0fde3d478e4b
+    bundle: basic
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: '<p>©2024 ALERTA AGENCY</p>'
+          summary: ''
+          format: basic_html
+  -
+    info: 'Redes sociales del footer'
+    langcode: es
+    uuid: 921c4a71-abaf-4374-b2ed-f88c31d9b066
+    bundle: image_with_link
+    revision_id: null
+    rev_id_current: null
+    fields:
+      field_image_with_link:
+        -
+          target_id: '1'
+          target_revision_id: '1'
+        -
+          target_id: '2'
+          target_revision_id: '2'
+        -
+          target_id: '5'
+          target_revision_id: '5'
+        -
+          target_id: '6'
+          target_revision_id: '6'
+  -
+    info: 'Contenido de la sección spearheads del home'
+    langcode: es
+    uuid: 8f5c73cf-6017-433e-bfb3-141f54977af4
+    bundle: spearheads_section
+    revision_id: null
+    rev_id_current: null
+    fields:
+      field_proyects:
+        -
+          target_id: '10'
+        -
+          target_id: '11'
+        -
+          target_id: '12'
+        -
+          target_id: '13'
+      field_spearheads_title:
+        -
+          value: "<span style=\"--index:0.15s\">Alerta</span>\r\n<span style=\"--index:0.2s\">Spearheads</span>"
+          format: restricted_html
+      field_spearhead_sec_title:
+        -
+          value: "<span style=\"--index:0.25s\"><b>MARKET</b></span>\r\n<span style=\"--index:0.3s\"><b>-</b></span>\r\n<span style=\"--index:0.35s\"><b>BENDING</b></span>\r\n<span style=\"--index:0.45s\">PROJECTS</span>\r\n<span style=\"--index:0.5s\">LIKE:</span>"
+          format: restricted_html
+  -
     info: 'Contenido de la sección insignias del home'
     langcode: es
     uuid: a5b29eef-f4b5-43db-a985-f7e5b3a54f9f
@@ -41,76 +111,6 @@ blocks:
         -
           value: "<span style=\"--index:0.25s\"><b>USING</b></span>\r\n<span style=\"--index:0.3s\"><b>STATE</b></span>\r\n<span style=\"--index:0.35s\"><b>-</b></span>\r\n<span style=\"--index:0.45s\">OF</span>\r\n<span style=\"--index:0.5s\">-</span>\r\n<span style=\"--index:0.5s\">THE</span>\r\n<span style=\"--index:0.5s\">-</span>\r\n<span style=\"--index:0.5s\">ART</span>\r\n<span style=\"--index:0.5s\">RESOURCES</span>\r\n<span style=\"--index:0.5s\">INCLUDING</span>"
           format: restricted_html
-  -
-    info: 'Contenido de la sección spearheads del home'
-    langcode: es
-    uuid: 8f5c73cf-6017-433e-bfb3-141f54977af4
-    bundle: spearheads_section
-    revision_id: null
-    rev_id_current: null
-    fields:
-      field_proyects:
-        -
-          target_id: '10'
-        -
-          target_id: '11'
-        -
-          target_id: '12'
-        -
-          target_id: '13'
-      field_spearheads_title:
-        -
-          value: "<span style=\"--index:0.15s\">Alerta</span>\r\n<span style=\"--index:0.2s\">Spearheads</span>"
-          format: restricted_html
-      field_spearhead_sec_title:
-        -
-          value: "<span style=\"--index:0.25s\"><b>MARKET</b></span>\r\n<span style=\"--index:0.3s\"><b>-</b></span>\r\n<span style=\"--index:0.35s\"><b>BENDING</b></span>\r\n<span style=\"--index:0.45s\">PROJECTS</span>\r\n<span style=\"--index:0.5s\">LIKE:</span>"
-          format: restricted_html
-  -
-    info: 'Redes sociales del footer'
-    langcode: es
-    uuid: 921c4a71-abaf-4374-b2ed-f88c31d9b066
-    bundle: image_with_link
-    revision_id: null
-    rev_id_current: null
-    fields:
-      field_image_with_link:
-        -
-          target_id: '1'
-          target_revision_id: '1'
-        -
-          target_id: '2'
-          target_revision_id: '2'
-        -
-          target_id: '5'
-          target_revision_id: '5'
-        -
-          target_id: '6'
-          target_revision_id: '6'
-  -
-    info: 'Marca del sitio personalizada'
-    langcode: es
-    uuid: ffa0eea7-397a-46ea-b177-0fde3d478e4b
-    bundle: basic
-    revision_id: null
-    rev_id_current: null
-    fields:
-      body:
-        -
-          value: '<p>©2024 ALERTA AGENCY</p>'
-          summary: ''
-          format: basic_html
-  -
-    info: 'Imagen del header'
-    langcode: es
-    uuid: bd340212-bf66-4694-bfbc-2e58f42a5784
-    bundle: only_one_image
-    revision_id: null
-    rev_id_current: null
-    fields:
-      field_image:
-        -
-          target_id: '1'
 menus:
   -
     menu_name: header
@@ -129,7 +129,7 @@ menus:
     menu_name: header
     title: 'Get in touch'
     parent: null
-    uri: 'internal:/get-touch'
+    uri: 'internal:/get-in-touch'
     link_title: ''
     description: null
     enabled: true
@@ -140,9 +140,9 @@ menus:
     options: {  }
   -
     menu_name: footers-email
-    title: email@email.com
+    title: hello@alertacreative.com
     parent: null
-    uri: 'internal:/mail:algo'
+    uri: 'mailto:hello@alertacreative.com'
     link_title: ''
     description: null
     enabled: true
@@ -152,5 +152,111 @@ menus:
     uuid: f1e62b13-f93b-45d3-a475-6501f348cff6
     options: {  }
 taxonomies:
+  habilities:
+    -
+      vid: habilities
+      tid: '1'
+      langcode: es
+      name: PRODUCTION
+      description__value: '<p>Multi-format, high-quality production with unbelievable efficiencies.</p>'
+      description__format: basic_html
+      weight: '0'
+      parent: '0'
+      uuid: 26c77874-2e91-4069-8a81-0a65e83878f4
+      field_call_to_action:
+        -
+          uri: 'internal:/url-test'
+          title: 'Click for more.'
+          options: {  }
+    -
+      vid: habilities
+      tid: '2'
+      langcode: es
+      name: 'STRATEGY AND RESEARCH'
+      description__value: '<p>Solid strategic planning harnesses our wild creative passion.&nbsp;</p>'
+      description__format: basic_html
+      weight: '0'
+      parent: '0'
+      uuid: 0366a04e-6cd7-486a-bb2e-7a38aa6f499e
+      field_call_to_action:
+        -
+          uri: 'https://www.drupal.org/'
+          title: 'Click for more.'
+          options: {  }
+    -
+      vid: habilities
+      tid: '3'
+      langcode: es
+      name: 'PRODUCT DEVELOPMENT'
+      description__value: '<p>We’ve got skin in the game! We market Fluttr, an Alerta-made product, using the same nest practices.</p>'
+      description__format: basic_html
+      weight: '0'
+      parent: '0'
+      uuid: 740bacea-856a-4d2c-986f-3b918878a81e
+      field_call_to_action:
+        -
+          uri: 'internal:/product-development'
+          title: 'Click for more.'
+          options: {  }
+    -
+      vid: habilities
+      tid: '4'
+      langcode: es
+      name: 'POST- PRODUCTION'
+      description__value: '<p>Editing, captioning, animating, VFXing, you’ll love doing it with Alerta.</p>'
+      description__format: basic_html
+      weight: '0'
+      parent: '0'
+      uuid: 36dfe651-9288-41d0-84c9-ebeb30b37fae
+      field_call_to_action:
+        -
+          uri: 'internal:/post-production'
+          title: 'Click for more.'
+          options: {  }
+    -
+      vid: habilities
+      tid: '5'
+      langcode: es
+      name: MARKETING
+      description__value: '<p>Strict operation protocols guarantee smooth, effective campaign delivery.</p>'
+      description__format: basic_html
+      weight: '0'
+      parent: '0'
+      uuid: 4e4d836d-d6d6-453b-a2e3-3f1afc6f7715
+      field_call_to_action:
+        -
+          uri: 'internal:/marketing'
+          title: 'Click for more.'
+          options: {  }
+    -
+      vid: habilities
+      tid: '6'
+      langcode: es
+      name: CREATIVITY
+      description__value: '<p>We are passionate about developing impactful and culturally relevant creative.</p>'
+      description__format: basic_html
+      weight: '0'
+      parent: '0'
+      uuid: c07b1d3d-9f07-41b0-90c7-d9301c8a0bc3
+      field_call_to_action:
+        -
+          uri: 'internal:/creativity'
+          title: 'Click for more.'
+          options: {  }
+    -
+      vid: habilities
+      tid: '7'
+      langcode: es
+      name: BRANDING
+      description__value: '<p>Brand architecture, new products and updating. Building consistency in an ever-changing world.&nbsp;</p>'
+      description__format: basic_html
+      weight: '0'
+      parent: '0'
+      uuid: ade9e668-efd3-4e8e-866e-af9e2d41489f
+      field_call_to_action:
+        -
+          uri: 'internal:/branding'
+          title: 'Click for more.'
+          options: {  }
   tags: {  }
 log: 1
