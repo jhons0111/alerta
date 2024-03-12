@@ -34,16 +34,16 @@ const ScrollSmoth = (()=>{
 
             function render() {
                 //We calculate our container position by linear interpolation method
-                dx = li(dx, sx, 0.07);
-                dy = li(dy, sy, 0.07);
+                dx = li(dx, sx, 0.1);
+                dy = li(dy, sy, 0.1);
 
                 dx = Math.floor(dx * 100) / 100;
                 dy = Math.floor(dy * 100) / 100;
 
                 main.style.transform = `translate3d(-${dx}px, -${dy}px, 0px)`;
-                parallax[0].style.transform = `translate3d(-${dx}px, -${dy}px, 0px)`;
-                parallax[1].style.transform = `translate3d(-${dx}px, -${dy}px, 0px)`;
-                scrollDown.style.transform = `translate3d(-${dx}px, -${dy}px, 0px)`;
+                parallax[0] && (parallax[0].style.transform = `translate3d(-${dx}px, -${dy}px, 0px)`);
+                parallax[1] && (parallax[1].style.transform = `translate3d(-${dx}px, -${dy}px, 0px)`);
+                scrollDown && (scrollDown.style.transform = `translate3d(-${dx}px, -${dy}px, 0px)`);
                 window.requestAnimationFrame(render);
             }
 

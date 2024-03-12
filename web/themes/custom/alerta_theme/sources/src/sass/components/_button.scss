@@ -38,6 +38,11 @@
     &--secondary{
         background-color: transparent;
     }
+    &--tertiary{
+        background-color: transparent;
+        border-color: fun.color('tertiary');
+        color: fun.color('tertiary');
+    }
     &:hover{
         background: transparent;
         color: fun.color('white');

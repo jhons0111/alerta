@@ -8,7 +8,7 @@ const Team = (()=>{
     const _TeamConfig = ()=>{
         const containerTeam = document.querySelector('#render-team');
         //Render team images and names
-        requestGet('/api/colaborators')
+        containerTeam && requestGet('/api/colaborators')
             .then(res=>{
                 res.forEach((data, indice)=>{
                     const { colaborator_id, picture } = data;
@@ -26,7 +26,7 @@ const Team = (()=>{
         const modalContent = document.querySelector('#modal-content .modal');
 
         //Buttons
-        buttons.forEach((btn)=>{
+        modalContent && buttons.forEach((btn)=>{
             btn.addEventListener('click', (e)=>{
                 //Request
                 requestGet(`/api/colaborator/${btn.dataset.colaborator}`)

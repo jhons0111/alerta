@@ -1,0 +1,128 @@
+@use '../base/functions' as fun;
+
+
+.detail-project{
+    max-height: calc(100vh - 97px);
+    margin: 97px auto 0;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0;
+    transition: .5s ease width !important;
+    &.aos-animate{
+        width: 100%;
+    }
+    iframe{
+        min-width: 120vw;
+        min-height: 120vh;
+    }
+}
+
+.detail-project__hero{
+    position: relative;
+    padding: 60px 0;
+    .block{
+        gap: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .block article{
+        &:first-child{
+            width: 20%;
+            max-width: 200px;
+            picture{
+                width: 100%;
+                display: flex;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        &:nth-child(2){
+            width: 60%;
+            p{
+                color: fun.color('white');
+                font-size: 2rem;
+                text-transform: uppercase;
+            }
+            h5{
+                font-size: 1.8rem;
+                color: fun.color('white');
+                margin: 20px 0;
+                text-transform: uppercase;
+            }
+            .item{
+                display: flex;
+                gap: 20px;
+            }
+        }
+        &:nth-child(3){
+            width: 20%;
+            max-width: 110px;
+            picture{
+                width: 100%;
+                display: flex;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .project-gradient{
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+        display: flex;
+        justify-content: flex-end;
+        picture{
+            width: 80%;
+            display: flex;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+.project-line{
+    margin-top: -5%;
+    pointer-events: none;
+}
+
+
+@media(max-width: fun.breakpoints('ipad-big')){
+    .detail-project{
+        max-height: calc(100vh - 60px);
+        margin-top: 60px auto 0;
+        iframe{
+            min-width: 450vw;
+            min-height: 450vh;
+        }
+    }
+    .detail-project__hero{
+        .block{
+            flex-direction: column;
+        }
+        .block article{
+            &:first-child, &:nth-child(2), &:last-child{
+                width: 100%;
+            }
+            &:first-child{
+                max-width: 150px;
+                margin: auto;
+            }
+            &:last-child{
+                max-width: 90px;
+                margin: auto;
+                display: none;
+            }
+        }
+    }
+    .project-line{
+        margin-top: -35% !important;
+    }
+}

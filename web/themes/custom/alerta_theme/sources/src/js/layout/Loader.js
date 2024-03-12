@@ -3,10 +3,10 @@ const Loader = (()=>{
     const _LoaderConfig = ()=>{
         const loader = document.querySelector('.loader');
         setTimeout(()=>{
-            loader.classList.add('line-animate');
+            loader && loader.classList.add('line-animate');
         },1500);
         setTimeout(()=>{
-            loader.classList.add('hidden');
+            loader && loader.classList.add('hidden');
         },2250);
     }
 
