@@ -1,0 +1,21 @@
+uuid: 667a9653-1912-4584-a1ec-006e255301be
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.only_video.field_video_link
+    - paragraphs.paragraphs_type.only_video
+id: paragraph.only_video.default
+targetEntityType: paragraph
+bundle: only_video
+mode: default
+content:
+  field_video_link:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

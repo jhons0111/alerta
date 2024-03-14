@@ -1,0 +1,18 @@
+uuid: a264fac8-d1a1-40d5-a3ad-36a7ceee4c87
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.only_one_image
+id: block_content.only_one_image.info
+field_name: info
+entity_type: block_content
+bundle: only_one_image
+label: 'Block description'
+description: 'A brief description of your block.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

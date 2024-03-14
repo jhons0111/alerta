@@ -1,0 +1,40 @@
+uuid: caac23eb-4154-4d03-80ac-f555191fdecc
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.title_and_description.field_elements_order
+    - field.field.paragraph.title_and_description.field_image
+    - field.field.paragraph.title_and_description.field_project_desc_parag
+    - paragraphs.paragraphs_type.title_and_description
+  module:
+    - options
+    - text
+id: paragraph.title_and_description.default
+targetEntityType: paragraph
+bundle: title_and_description
+mode: default
+content:
+  field_elements_order:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_image:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_project_desc_parag:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

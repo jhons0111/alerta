@@ -1,0 +1,18 @@
+uuid: 444c681a-6500-44c3-b936-1ab34021a537
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.collaborator
+id: node.collaborator.changed
+field_name: changed
+entity_type: node
+bundle: collaborator
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

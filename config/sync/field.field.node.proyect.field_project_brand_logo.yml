@@ -1,0 +1,29 @@
+uuid: 88392d4c-052b-47cd-a83e-ea2ee3dec2e2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_project_brand_logo
+    - media.type.image
+    - node.type.proyect
+id: node.proyect.field_project_brand_logo
+field_name: field_project_brand_logo
+entity_type: node
+bundle: proyect
+label: 'Logo de la marca'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -13,7 +13,7 @@ bundle: home
 label: 'Sección Spearheads'
 description: 'Bloque para agregar el contenido de la sección Spearheads.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

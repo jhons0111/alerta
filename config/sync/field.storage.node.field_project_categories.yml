@@ -1,0 +1,21 @@
+uuid: 8cd34c4b-f745-4844-97d2-07d246870f35
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_project_categories
+field_name: field_project_categories
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

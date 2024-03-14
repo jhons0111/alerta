@@ -1,0 +1,21 @@
+uuid: 29639188-2661-4be3-aa75-f78b8f3e413f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_elements_order
+    - paragraphs.paragraphs_type.title_and_description
+  module:
+    - options
+id: paragraph.title_and_description.field_elements_order
+field_name: field_elements_order
+entity_type: paragraph
+bundle: title_and_description
+label: 'Orden de los elementos'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

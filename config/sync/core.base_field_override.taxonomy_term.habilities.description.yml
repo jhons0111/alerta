@@ -1,0 +1,20 @@
+uuid: f56abe5d-31a1-4aff-8ad8-118a732b3ae7
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.habilities
+  module:
+    - text
+id: taxonomy_term.habilities.description
+field_name: description
+entity_type: taxonomy_term
+bundle: habilities
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

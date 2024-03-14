@@ -1,0 +1,21 @@
+uuid: a4a1ef06-52e2-43f4-9814-7c99b8c40da6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_project_desc_parag
+    - paragraphs.paragraphs_type.title_and_description
+  module:
+    - text
+id: paragraph.title_and_description.field_project_desc_parag
+field_name: field_project_desc_parag
+entity_type: paragraph
+bundle: title_and_description
+label: Descripción
+description: 'Texto de tipo parrafo para agregar contenido.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,23 @@
+uuid: edc5eadd-e956-411b-8bdf-c6bb3282b6cf
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.only_video.field_video_link
+    - paragraphs.paragraphs_type.only_video
+id: paragraph.only_video.default
+targetEntityType: paragraph
+bundle: only_video
+mode: default
+content:
+  field_video_link:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

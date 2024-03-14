@@ -1,0 +1,10 @@
+uuid: 91dd25f7-cef6-4f38-a1bd-68f94dc39399
+langcode: es
+status: true
+dependencies: {  }
+id: only_video
+label: 'Link de video'
+icon_uuid: null
+icon_default: null
+description: 'Paragraph para agregar videos con url.'
+behavior_plugins: {  }

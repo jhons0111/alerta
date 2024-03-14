@@ -1,0 +1,20 @@
+uuid: f3a02efe-ab30-4813-ac1c-98f28d1d84b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.pagina_maqueta
+  module:
+    - path
+id: node.pagina_maqueta.path
+field_name: path
+entity_type: node
+bundle: pagina_maqueta
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

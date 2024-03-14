@@ -1,0 +1,18 @@
+uuid: 646f1077-9e0f-4eda-9f4e-30e4873191ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.image_with_link
+id: block_content.image_with_link.changed
+field_name: changed
+entity_type: block_content
+bundle: image_with_link
+label: Changed
+description: 'The time that the custom block was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

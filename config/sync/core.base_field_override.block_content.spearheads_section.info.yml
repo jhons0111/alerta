@@ -1,0 +1,18 @@
+uuid: 92180c0f-234c-44a6-95ea-febcc95cd328
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.spearheads_section
+id: block_content.spearheads_section.info
+field_name: info
+entity_type: block_content
+bundle: spearheads_section
+label: 'Block description'
+description: 'A brief description of your block.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

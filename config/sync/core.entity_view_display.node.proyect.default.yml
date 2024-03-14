@@ -7,8 +7,14 @@ dependencies:
     - field.field.node.proyect.field_card_description
     - field.field.node.proyect.field_card_image
     - field.field.node.proyect.field_card_title
+    - field.field.node.proyect.field_project_banner_url
+    - field.field.node.proyect.field_project_brand_logo
+    - field.field.node.proyect.field_project_categories
+    - field.field.node.proyect.field_project_description
+    - field.field.node.proyect.field_section_left_side
     - node.type.proyect
   module:
+    - entity_reference_revisions
     - text
     - user
 id: node.proyect.default
@@ -47,6 +53,47 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 102
+    region: content
+  field_project_banner_url:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_project_brand_logo:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_project_categories:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_project_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_section_left_side:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 109
     region: content
   links:
     settings: {  }

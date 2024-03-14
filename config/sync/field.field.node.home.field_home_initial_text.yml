@@ -14,7 +14,7 @@ bundle: home
 label: 'Texto inicial'
 description: 'Texto junto a la esfera de color transparente.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

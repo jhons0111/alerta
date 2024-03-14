@@ -1,0 +1,22 @@
+uuid: d94be082-b3d2-44a9-9d23-33fd8b5a4e05
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.spearheads_section
+id: block_content.spearheads_section.status
+field_name: status
+entity_type: block_content
+bundle: spearheads_section
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

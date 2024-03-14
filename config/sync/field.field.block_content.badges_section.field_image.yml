@@ -13,7 +13,7 @@ bundle: badges_section
 label: Insignias
 description: 'Imagen para cada insignia.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

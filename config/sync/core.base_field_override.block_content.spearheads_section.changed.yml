@@ -1,0 +1,18 @@
+uuid: 5eefa1bb-58a2-4f68-8b8e-fd0a8dd229db
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.spearheads_section
+id: block_content.spearheads_section.changed
+field_name: changed
+entity_type: block_content
+bundle: spearheads_section
+label: Changed
+description: 'The time that the custom block was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

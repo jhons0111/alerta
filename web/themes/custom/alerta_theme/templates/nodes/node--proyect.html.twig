@@ -1,0 +1,108 @@
+
+<main class="main-content" id="main">
+    <!-- Stars -->
+    <section class="stars__container">
+        <div id='stars'></div>
+        {% for i in 1..3 %}
+            <div id='stars{{ i }}'></div>
+        {% endfor %}
+    </section>
+    <!--End stars-->
+    <!--Video-->
+    <section class="detail-project" data-aos="personality">
+        <article>
+            <iframe src="{{ node.field_project_banner_url.value|raw }}" frameborder="0"></iframe>
+        </article>
+    </section>
+    <!-- End video-->
+    <!--Contain with icons-->
+    <section class="detail-project__hero">
+        <div class="block ctn">
+            <article class="container" data-aos="fade-up" >
+                <picture>
+                    {% set brand_logo = file_url(node.field_project_brand_logo.entity.field_media_image.entity.fileuri) %}
+                    <img src="{{ brand_logo }}" alt="brand">
+                </picture>
+            </article>
+            <article class="container" data-aos="fade-up" data-aos-delay="100">
+                <p>
+                    {{ node.field_project_description.value|raw }}
+                </p>
+                <h5>Campaigns</h5>
+                <div class="item">
+                    {% for category in node.field_project_categories %}
+                        <a href="#" class="btn btn--tertiary">{{ category.value }}</a>
+                        {# <a href="#" class="btn btn--tertiary">{{ category.value }}</a> #}
+                    {% endfor %}
+                </div>
+            </article>
+            <article class="container" data-aos="fade-up" data-aos-delay="200">
+                <picture>
+                    <img src="/themes/custom/alerta_theme/sources/dist/assets/img/svg/icon-test.svg" alt="icon">
+                </picture>
+            </article>
+        </div>
+        <article class="project-gradient" data-aos="fade-up" data-aos-delay="300">
+            <picture>
+                <img src="/themes/custom/alerta_theme/sources/dist/assets/img/png/gradient-project.png" alt="background">
+            </picture>
+        </article>
+    </section>
+    <!--End contain with icons-->
+
+    <!--Line animate-->
+    <section class="home-line home-line--relative project-line personality-animation" data-aos="personality">
+        <!--Svg module-->
+        <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="465" viewBox="0 0 1920 465" fill="none">
+            <path  id="pathHome3" d="M-41.5318 108.835C-37.212 63.8059 -5.98969 -19.2352 84.3419 8.83132C197.256 43.9145 190.199 274.605 435.38 244.052C680.561 213.5 723.373 53.4216 970.188 162.961C1217 272.5 1391.33 503.549 1644.15 455.051C1896.98 406.552 1856.74 248.01 1984.23 260.24" stroke="url(#paint0_linear_1735_14458)" stroke-width="6"/>
+            <path  id="pathHome3" d="M-41.5318 108.835C-37.212 63.8059 -5.98969 -19.2352 84.3419 8.83132C197.256 43.9145 190.199 274.605 435.38 244.052C680.561 213.5 723.373 53.4216 970.188 162.961C1217 272.5 1391.33 503.549 1644.15 455.051C1896.98 406.552 1856.74 248.01 1984.23 260.24" stroke="url(#paint1_linear_1735_14458)" stroke-width="6"/>
+            <defs>
+            <linearGradient id="paint0_linear_1735_14458" x1="1072.71" y1="-63.4724" x2="997.476" y2="410.785" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#0052F1"/>
+            <stop offset="1" stop-color="#0052F1" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="paint1_linear_1735_14458" x1="1471.32" y1="566.768" x2="1326.14" y2="-113.568" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#9747FF"/>
+            <stop offset="1" stop-color="#9747FF" stop-opacity="0"/>
+            </linearGradient>
+            </defs>
+        </svg>
+        <!--End svg module-->
+    </section>
+    <!--End line animate-->
+    {% include directory ~ '/templates/includes/loader.html.twig' %}
+</main>
+
+{# Paragraph fields #}
+    {% for key, item in content.field_section_left_side if key|first != '#'%}
+        
+        {% set paragraph_type_machine_name = item['#paragraph'].getType() %}
+        {% if paragraph_type_machine_name == 'title_and_description' %}
+
+            {% if item['#paragraph'].field_elements_order[0].value|raw == 'left' %}
+
+                <h2>{{ item['#paragraph'].field_elements_order[0].value|raw }}</h2>
+                {{ item['#paragraph'].field_project_desc_parag[0].value|raw }}
+                {% set title_img = file_url(item['#paragraph'].field_image.entity.field_media_image.entity.fileuri) %}
+                {{ title_img }}
+            {% elseif item['#paragraph'].field_elements_order[0].value|raw == 'right' %}
+
+                <h2>{{ item['#paragraph'].field_elements_order[0].value|raw }}</h2>
+                <h2>{{ item['#paragraph'].field_project_desc_parag[0].value|raw }}</h2>
+                {% set title_img = file_url(item['#paragraph'].field_image.entity.field_media_image.entity.fileuri) %}
+                <h3>{{ title_img }}</h3>
+            {% endif %}
+             
+        {% elseif paragraph_type_machine_name == 'only_video' %}
+
+            </br>
+            <h2>{{ item['#paragraph'].field_video_link[0].value|raw }}</h2>
+        {% endif %}
+
+
+    {# Imprimir el machine name del tipo de párrafo #}
+    {# <h1>{{ paragraph_type_machine_name }}</h1> #}
+    {# {{ item['#paragraph'].field_description[0].value|raw }}
+    {{ item['#paragraph'].field_start_date[0].value|raw }}#}
+    
+    {% endfor %}

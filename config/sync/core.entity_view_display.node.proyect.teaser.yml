@@ -8,6 +8,11 @@ dependencies:
     - field.field.node.proyect.field_card_description
     - field.field.node.proyect.field_card_image
     - field.field.node.proyect.field_card_title
+    - field.field.node.proyect.field_project_banner_url
+    - field.field.node.proyect.field_project_brand_logo
+    - field.field.node.proyect.field_project_categories
+    - field.field.node.proyect.field_project_description
+    - field.field.node.proyect.field_section_left_side
     - node.type.proyect
   module:
     - user
@@ -26,4 +31,9 @@ hidden:
   field_card_description: true
   field_card_image: true
   field_card_title: true
+  field_project_banner_url: true
+  field_project_brand_logo: true
+  field_project_categories: true
+  field_project_description: true
+  field_section_left_side: true
   langcode: true

@@ -13,7 +13,7 @@ bundle: home
 label: 'Sección Insignias'
 description: 'Bloque para agregar el contenido de la sección Insignias.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

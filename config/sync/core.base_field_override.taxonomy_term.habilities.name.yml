@@ -1,0 +1,18 @@
+uuid: bce9f616-8ee3-4d80-b503-ea71683f34a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.habilities
+id: taxonomy_term.habilities.name
+field_name: name
+entity_type: taxonomy_term
+bundle: habilities
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

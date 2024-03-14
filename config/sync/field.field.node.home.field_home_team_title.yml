@@ -14,7 +14,7 @@ bundle: home
 label: 'Team titulo'
 description: 'Primer titulo de la sección ''equipo''.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

@@ -1,0 +1,42 @@
+uuid: acf645c1-3bb1-4964-a2ec-9de1ac53b076
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section_left_side
+    - node.type.proyect
+    - paragraphs.paragraphs_type.only_video
+    - paragraphs.paragraphs_type.title_and_description
+  module:
+    - entity_reference_revisions
+id: node.proyect.field_section_left_side
+field_name: field_section_left_side
+entity_type: node
+bundle: proyect
+label: 'Titulo y descripción'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      title_and_description: title_and_description
+      only_video: only_video
+    negate: 0
+    target_bundles_drag_drop:
+      badges:
+        weight: 5
+        enabled: false
+      image_with_link:
+        weight: 6
+        enabled: false
+      only_video:
+        weight: 5
+        enabled: true
+      title_and_description:
+        weight: 4
+        enabled: true
+field_type: entity_reference_revisions

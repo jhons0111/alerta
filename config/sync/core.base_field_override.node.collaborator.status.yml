@@ -1,0 +1,22 @@
+uuid: 6e0be301-6b86-475a-8332-3dc4b120e1cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.collaborator
+id: node.collaborator.status
+field_name: status
+entity_type: node
+bundle: collaborator
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

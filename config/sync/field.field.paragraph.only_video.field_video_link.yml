@@ -1,0 +1,19 @@
+uuid: 0c8312c4-b084-406f-8ccb-8e046bef7076
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_video_link
+    - paragraphs.paragraphs_type.only_video
+id: paragraph.only_video.field_video_link
+field_name: field_video_link
+entity_type: paragraph
+bundle: only_video
+label: 'Link del video'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

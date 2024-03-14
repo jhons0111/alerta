@@ -1,0 +1,41 @@
+uuid: ac79b2f7-46f9-455f-b30f-61eb19150b55
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.title_and_description.field_elements_order
+    - field.field.paragraph.title_and_description.field_image
+    - field.field.paragraph.title_and_description.field_project_desc_parag
+    - paragraphs.paragraphs_type.title_and_description
+  module:
+    - media_library
+    - text
+id: paragraph.title_and_description.default
+targetEntityType: paragraph
+bundle: title_and_description
+mode: default
+content:
+  field_elements_order:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_image:
+    type: media_library_widget
+    weight: 0
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_project_desc_parag:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,10 @@
+uuid: 60ada43b-579d-4273-b292-cba70d3732cb
+langcode: es
+status: true
+dependencies: {  }
+id: title_and_description
+label: 'Titulo y descripción'
+icon_uuid: null
+icon_default: null
+description: 'Titulo de tipo imagen y descripción para los proyectos'
+behavior_plugins: {  }

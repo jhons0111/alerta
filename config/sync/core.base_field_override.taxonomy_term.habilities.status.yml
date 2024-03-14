@@ -1,0 +1,22 @@
+uuid: 1825d2d0-5c7b-48a9-bfbd-741b6e079b02
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.habilities
+id: taxonomy_term.habilities.status
+field_name: status
+entity_type: taxonomy_term
+bundle: habilities
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

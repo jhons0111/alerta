@@ -1,0 +1,22 @@
+uuid: 8f9fd05e-6891-49d2-93fa-9d51052bcee6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.pagina_maqueta
+id: node.pagina_maqueta.status
+field_name: status
+entity_type: node
+bundle: pagina_maqueta
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

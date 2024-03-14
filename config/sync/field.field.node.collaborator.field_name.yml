@@ -12,7 +12,7 @@ bundle: collaborator
 label: Nombre
 description: 'Nombre del colaborador'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
