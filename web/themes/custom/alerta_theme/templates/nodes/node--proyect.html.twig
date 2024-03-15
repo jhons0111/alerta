@@ -70,39 +70,65 @@
         <!--End svg module-->
     </section>
     <!--End line animate-->
-    {% include directory ~ '/templates/includes/loader.html.twig' %}
-</main>
 
-{# Paragraph fields #}
+    {# Body #}
     {% for key, item in content.field_section_left_side if key|first != '#'%}
-        
+    
         {% set paragraph_type_machine_name = item['#paragraph'].getType() %}
         {% if paragraph_type_machine_name == 'title_and_description' %}
 
-            {% if item['#paragraph'].field_elements_order[0].value|raw == 'left' %}
+            <section class="text-content">
+                {% if item['#paragraph'].field_elements_order[0].value|raw == 'left' %}
 
-                <h2>{{ item['#paragraph'].field_elements_order[0].value|raw }}</h2>
-                {{ item['#paragraph'].field_project_desc_parag[0].value|raw }}
-                {% set title_img = file_url(item['#paragraph'].field_image.entity.field_media_image.entity.fileuri) %}
-                {{ title_img }}
-            {% elseif item['#paragraph'].field_elements_order[0].value|raw == 'right' %}
+                        <!--Title and text section left-->
+                        <div class="text-content-title text-content-title">
+                            <div class="text-content-title-raw text-content-title-raw_left">
+                                {% set title_img = file_url(item['#paragraph'].field_image.entity.field_media_image.entity.fileuri) %}
+                                {% set title_alt = file_url(item['#paragraph'].field_image.entity.field_media_image.entity.alt) %}
+                                <img src="{{ title_img }}" alt="{{ title_alt }}">
+                            </div>
+                        </div>
+                        <div class="text-content-paragraphs">
+                            <div class="text-content-paragraphs-raw text-content-paragraphs-raw_left">
+                                <span>
+                                    {{ item['#paragraph'].field_project_desc_parag[0].value|raw }}
+                                </span>
+                            </div>
+                        </div>
+                        <!--End Title and text section left-->
+                {% elseif item['#paragraph'].field_elements_order[0].value|raw == 'right' %}
 
-                <h2>{{ item['#paragraph'].field_elements_order[0].value|raw }}</h2>
-                <h2>{{ item['#paragraph'].field_project_desc_parag[0].value|raw }}</h2>
-                {% set title_img = file_url(item['#paragraph'].field_image.entity.field_media_image.entity.fileuri) %}
-                <h3>{{ title_img }}</h3>
-            {% endif %}
-             
+                    <!--Title and text section right-->
+                    <section class="text-content">
+                        <div class="text-content-title">
+                            <div class="text-content-title-raw text-content-title-raw_right">
+                                {% set title_img = file_url(item['#paragraph'].field_image.entity.field_media_image.entity.fileuri) %}
+                                {% set title_alt = file_url(item['#paragraph'].field_image.entity.field_media_image.entity.fileuri) %}
+                                <img src="{{ title_img }}" alt="{{ title_alt }}">
+                            </div>
+                        </div>
+                        <div class="text-content-paragraphs">
+                            <div class="text-content-paragraphs-raw text-content-paragraphs-raw_right">
+                                <span>
+                                    {{ item['#paragraph'].field_project_desc_parag[0].value|raw }}
+                                </span>
+                            </div>
+                        </div>
+                    </section>
+                    <!--End Title and text section right-->
+                {% endif %}
+            </section>
         {% elseif paragraph_type_machine_name == 'only_video' %}
 
-            </br>
-            <h2>{{ item['#paragraph'].field_video_link[0].value|raw }}</h2>
+            <!--Video-->
+            <section class="detail-project detail-project-body" data-aos="personality">
+                <article>
+                    <iframe src="{{ item['#paragraph'].field_video_link[0].value|raw }}" frameborder="0"></iframe>
+                </article>
+            </section>
+            <!-- End video-->
         {% endif %}
-
-
-    {# Imprimir el machine name del tipo de párrafo #}
-    {# <h1>{{ paragraph_type_machine_name }}</h1> #}
-    {# {{ item['#paragraph'].field_description[0].value|raw }}
-    {{ item['#paragraph'].field_start_date[0].value|raw }}#}
-    
     {% endfor %}
+    {# End body #}
+    {% include directory ~ '/templates/includes/loader.html.twig' %}
+</main>

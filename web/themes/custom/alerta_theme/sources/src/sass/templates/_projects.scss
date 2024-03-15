@@ -12,6 +12,9 @@
     align-items: center;
     width: 0;
     transition: .5s ease width !important;
+    &-body{
+        margin: 0 !important;
+    }
     &.aos-animate{
         width: 100%;
     }
@@ -45,7 +48,7 @@
             width: 60%;
             p{
                 color: fun.color('white');
-                font-size: 2rem;
+                font-size: 2.5rem;
                 text-transform: uppercase;
             }
             h5{
@@ -93,6 +96,74 @@
     pointer-events: none;
 }
 
+.text-content{
+    width: 100%;
+    padding-top: 60px;
+    &-title{
+        width: 100%;
+        border-bottom: 3px solid #fff;
+        &-raw{
+            max-width: 1550px;
+            width: 90%;
+            margin: auto;
+            padding: 20px 40px;
+            position: relative;
+            display: flex;
+        }
+        &-raw_left{
+            &::before{
+                content: "";
+                position: absolute;
+                left: -6px;
+                height: 100%;
+                width: 18px;
+                background-image: url('/themes/custom/alerta_theme/sources/dist/assets/img/svg/vertical-line.svg');
+                background-repeat: no-repeat;
+            }
+        }
+        &-raw_right{
+            flex-direction: row-reverse;
+            &::after{
+                content: "";
+                position: absolute;
+                right: -8px;
+                height: 100%;
+                width: 18px;
+                background-image: url('/themes/custom/alerta_theme/sources/dist/assets/img/svg/vertical-line.svg');
+                background-repeat: no-repeat;
+            }
+        }
+    }
+    &-paragraphs{
+        width: 100%;
+        &-raw{
+            max-width: 1550px;
+            width: 90%;
+            margin: auto;
+            padding: 45px;
+            
+            span{
+                color: #fff;
+                font-size: 2.5rem;
+                p{
+                    font-family: 'signo';
+                    font-weight: 300;
+                }
+            }
+            &_left{
+                border-left: 3px solid #fff;
+            }
+            &_right{
+                border-right: 3px solid #fff;
+                span{
+                    text-align: end;
+                }
+            }
+        }
+
+    }
+}
+
 
 @media(max-width: fun.breakpoints('ipad-big')){
     .detail-project{
@@ -124,5 +195,18 @@
     }
     .project-line{
         margin-top: -35% !important;
+    }
+}
+
+@media(max-width: fun.breakpoints('ipad-big')){
+    .text-content-paragraphs-raw span{
+        text-align: justify;
+        display: block;
+    }
+
+    .text-content-title-raw img{
+        width: 100%;
+        display: block;
+        margin: auto;
     }
 }
