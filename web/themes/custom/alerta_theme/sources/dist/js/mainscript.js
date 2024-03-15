@@ -41,7 +41,7 @@ var _n = Ge((He) => {
       let t = 0;
       window.addEventListener("scroll", function() {
         const i = window.pageYOffset || document.documentElement.scrollTop, n = document.querySelector(".header");
-        i > t ? n.classList.add("scroll") : i < t && n.classList.remove("scroll"), t = i <= 0 ? 0 : i;
+        i > t ? n.classList.add("scroll") : i < t && n.classList.remove("scroll"), window.scrollY > 100 ? n.classList.add("hidden-cta") : n.classList.remove("hidden-cta"), t = i <= 0 ? 0 : i;
       });
     };
     return {
@@ -87,15 +87,17 @@ var _n = Ge((He) => {
         }
       }
     };
-  })(), Fe = () => {
+  })(), qe = () => {
     Be.setHandleEvent();
-  }, qe = (() => {
+  }, Fe = (() => {
     const e = () => {
-      const t = document.querySelector("#open-form"), i = document.querySelector("#join-form-ctn .join-us__bg");
-      console.log(i), i.addEventListener("click", (n) => {
-        console.log("click"), n.target.closest(".join-us").classList.remove("active");
-      }), t.addEventListener("click", (n) => {
-        n.target.closest(".join-us").classList.toggle("active");
+      const t = document.querySelector("#open-form"), i = document.querySelectorAll("nav .menu-item"), n = document.querySelector("#join-form-ctn .join-us__bg");
+      i[1].addEventListener("click", (r) => {
+        r.preventDefault(), document.querySelector(".join-us").classList.add("active");
+      }), n.addEventListener("click", (r) => {
+        console.log("click"), r.target.closest(".join-us").classList.remove("active");
+      }), t.addEventListener("click", (r) => {
+        r.target.closest(".join-us").classList.toggle("active");
       });
     };
     return {
@@ -107,7 +109,7 @@ var _n = Ge((He) => {
       }
     };
   })(), We = () => {
-    qe.setHandleEvent();
+    Fe.setHandleEvent();
   }, Re = (() => {
     const e = () => {
       const t = document.querySelector("#join-form-ctn"), i = document.querySelector(".header"), n = document.querySelector(".blob"), r = document.querySelector(".stars__container"), s = document.querySelector("#modal-content"), a = document.body;
@@ -281,7 +283,7 @@ var _n = Ge((He) => {
             function ie() {
               return H === void 0 ? G : Y(v());
             }
-            function q() {
+            function F() {
               var O = v(), $ = _(O);
               if (W = arguments, X = this, V = O, $) {
                 if (H === void 0)
@@ -294,7 +296,7 @@ var _n = Ge((He) => {
             var W, X, K, G, H, V, Z = 0, ee = !1, Q = !1, A = !0;
             if (typeof g != "function")
               throw new TypeError(f);
-            return x = m(x) || 0, o(E) && (ee = !!E.leading, Q = "maxWait" in E, K = Q ? k(m(E.maxWait) || 0, x) : K, A = "trailing" in E ? !!E.trailing : A), q.cancel = re, q.flush = ie, q;
+            return x = m(x) || 0, o(E) && (ee = !!E.leading, Q = "maxWait" in E, K = Q ? k(m(E.maxWait) || 0, x) : K, A = "trailing" in E ? !!E.trailing : A), F.cancel = re, F.flush = ie, F;
           }
           function a(g, x, E) {
             var I = !0, L = !0;
@@ -342,8 +344,8 @@ var _n = Ge((He) => {
         (function(r) {
           function s(v, g, x) {
             function E(A) {
-              var O = q, $ = W;
-              return q = W = void 0, V = A, K = v.apply($, O);
+              var O = F, $ = W;
+              return F = W = void 0, V = A, K = v.apply($, O);
             }
             function I(A) {
               return V = A, G = setTimeout(_, g), Z ? E(A) : K;
@@ -361,17 +363,17 @@ var _n = Ge((He) => {
               return D(A) ? j(A) : void (G = setTimeout(_, L(A)));
             }
             function j(A) {
-              return G = void 0, Q && q ? E(A) : (q = W = void 0, K);
+              return G = void 0, Q && F ? E(A) : (F = W = void 0, K);
             }
             function Y() {
-              G !== void 0 && clearTimeout(G), V = 0, q = H = W = G = void 0;
+              G !== void 0 && clearTimeout(G), V = 0, F = H = W = G = void 0;
             }
             function re() {
               return G === void 0 ? K : j(N());
             }
             function ie() {
               var A = N(), O = D(A);
-              if (q = arguments, W = this, H = A, O) {
+              if (F = arguments, W = this, H = A, O) {
                 if (G === void 0)
                   return I(H);
                 if (ee)
@@ -379,7 +381,7 @@ var _n = Ge((He) => {
               }
               return G === void 0 && (G = setTimeout(_, g)), K;
             }
-            var q, W, X, K, G, H, V = 0, Z = !1, ee = !1, Q = !0;
+            var F, W, X, K, G, H, V = 0, Z = !1, ee = !1, Q = !0;
             if (typeof v != "function")
               throw new TypeError(u);
             return g = d(g) || 0, a(x) && (Z = !!x.leading, ee = "maxWait" in x, X = ee ? P(d(x.maxWait) || 0, g) : X, Q = "trailing" in x ? !!x.trailing : Q), ie.cancel = Y, ie.flush = re, ie;
@@ -709,7 +711,7 @@ var _n = Ge((He) => {
       typeof setTimeout != "undefined" && clearTimeout(e);
     }
   };
-  function F() {
+  function q() {
     const e = typeof window != "undefined" ? window : {};
     return ve(e, st), e;
   }
@@ -733,12 +735,12 @@ var _n = Ge((He) => {
     return Date.now();
   }
   function at(e) {
-    const t = F();
+    const t = q();
     let i;
     return t.getComputedStyle && (i = t.getComputedStyle(e, null)), !i && e.currentStyle && (i = e.currentStyle), i || (i = e.style), i;
   }
   function ot(e, t = "x") {
-    const i = F();
+    const i = q();
     let n, r, s;
     const a = at(e);
     return i.WebKitCSSMatrix ? (r = a.transform || a.webkitTransform, r.split(",").length > 6 && (r = r.split(", ").map((o) => o.replace(",", ".")).join(", ")), s = new i.WebKitCSSMatrix(r === "none" ? "" : r)) : (s = a.MozTransform || a.OTransform || a.MsTransform || a.msTransform || a.transform || a.getPropertyValue("transform").replace("translate(", "matrix(1, 0, 0, 1,"), n = s.toString().split(",")), t === "x" && (i.WebKitCSSMatrix ? r = s.m41 : n.length === 16 ? r = parseFloat(n[12]) : r = parseFloat(n[4])), t === "y" && (i.WebKitCSSMatrix ? r = s.m42 : n.length === 16 ? r = parseFloat(n[13]) : r = parseFloat(n[5])), r || 0;
@@ -771,7 +773,7 @@ var _n = Ge((He) => {
     targetPosition: t,
     side: i
   }) {
-    const n = F(), r = -e.translate;
+    const n = q(), r = -e.translate;
     let s = null, a;
     const o = e.params.speed;
     e.wrapperEl.style.scrollSnapType = "none", n.cancelAnimationFrame(e.cssModeFrameID);
@@ -817,7 +819,7 @@ var _n = Ge((He) => {
     return i;
   }
   function ne(e, t) {
-    return F().getComputedStyle(e, null).getPropertyValue(t);
+    return q().getComputedStyle(e, null).getPropertyValue(t);
   }
   function Se(e) {
     let t = e, i;
@@ -835,12 +837,12 @@ var _n = Ge((He) => {
     return i;
   }
   function Te(e, t, i) {
-    const n = F();
+    const n = q();
     return i ? e[t === "width" ? "offsetWidth" : "offsetHeight"] + parseFloat(n.getComputedStyle(e, null).getPropertyValue(t === "width" ? "margin-right" : "margin-top")) + parseFloat(n.getComputedStyle(e, null).getPropertyValue(t === "width" ? "margin-left" : "margin-bottom")) : e.offsetWidth;
   }
   let ce;
   function ft() {
-    const e = F(), t = J();
+    const e = q(), t = J();
     return {
       smoothScroll: t.documentElement && "scrollBehavior" in t.documentElement.style,
       touch: !!("ontouchstart" in e || e.DocumentTouch && t instanceof e.DocumentTouch)
@@ -853,7 +855,7 @@ var _n = Ge((He) => {
   function pt({
     userAgent: e
   } = {}) {
-    const t = Ie(), i = F(), n = i.navigator.platform, r = e || i.navigator.userAgent, s = {
+    const t = Ie(), i = q(), n = i.navigator.platform, r = e || i.navigator.userAgent, s = {
       ios: !1,
       android: !1
     }, a = i.screen.width, o = i.screen.height, l = r.match(/(Android);?[\s\/]+([\d.]+)?/);
@@ -868,7 +870,7 @@ var _n = Ge((He) => {
   }
   let fe;
   function ht() {
-    const e = F();
+    const e = q();
     let t = !1;
     function i() {
       const n = e.navigator.userAgent.toLowerCase();
@@ -895,7 +897,7 @@ var _n = Ge((He) => {
     on: t,
     emit: i
   }) {
-    const n = F();
+    const n = q();
     let r = null, s = null;
     const a = () => {
       !e || e.destroyed || !e.initialized || (i("beforeResize"), i("resize"));
@@ -937,7 +939,7 @@ var _n = Ge((He) => {
     on: i,
     emit: n
   }) {
-    const r = [], s = F(), a = (d, m = {}) => {
+    const r = [], s = q(), a = (d, m = {}) => {
       const u = s.MutationObserver || s.WebkitMutationObserver, f = new u((c) => {
         if (e.__preventObserver__)
           return;
@@ -1101,9 +1103,9 @@ var _n = Ge((He) => {
             else {
               const {
                 clientWidth: ie,
-                offsetWidth: q
+                offsetWidth: F
               } = g;
-              k = L + D + _ + j + Y + (q - ie);
+              k = L + D + _ + j + Y + (F - ie);
             }
           }
           E && (g.style.transform = E), I && (g.style.webkitTransform = I), n.roundLengths && (k = Math.floor(k));
@@ -1576,7 +1578,7 @@ var _n = Ge((He) => {
     let s = e;
     return r.params.loop && (r.virtual && r.params.virtual.enabled ? s = s + r.virtual.slidesBefore : s = r.getSlideIndexByData(s)), r.slideTo(s, t, i, n);
   }
-  function Ft(e = this.params.speed, t = !0, i) {
+  function qt(e = this.params.speed, t = !0, i) {
     const n = this, {
       enabled: r,
       params: s,
@@ -1596,7 +1598,7 @@ var _n = Ge((He) => {
     }
     return s.rewind && n.isEnd ? n.slideTo(0, e, t, i) : n.slideTo(n.activeIndex + l, e, t, i);
   }
-  function qt(e = this.params.speed, t = !0, i) {
+  function Ft(e = this.params.speed, t = !0, i) {
     const n = this, {
       params: r,
       snapGrid: s,
@@ -1672,8 +1674,8 @@ var _n = Ge((He) => {
   const Xt = {
     slideTo: Vt,
     slideToLoop: Bt,
-    slideNext: Ft,
-    slidePrev: qt,
+    slideNext: qt,
+    slidePrev: Ft,
     slideReset: Wt,
     slideToClosest: Rt,
     slideToClickedSlide: Yt
@@ -1814,7 +1816,7 @@ var _n = Ge((He) => {
   };
   function nn(e, t = this) {
     function i(n) {
-      if (!n || n === J() || n === F())
+      if (!n || n === J() || n === q())
         return null;
       n.assignedSlot && (n = n.assignedSlot);
       const r = n.closest(e);
@@ -1823,7 +1825,7 @@ var _n = Ge((He) => {
     return i(t);
   }
   function sn(e) {
-    const t = this, i = J(), n = F(), r = t.touchEventsData;
+    const t = this, i = J(), n = q(), r = t.touchEventsData;
     r.evCache.push(e);
     const {
       params: s,
@@ -2143,7 +2145,7 @@ var _n = Ge((He) => {
     if (!e || t === "container" && !i)
       return;
     let n = !1;
-    const r = F(), s = t === "window" ? r.innerHeight : i.clientHeight, a = Object.keys(e).map((o) => {
+    const r = q(), s = t === "window" ? r.innerHeight : i.clientHeight, a = Object.keys(e).map((o) => {
       if (typeof o == "string" && o.indexOf("@") === 0) {
         const l = parseFloat(o.substr(1));
         return {
@@ -3042,7 +3044,7 @@ var _n = Ge((He) => {
   };
   kn();
   window.addEventListener("load", () => {
-    Fe(), $e(), Ze(), Ve(), We(), Ye(), it(), Ke(), In(), Pn(), Je(), window.onscroll = null;
+    qe(), $e(), Ze(), Ve(), We(), Ye(), it(), Ke(), In(), Pn(), Je(), window.onscroll = null;
   });
 });
 export default _n();

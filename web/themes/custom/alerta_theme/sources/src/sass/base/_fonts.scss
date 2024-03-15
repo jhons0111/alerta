@@ -11,12 +11,21 @@
     font-weight: 500;
     font-display: swap;
 }
+
+
+@font-face {
+    font-family:"Strenuous";
+    src:url("https://use.typekit.net/af/6e356a/0000000000000000773596f3/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/6e356a/0000000000000000773596f3/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/6e356a/0000000000000000773596f3/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+    font-weight:600;
+}
+
 @font-face {
     font-family: 'Strenuous';
     src: url("./../../dist/fonts/strenuous-bold.ttf");
     font-weight: 700;
     font-display: swap;
 }
+
 @font-face {
     font-family: 'Strenuous';
     src: url("./../../dist/fonts/strenuous-3d.ttf");
@@ -26,8 +35,21 @@
 //Rift
 @font-face {
     font-family: 'rift';
-    src: url("./../../dist/fonts/rift.otf");
+    src:url("https://use.typekit.net/af/af021d/00000000000000007735b21d/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/af021d/00000000000000007735b21d/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/af021d/00000000000000007735b21d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
     font-weight: 400;
+    font-display: swap;
+}
+//Rift
+@font-face {
+    font-family: 'rift';
+    src: url("./../../dist/fonts/rift.otf");
+    font-weight: 500;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'rift';
+    src:url("https://use.typekit.net/af/ede55a/00000000000000007735b228/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/ede55a/00000000000000007735b228/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/ede55a/00000000000000007735b228/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+    font-weight: 700;
     font-display: swap;
 }
 //Etna font
@@ -51,6 +73,12 @@
     font-weight: 400;
     font-display: swap;
 }
+@font-face {
+    font-family: 'slab';
+    src:url("https://use.typekit.net/af/68993b/00000000000000007750bb7d/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"),url("https://use.typekit.net/af/68993b/00000000000000007750bb7d/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff"),url("https://use.typekit.net/af/68993b/00000000000000007750bb7d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("opentype");
+    font-weight: 500;
+    font-display: swap;
+}
 //Signo
 @font-face {
     font-family: 'signo';
@@ -58,6 +86,28 @@
     font-weight: 400;
     font-display: swap;
 }
+//Signo
+@font-face {
+    font-family: 'signo';
+    src:url("https://use.typekit.net/af/a010d8/000000000000000000014a09/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/a010d8/000000000000000000014a09/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/a010d8/000000000000000000014a09/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+    font-weight: 300;
+    font-display: swap;
+}
+//Signo
+@font-face {
+    font-family: 'signo';
+    src:url("https://use.typekit.net/af/815687/000000000000000000014a00/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/815687/000000000000000000014a00/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/815687/000000000000000000014a00/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+    font-weight: 700;
+    font-display: swap;
+}
+//Seismic
+@font-face {
+    font-family: 'seismic';
+    src:url("https://use.typekit.net/af/c142ac/00000000000000007750bce3/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&v=3") format("woff2"),url("https://use.typekit.net/af/c142ac/00000000000000007750bce3/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&v=3") format("woff"),url("https://use.typekit.net/af/c142ac/00000000000000007750bce3/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&v=3") format("opentype");
+    font-weight: 400;
+    font-display: swap;
+}
+
 
 
 html {

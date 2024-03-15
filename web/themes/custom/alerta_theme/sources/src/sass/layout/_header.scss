@@ -13,6 +13,15 @@ header,
     &.scroll{
         top: -200px;
     }
+    &.hidden-cta{
+        nav{
+            opacity: 0;
+            pointer-events: none;
+        }
+        #block-imagendelheader{
+            opacity: 0;
+        }
+    }
     & > div{
         display: flex;
         justify-content: space-between;
@@ -35,6 +44,7 @@ header,
     #block-imagendelheader{
         max-width: 50px;
         display: flex;
+        transition: .5s ease opacity;
         img{
             object-fit: contain;
             width: 100%;
@@ -44,12 +54,16 @@ header,
         width: 100%;
         display: flex;
         justify-content: flex-end;
+        transition: .5s ease opacity;
         ul{
             list-style: none;
             display: flex;
             gap: 10px;
         }
         li{
+            a{
+                font-weight: 500 !important;
+            }
             &:first-child{
                 a{
                     color: fun.color('primary');
