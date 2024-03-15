@@ -85,12 +85,12 @@
                             <div class="text-content-title-raw text-content-title-raw_left">
                                 {% set title_img = file_url(item['#paragraph'].field_image.entity.field_media_image.entity.fileuri) %}
                                 {% set title_alt = file_url(item['#paragraph'].field_image.entity.field_media_image.entity.alt) %}
-                                <img src="{{ title_img }}" alt="{{ title_alt }}">
+                                <img src="{{ title_img }}" alt="{{ title_alt }}" data-aos="fade-left">
                             </div>
                         </div>
                         <div class="text-content-paragraphs">
                             <div class="text-content-paragraphs-raw text-content-paragraphs-raw_left">
-                                <span>
+                                <span data-aos="fade-left">
                                     {{ item['#paragraph'].field_project_desc_parag[0].value|raw }}
                                 </span>
                             </div>
@@ -104,12 +104,12 @@
                             <div class="text-content-title-raw text-content-title-raw_right">
                                 {% set title_img = file_url(item['#paragraph'].field_image.entity.field_media_image.entity.fileuri) %}
                                 {% set title_alt = file_url(item['#paragraph'].field_image.entity.field_media_image.entity.fileuri) %}
-                                <img src="{{ title_img }}" alt="{{ title_alt }}">
+                                <img src="{{ title_img }}" alt="{{ title_alt }}" data-aos="fade-right">
                             </div>
                         </div>
                         <div class="text-content-paragraphs">
                             <div class="text-content-paragraphs-raw text-content-paragraphs-raw_right">
-                                <span>
+                                <span data-aos="fade-right">
                                     {{ item['#paragraph'].field_project_desc_parag[0].value|raw }}
                                 </span>
                             </div>
