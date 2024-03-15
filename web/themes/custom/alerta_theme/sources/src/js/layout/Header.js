@@ -12,6 +12,11 @@ const Header = (()=>{
             } else if (scrollTop < lastScrollTop) {
                 header.classList.remove('scroll');
             }
+            if(window.scrollY > 100){
+                header.classList.add('hidden-cta');
+            }else{
+                header.classList.remove('hidden-cta');
+            }
             lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
         });
     }

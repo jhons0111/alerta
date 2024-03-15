@@ -23,17 +23,30 @@
             top: -60vh;
         }
     }
+    &--top{
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        width: 100%;
+        margin-top: -1%;
+        img{
+            width: 30%;
+        }
+    }
 }
 
 @media(max-width: fun.breakpoints('ipad-small')){
     .gradient {
-        filter: blur(100px);
+        &--top{
+            img{
+                width: 50%;
+            }
+        }
         article{
             width: 150px;
             height: 150px;
             right: -25px;
             filter: blur(50px);
-
         }
     }
 }

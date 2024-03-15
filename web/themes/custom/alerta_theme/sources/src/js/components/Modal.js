@@ -2,8 +2,15 @@ const Modal = (()=>{
 
     const _ModalConfig = ()=>{
         const btnModal = document.querySelector('#open-form');
+        const buttonOpenModalHeader = document.querySelectorAll('nav .menu-item');
         const bgModal = document.querySelector('#join-form-ctn .join-us__bg');
-        console.log(bgModal);
+
+
+        buttonOpenModalHeader[1].addEventListener('click', (e)=>{
+            e.preventDefault();
+            document.querySelector('.join-us').classList.add('active');
+        });
+
         bgModal.addEventListener('click', (e)=>{
             console.log('click');
             e.target.closest('.join-us').classList.remove('active');

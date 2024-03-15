@@ -85,12 +85,15 @@
             justify-content: space-between;
             h4{
                 color: fun.color('secondary');
-                font-size: 2.5rem;
+                font-size: 2.3rem;
+                font-family: 'seismic';
             }
             p{
                 font-size: 1.6rem;
                 color: fun.color('white');
                 margin-top: 15px;
+                font-family: 'Signo';
+                font-weight: 300 !important;
             }
             .block{
                 display: flex;
@@ -111,7 +114,7 @@
         width: 100%;
         position: relative;
         z-index: 1;
-        padding: 7.5px 10px;
+        padding: 12px 10px 7.5px 10px;
         border: 2px solid fun.color('white');
         background-color: fun.color('black');
         width: calc(100% + 72px);
@@ -120,7 +123,8 @@
         margin: 30px 0;
         p{
             color: fun.color('white');
-            font-size: 2.5rem;
+            font-size: 2.2rem;
+            font-family: 'seismic';
         }
     }
     &__close{

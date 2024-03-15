@@ -14,7 +14,8 @@ body{
     }
 }
 
-.home-grid .content{
+.home-grid .content,
+.home-team article:nth-child(2){
     &::-webkit-scrollbar {
         -webkit-appearance: none;
     }
@@ -40,3 +41,12 @@ body{
         border-radius: 10px; 
     }  
 }
+
+.home-team article:nth-child(2){
+    &::-webkit-scrollbar-thumb {
+        background-color: fun.color('tertiary');
+        border-radius: 20px;
+        border: 5px solid fun.color('primary');
+    }
+}
+
