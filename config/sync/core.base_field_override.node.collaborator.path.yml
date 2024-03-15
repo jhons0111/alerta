@@ -1,0 +1,20 @@
+uuid: a45e1373-1113-4125-bc5e-2cf51be09169
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.collaborator
+  module:
+    - path
+id: node.collaborator.path
+field_name: path
+entity_type: node
+bundle: collaborator
+label: 'Alias de URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

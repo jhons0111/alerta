@@ -26,7 +26,7 @@ content:
     third_party_settings: {  }
   field_description:
     type: text_textarea
-    weight: 12
+    weight: 10
     region: content
     settings:
       rows: 5
@@ -34,7 +34,7 @@ content:
     third_party_settings: {  }
   field_habilities:
     type: options_buttons
-    weight: 13
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -48,25 +48,18 @@ content:
     third_party_settings: {  }
   field_picture:
     type: media_library_widget
-    weight: 10
+    weight: 8
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_position:
     type: string_textfield
-    weight: 11
+    weight: 9
     region: content
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
-  langcode:
-    type: language_select
-    weight: 8
-    region: content
-    settings:
-      include_locked: true
     third_party_settings: {  }
   path:
     type: path
@@ -103,11 +96,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  translation:
-    weight: 9
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
     weight: 1
@@ -118,4 +106,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  langcode: true
+  translation: true
