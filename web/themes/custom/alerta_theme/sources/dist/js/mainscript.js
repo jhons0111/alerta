@@ -573,7 +573,7 @@ var _n = Ge((He) => {
           easing: "ease",
           once: !0
         });
-      }, 0);
+      }, 2250);
     };
     return {
       setHandleEvent: function() {
