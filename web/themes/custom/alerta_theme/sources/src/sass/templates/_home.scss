@@ -635,6 +635,10 @@
             width: fit-content;
             margin: auto;
             left: 5vw;
+            border: 3px solid #D2D2D2;
+            border-bottom: 3px solid #2F2F2F;
+            padding: 0 35px 35px 0;
+            border-top-right-radius: 7.5em 7em;
             picture{
                 position: absolute;
                 display: block;
@@ -713,8 +717,8 @@
             }
             .team-lines{
                 position: absolute;
-                left: calc(100% + 21px);
-                top: 35%;
+                left: 100%;
+                top: 60%;
                 .line-team{
                     position: relative;
                     &::before,
@@ -777,7 +781,7 @@
             display: flex;
             position: relative;
             z-index: 9;
-            top: -30px;
+            top: -10px;
             margin: 0 auto;
             width: 825px;
             height: 140px;
