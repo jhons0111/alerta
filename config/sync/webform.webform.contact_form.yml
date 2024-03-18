@@ -21,26 +21,31 @@ elements: |-
     '#markup': '<p>YOUR PROJECT</p>'
   nombre_compania:
     '#type': textfield
-    '#title': Nombre/compañia
+    '#title': Name/Company
     '#title_display': invisible
-    '#placeholder': Nombre/compañia
+    '#placeholder': Name/Company
   email:
     '#type': email
     '#title': Email
     '#title_display': invisible
-    '#placeholder': Correo
+    '#placeholder': Email
   how_can_we_collaborate:
     '#type': textarea
-    '#title': 'Como podemos colaborarte'
+    '#title': 'How can we collaborate?'
     '#title_display': invisible
-    '#placeholder': 'Como podemos colaborarte ?'
+    '#placeholder': 'How can we collaborate?'
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'
-    '#submit__label': Colaborar
+    '#submit__label': Collaborate
+    '#prefix': '<div id="submit-content">'
+    '#suffix': '</div>'
     '#submit__attributes':
       class:
         - btn
+  creation:
+    '#type': webform_markup
+    '#markup': '<p><img src="/themes/custom/alerta_theme/sources/dist/assets/img/svg/text-form.svg" alt=""></p>'
 css: ''
 javascript: ''
 settings:
