@@ -62,7 +62,7 @@
         align-items: flex-start;
         height: auto;
         height: 100vh;
-        max-height: 500px;
+        max-height: 550px;
         &#open-form{
             background-color: fun.color('cuartary');
             color: red;
@@ -107,6 +107,36 @@
                 textarea{
                     margin-bottom: 20px;
                     width: 100%;
+                }
+                #submit-content{
+                    grid-column: 1 / -1;
+                    .form-actions{
+
+                        .btn{
+                            width: 140px;
+                            height: 40px;
+                            text-transform: lowercase !important;
+                            margin: 0;
+                            padding-right: 10px;
+                        }
+                        &::after{
+                            content: url('/themes/custom/alerta_theme/sources/dist/assets/img/png/icon-star.png');
+                            position: relative;
+                            left: -35px;
+                            align-items: center;
+                            display: flex;
+                            top: 1px;
+                        }
+                    }
+                }
+                [id^="edit-creation"]{
+                    grid-column: 1 / -1;
+                    img{
+                        position: relative;
+                        width: 105%;
+                        top: -30px;
+                        left: -9px;
+                    }
                 }
             }
             #edit-second-title,
