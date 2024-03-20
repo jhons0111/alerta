@@ -118,11 +118,13 @@
                             text-transform: lowercase !important;
                             margin: 0;
                             padding-right: 10px;
+                            position: relative;
+                            left: 17px;
                         }
                         &::after{
                             content: url('/themes/custom/alerta_theme/sources/dist/assets/img/png/icon-star.png');
                             position: relative;
-                            left: -35px;
+                            left: -17px;
                             align-items: center;
                             display: flex;
                             top: 1px;

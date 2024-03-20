@@ -166,15 +166,15 @@
         &:first-child{
             height: 10px;
             position: absolute;
-            left: -32.5vw;
+            left: -31.5vw;
             display: flex;
             justify-content: center;
             align-items: center;
             &::before{
                 content: "";
                 position: absolute;
-                width: 35vw;
-                height: 30vw;
+                width: 28vw;
+                height: 26vw;
                 border: 2px solid fun.color('white');
                 left: 50%;
                 border-radius: 0 50% 0 0;
@@ -274,8 +274,8 @@
             justify-content: center;
             align-items: center;
             canvas{
-                width: 100% !important;
-                height: 100% !important;
+                width: 90% !important;
+                height: 90% !important;
             }
         }
     }
@@ -408,14 +408,24 @@
                 }
             }
             .block{
+                &-makes{
+                    max-width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    img{
+                        width: 90%;
+                    }
+                }
                 &:last-child{
                     min-width: 25vw;
                 }
                 picture{
                     width: 100%;
                     display: flex;
+                    max-width: 25vw;
                     img{
                         width: 100%;
+                        border: 2px solid #fff;
                     }
                 }
             }
@@ -452,11 +462,17 @@
                 align-items: flex-end;
                 border: 2px solid fun.color('white');
                 height: 42.5vw;
-                top: -30.5vw;
+                top: -28.8vw;
                 border-radius: 400.612px;
-                img{
-                    width: 6vw;
-                    margin-bottom: 2vw;
+                .star{
+                    width: 8vw;
+                    margin-bottom: 2.5vw;
+                }
+                .expansive{
+                    position: absolute;
+                    top: 4.5vw;
+                    left: -14.5%;
+                    width: 29%;
                 }
             }
         }
@@ -937,7 +953,16 @@
         article{
             &:last-child{
                 picture{
-                    top: -32vw;
+                    top: -30.5vw;
+                }
+            }
+            &:nth-child(2){
+                .block{
+                    &-makes{
+                        img{
+                            width: 80%;
+                        }
+                    }
                 }
             }
         }
@@ -991,6 +1016,12 @@
             h4{
                 font-size: 5rem;
             }
+            #canvas{
+                canvas{
+                    width: 100% !important;
+                    height: 100% !important;
+                }
+            }
         }
     }
     .home-limitless{
@@ -1036,6 +1067,17 @@
                     }
                 }
             }
+            &:last-child{
+                picture{
+                    .star{
+                        width: 13vw;
+                        margin-bottom: 4.5vw;
+                    }
+                    .expansive{
+                        top: 9.5vw;
+                    }
+                }
+            }
         }
     }
     .home-team{
@@ -1044,6 +1086,7 @@
             &:first-child{
                 left: 0;
                 width: 100%;
+                padding-right: 0;
                 em{
                     left: 0;
                     top: 0;
@@ -1058,7 +1101,7 @@
                     }
                 }
                 div{
-                    padding: 20px 0;
+                    padding-top: 20px;
                 }
                 h2,h4{
                     margin-left: 0;
@@ -1230,16 +1273,28 @@
                 .block{
                     &:first-child{
                         width: 80%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        h3{
+                            justify-content: flex-start;
+                        }
                     }
                     &:last-child{
                         picture{
                             display: flex;
                             justify-content: flex-end;
                             width: 100%;
+                            max-width: 100%;
                         }
                         img{
                             width: 50%;
                         }
+                    }
+                    &-makes{
+                        justify-content: flex-start;
+                        position: relative;
+                        left: -5px;
                     }
                 }
                 h2{
@@ -1257,10 +1312,7 @@
                 picture{
                     width: 50%;
                     height: 75vw;
-                    top: -55vw;
-                    img{
-                        width: 40px;
-                    }
+                    top: -47.5vw;
                 }
             }
         }
@@ -1282,7 +1334,7 @@
                 }
             }
             &:nth-child(2){
-                height: 100px;
+                height: 120px;
                 picture{
                     width: 100px;
                     height: 100px;

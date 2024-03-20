@@ -14,13 +14,21 @@
         top: 40vh;
         right: -100px;
     }
-    &--big{
+    &--left-blue-light{
         display: flex;
-        justify-content: flex-end;
+        justify-content: flex-start;
         img{
-            width: 80%;
+            width: 60%;
             position: absolute;
-            top: -60vh;
+            top: -5vh;
+        }
+    }
+    &--left-green-light{
+        display: flex;
+        justify-content: flex-start;
+        img{
+            position: absolute;
+            top: -12vh;
         }
     }
     &--top{
@@ -31,6 +39,16 @@
         margin-top: -1%;
         img{
             width: 30%;
+        }
+    }
+}
+
+@media(max-width: fun.breakpoints('ipad-big')){
+    .gradient {
+        &--left-blue-light{
+            img{
+                top: 0;
+            }
         }
     }
 }

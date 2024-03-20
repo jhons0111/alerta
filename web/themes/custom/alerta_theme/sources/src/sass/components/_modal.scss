@@ -30,14 +30,17 @@
         border: 3px solid #D9D9D9;
         background: rgba(0, 0, 0, 0.70);
         backdrop-filter: blur(8px);
-        padding: 60px 30px 0 50px;
+        padding: 50px 20px 0 48px;
         display: flex;
         justify-content: space-between;
         width: 90%;
-        max-width: 675px;
-        gap: 40px;
+        max-width: 700px;
+        gap: 25px;
     }
     .item{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         &:first-child{
             picture{
                 &:first-child{
@@ -60,7 +63,7 @@
                 }
                 &:nth-child(2){
                     position: absolute;
-                    top: 20px;
+                    top: 15px;
                     width: 200px;
                     height: 100%;
                     overflow: hidden;
@@ -99,7 +102,7 @@
                 display: flex;
                 justify-content: flex-end;
                 gap: 10px;
-                padding: 30px 0;
+                padding: 10px 0;
                 picture{
                     width: 100%;
                     max-width: 65px;
@@ -117,14 +120,15 @@
         padding: 12px 10px 7.5px 10px;
         border: 2px solid fun.color('white');
         background-color: fun.color('black');
-        width: calc(100% + 72px);
+        width: calc(100% + 122px);
         left: -50px;
         text-align: right;
-        margin: 30px 0;
+        margin: 25px 0;
         p{
             color: fun.color('white');
             font-size: 2.2rem;
             font-family: 'seismic';
+            text-transform: uppercase;
         }
     }
     &__close{

@@ -147,9 +147,12 @@
         </article>
         <article>
             <div class="block personality-animation" data-aos="personality">
-                <h2 class="Strenuous difuminate animation-tx-reveal">
-                    {{ node.field_home_makes_first_text.value|raw }}
-                </h2>
+                {# <h2 class="Strenuous difuminate animation-tx-reveal">
+                    AQUI
+                </h2> #}
+                <div class="block-makes" data-aos="fade-left">
+                    <img src="/themes/custom/alerta_theme/sources/dist/assets/img/png/alerta-makes.png">
+                </div>
                 <h3 class="Strenuous animation-tx-reveal">
                     {{ node.field_home_makes_second_text.value|raw }}
                 </h3>
@@ -159,8 +162,9 @@
             </div>
             <div class="block" data-aos="personality">
                 <picture>
-                    {% set main_img = file_url(node.field_main_home_image.entity.field_media_image.entity.fileuri) %}
-                    <img src="{{ main_img }}" alt="">
+                    {% set main_img_url = file_url(node.field_main_home_image.entity.field_media_image.entity.fileuri) %}
+                    {% set main_img_alt = file_url(node.field_main_home_image.entity.field_media_image.entity.alt) %}
+                    <img src="{{ main_img_url }}" alt="{{ main_img_alt }}">
                 </picture>
             </div>
         </article>
@@ -180,7 +184,8 @@
         </article>
         <article data-aos="personality">
             <picture>
-                <img src="/themes/custom/alerta_theme/sources/dist/assets/img/svg/start-makes.svg" alt="star">
+                <img class="star" src="/themes/custom/alerta_theme/sources/dist/assets/img/svg/start-makes.svg" alt="star">
+                <img class="expansive" src="/themes/custom/alerta_theme/sources/dist/assets/img/png/expansive.png" alt="Expansive image">
             </picture>
         </article>
     </section>
@@ -196,18 +201,17 @@
     </section>
     <!--End line animate-->
 
+    <!--RGB-->
+    <section class="gradient gradient--left-blue-light">
+        <img src="/themes/custom/alerta_theme/sources/dist/assets/img/png/left-blue-light.png" alt="">
+    </section>
+    <!--End RGB-->
+
     <!--Project grid-->
     <section class="home-grid ctn ctm-fonts">
         {{ spearheads_template }}
     </section>
     <!--End projects grid-->
-
-    <!--RGB-->
-    {# <section class="gradient gradient--big">
-        <img src="/themes/custom/alerta_theme/sources/dist/assets/img/png/gradient.png" alt="">
-    </section> #}
-    <!--End RGB-->
-    
 
     <!-- Categories-->
     <section class="home-categories">
@@ -277,6 +281,12 @@
         </article>
     </section>
     <!--End arallax-->
+
+    <!--RGB-->
+    <section class="gradient gradient--left-green-light">
+        <img src="/themes/custom/alerta_theme/sources/dist/assets/img/png/left-green-light.png" alt="">
+    </section>
+    <!--End RGB-->
 
     <!-- Planet with message alert-->
     <section class="home-alert ctm-fonts">
