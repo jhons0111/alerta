@@ -162,6 +162,7 @@
             #canvas-hero{
                 transform: scale(0);
                 transition: 1s ease transform;
+                border-radius: 50%;
             }
             &.aos-animate{
                 #canvas-hero{
