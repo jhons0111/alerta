@@ -440,6 +440,7 @@
                 }
             }
             h3{
+                line-height: 1;
                 font-size: 3.25vw;
                 color: transparent;
                 -webkit-text-stroke-width: 1px;
@@ -514,7 +515,7 @@
                 align-items: flex-end;
                 border: 2px solid fun.color('white');
                 height: 42.5vw;
-                top: -28.8vw;
+                top: -28.1vw;
                 border-radius: 400.612px;
                 .star{
                     width: 8vw;
@@ -522,7 +523,7 @@
                 }
                 .expansive{
                     position: absolute;
-                    top: 4.5vw;
+                    top: 6vw;
                     left: -14.5%;
                     width: 29%;
                 }
@@ -554,7 +555,7 @@
             h3{
                 color: fun.color('white');
                 text-align: center;
-                font-size: 2.5vw;
+                font-size: 3vw;
                 span{
                     font-weight: 500;
                 }
@@ -1005,7 +1006,7 @@
         article{
             &:last-child{
                 picture{
-                    top: -30.5vw;
+                    top: -30.1vw;
                 }
             }
             &:nth-child(2){
@@ -1015,6 +1016,15 @@
                             width: 80%;
                         }
                     }
+                }
+            }
+        }
+    }
+    .home-grid{
+        article{
+            &:first-child{
+                h3{
+                    font-size: 3.4vw;
                 }
             }
         }
@@ -1099,11 +1109,17 @@
         padding: 60px 0;
         article{
             &:first-child{
+                .makes-spearheads{
+                    top: 10px !important;
+                    img{
+                        width: 80% !important;
+                    }
+                }
                 h2{
                     font-size: 3rem;
                 }
                 h3{
-                    font-size: 2.5rem;
+                    font-size: 6vw !important;
                 }
             }
             &:last-child{

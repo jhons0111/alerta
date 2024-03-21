@@ -175,6 +175,17 @@
 
 .home-grid{
     article{
+        &:first-child{
+            .makes-spearheads{
+                display: flex;
+                justify-content: center;
+                position: relative;
+                top: 20px;
+                img{
+                    width: 45%;
+                }
+            }
+        }
         &:last-child{
             .item{
                 opacity: 0;
