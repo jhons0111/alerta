@@ -9,6 +9,7 @@ import { loadModalHandlers } from './components/Modal';
 import { loadFormHandlers } from './components/Form';
 import { loadBlobHandlers } from './components/Blob';
 import { loadPaginatorHandlers } from './components/Paginator';
+import { stars } from './components/Stars';
 //Animations
 import { loadLineHandlers } from './animations/Line';
 //Libs
@@ -35,6 +36,7 @@ window.addEventListener('load', ()=>{
     loadTeamHandlers();
     loadSwiperHandlers();
     loadPaginatorHandlers();
+    stars();
     //Enable scroll
     window.onscroll = null;
 });

@@ -115,11 +115,13 @@
                         .btn{
                             width: 140px;
                             height: 40px;
-                            text-transform: lowercase !important;
+                            font-family: signo;
                             margin: 0;
                             padding-right: 10px;
                             position: relative;
-                            left: 17px;
+                            left: 14px;
+                            font-size: 1vw;
+                            font-weight: 600;
                         }
                         &::after{
                             content: url('/themes/custom/alerta_theme/sources/dist/assets/img/png/icon-star.png');

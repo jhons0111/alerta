@@ -2,14 +2,14 @@
 
 
 .detail-project{
-    max-height: calc(100vh - 97px);
+    // max-height: calc(100vh - 97px);
     margin: 97px auto 0;
     position: relative;
     width: 100%;
     overflow: hidden;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    // justify-content: center;
+    // align-items: center;
     width: 0;
     transition: .5s ease width !important;
     &-body{
@@ -19,8 +19,8 @@
         width: 100%;
     }
     iframe{
-        min-width: 120vw;
-        min-height: 120vh;
+        min-width: 100vw;
+        min-height: 115vh;
     }
 }
 
