@@ -377,6 +377,7 @@
     </section>
 
     <!--THREE JS-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/83/three.min.js"></script>
     <script id="vertexShader" type="x-shader/x-vertex">
         varying vec3 vNormal; void main() { vNormal = normalize( normalMatrix * normal ); gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 ); }

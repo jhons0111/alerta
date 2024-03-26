@@ -1,38 +1,38 @@
-const stars = (()=>{
+const stars = () => {
 
     var WIDTH, HEIGHT, canvas, con, g;
-    var pxs = [];
-    var rint = 70;
-    $(document).ready(function() {
-        var windowSize = function() {
-            WIDTH = $('.stars__container').innerWidth();
-            HEIGHT = $('.stars__container').innerHeight();
-            canvas = $('#galaxy');
-            canvas.attr('width', WIDTH).attr('height', HEIGHT);
-        };
+    const pxs = [];
+    const rint = 70;
+    const windowSize = function() {
+        WIDTH = $('.stars__container').innerWidth();
+        HEIGHT = $('.stars__container').innerHeight();
+        canvas = $('#galaxy');
+        canvas.attr('width', WIDTH).attr('height', HEIGHT);
+    };
 
+    windowSize();
+
+    $(window).resize(function() {
         windowSize();
+    });
 
-        $(window).resize(function() {
-            windowSize();
-        });
+    con = canvas[0].getContext('2d');
+    for (var i = 0; i < 100; i++) {
+        pxs[i] = new Circle();
+        pxs[i].reset();
+    }
+    requestAnimationFrame(draw);
 
-        con = canvas[0].getContext('2d');
-        for (var i = 0; i < 100; i++) {
-            pxs[i] = new Circle();
-            pxs[i].reset();
-        }
-        requestAnimationFrame(draw);
+    //Alerta letters
 
-        //Alerta letters
+    //Get the first span element
+    let primerElemento = document.querySelector('.alerta-letter');
+    if(primerElemento){
 
-        // Obtener el primer elemento span
-        var primerElemento = document.querySelector('.alerta-letter');
-
-        // Llamar a la función showData con el primer elemento span
+        //Execute showData function
         showData({ target: primerElemento });
         
-        var alertaLetters = document.querySelectorAll('.alerta-letter');
+        let alertaLetters = document.querySelectorAll('.alerta-letter');
 
         alertaLetters.forEach(function(element) {
             element.addEventListener('click', showData);
@@ -40,26 +40,24 @@ const stars = (()=>{
 
         function showData(event) {
 
-            var element = event.target;
-            var title = element.getAttribute('data-title');
-            var description = element.getAttribute('data-description');
+            let element = event.target;
+            let title = element.getAttribute('data-title');
+            let description = element.getAttribute('data-description');
             
-            // Cambiar el color del elemento seleccionado
-            var alertaLetters = document.querySelectorAll('.alerta-letter');
+            //Change color
+            let alertaLetters = document.querySelectorAll('.alerta-letter');
             alertaLetters.forEach(function(alertaLetter) {
-                alertaLetter.style.color = ''; // Reiniciar el color de todos los elementos
+                alertaLetter.style.color = ''; // Set white color for non-selected elements
             });
             element.style.color = '#9EFF00';
 
-            var titleContainer = document.querySelector('.dinamic-text-title');
-            var descriptionContainer = document.querySelector('.dinamic-text-description');
+            let titleContainer = document.querySelector('.dinamic-text-title');
+            let descriptionContainer = document.querySelector('.dinamic-text-description');
 
             titleContainer.textContent = title;
             descriptionContainer.textContent = description;
-
-
         }
-    });
+    }
 
     function draw() {
         con.clearRect(0, 0, WIDTH, HEIGHT);
@@ -130,6 +128,6 @@ const stars = (()=>{
             return this.y;
         };
     };
-})();
+};
 
 export { stars }
