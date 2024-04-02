@@ -120,7 +120,7 @@
                             padding-right: 10px;
                             position: relative;
                             left: 14px;
-                            font-size: 1vw;
+                            font-size: 1.4rem;
                             font-weight: 600;
                         }
                         &::after{
@@ -214,6 +214,10 @@
                     .js-form-type-textarea,
                     .form-actions{
                         grid-column: 1/2;
+                        .btn{
+                            font-size: 3vw !important;
+                            color: #000 !important;
+                        }
                     }
                     input{
                         width: 100%;

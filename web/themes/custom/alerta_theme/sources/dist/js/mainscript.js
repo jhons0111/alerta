@@ -3107,7 +3107,7 @@ var Di = $e((Ge) => {
   };
   Oi();
   window.addEventListener("load", () => {
-    Fe(), Ne(), tt(), Be(), Re(), Xe(), rt(), Ue(), _i(), ki(), Qe(), Ze(), window.onscroll = null;
+    Fe(), Ne(), tt(), Be(), Re(), Xe(), rt(), Ue(), _i(), ki(), Qe(), Ze(), initLine(), window.onscroll = null;
   });
 });
 export default Di();

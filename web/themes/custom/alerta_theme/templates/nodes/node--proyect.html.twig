@@ -82,11 +82,11 @@
         {% set orientation = item['#paragraph'].field_elements_order[0].value|raw %}
         {% if paragraph_type_machine_name == 'title_and_description' %}
 
-            <section class="text-content">
+            <section class="text-content text-content-{{ loop.index }}">
                 {% if orientation == 'left' %}
 
                         <!--Title and text section left-->
-                        <div class="text-content-title text-content-title">
+                        <div class="text-content-title">
                             <div class="text-content-title-raw text-content-title-raw_left">
                                 {% set title_img = file_url(item['#paragraph'].field_image.entity.field_media_image.entity.fileuri) %}
                                 {% set title_alt = file_url(item['#paragraph'].field_image.entity.field_media_image.entity.alt) %}
@@ -104,22 +104,20 @@
                 {% elseif orientation == 'right' %}
 
                     <!--Title and text section right-->
-                    <section class="text-content">
-                        <div class="text-content-title">
-                            <div class="text-content-title-raw text-content-title-raw_right">
-                                {% set title_img = file_url(item['#paragraph'].field_image.entity.field_media_image.entity.fileuri) %}
-                                {% set title_alt = file_url(item['#paragraph'].field_image.entity.field_media_image.entity.fileuri) %}
-                                <img src="{{ title_img }}" alt="{{ title_alt }}" data-aos="fade-right">
-                            </div>
+                    <div class="text-content-title">
+                        <div class="text-content-title-raw text-content-title-raw_right">
+                            {% set title_img = file_url(item['#paragraph'].field_image.entity.field_media_image.entity.fileuri) %}
+                            {% set title_alt = file_url(item['#paragraph'].field_image.entity.field_media_image.entity.fileuri) %}
+                            <img src="{{ title_img }}" alt="{{ title_alt }}" data-aos="fade-right">
                         </div>
-                        <div class="text-content-paragraphs">
-                            <div class="text-content-paragraphs-raw text-content-paragraphs-raw_right">
-                                <span data-aos="fade-right">
-                                    {{ item['#paragraph'].field_project_desc_parag[0].value|raw }}
-                                </span>
-                            </div>
+                    </div>
+                    <div class="text-content-paragraphs">
+                        <div class="text-content-paragraphs-raw text-content-paragraphs-raw_right">
+                            <span data-aos="fade-right">
+                                {{ item['#paragraph'].field_project_desc_parag[0].value|raw }}
+                            </span>
                         </div>
-                    </section>
+                    </div>
                     <!--End Title and text section right-->
                 {% endif %}
             </section>

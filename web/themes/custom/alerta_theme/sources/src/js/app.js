@@ -37,6 +37,7 @@ window.addEventListener('load', ()=>{
     loadSwiperHandlers();
     loadPaginatorHandlers();
     stars();
+    initLine();
     //Enable scroll
     window.onscroll = null;
 });
